@@ -1,0 +1,13 @@
+Source: arco-tools
+Section: shells
+Priority: extra
+Maintainer: ARCO Research Group <sysadm@arco.esi.uclm.es>
+Build-Depends: debhelper (>= 7)
+Standards-Version: 3.8.3
+Homepage: http://arco.esi.uclm.es
+
+Package: arco-tools
+Architecture: any
+Depends: ${misc:Depends}, dh-make, devscripts
+Description: ARCO administrator tools
+ Packaging and administrative tools for ARCO developers.

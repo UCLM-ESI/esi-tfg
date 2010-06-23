@@ -1,0 +1,23 @@
+arco-tools (0.3-1) unstable; urgency=low
+
+  * figures.sh stuff
+
+ -- Cleto Martin Angelina <cleto.martin@gmail.com>  Thu, 10 Jun 2010 20:42:00 +0200
+
+arco-tools (0.2-2) unstable; urgency=low
+
+  * No root user
+
+ -- ARCO Research Group <sysadm@arco.esi.uclm.es>  Wed, 27 Jan 2010 15:06:44 +0100
+
+arco-tools (0.2-1) unstable; urgency=low
+
+  * Small bug fixed.
+
+ -- ARCO Research Group <sysadm@arco.esi.uclm.es>  Mon, 14 Dec 2009 18:29:33 +0100
+
+arco-tools (0.1-1) unstable; urgency=low
+
+  * Initial release.
+
+ -- ARCO Research Group <sysadm@arco.esi.uclm.es>  Mon, 14 Dec 2009 17:11:56 +0100
