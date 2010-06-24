@@ -1,8 +1,15 @@
+arco-tools (0.3-2) unstable; urgency=low
+
+  * package restructured
+  * added build-orig-source rule
+
+ -- ARCO Research Group <sysadm@arco.esi.uclm.es>  Thu, 24 Jun 2010 12:04:33 +0200
+
 arco-tools (0.3-1) unstable; urgency=low
 
   * figures.sh stuff
 
- -- Cleto Martin Angelina <cleto.martin@gmail.com>  Thu, 10 Jun 2010 20:42:00 +0200
+ -- ARCO Research Group <sysadm@arco.esi.uclm.es>  Thu, 10 Jun 2010 20:42:00 +0200
 
 arco-tools (0.2-2) unstable; urgency=low
 

@@ -1,6 +1,15 @@
 #!/usr/bin/make -f
 # -*- makefile -*-
 
-
 %:
 	dh  $@
+
+
+VERSION=0.3
+
+build-orig-source:
+	mkdir -p arco-tools-$(VERSION)
+	tar --exclude=debian --exclude=\*~ --exclude=\.svn --exclude=arco-tools-$(VERSION) -cf - . \
+		| ( cd arco-tools-$(VERSION) && tar xf - )
+	tar -czf ../tarballs/arco-tools_$(VERSION).orig.tar.gz arco-tools-$(VERSION)
+	$(RM) -r arco-tools-$(VERSION)
