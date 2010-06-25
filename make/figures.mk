@@ -1,5 +1,8 @@
 
-#-- dia ----------------------------------------------------
+export TEX_SRC_DIR?=$(shell pwd)
+export TEX_FIG_DIR?=$(TEX_ROOT_DIR)/figures
+
+#-- dia	 ----------------------------------------------------
 
 %.eps: %.dia
 	dia -n -e $@ -t eps $<
