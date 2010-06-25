@@ -1,6 +1,6 @@
 
-export TEX_SRC_DIR?=$(shell pwd)
-export TEX_FIG_DIR?=$(TEX_ROOT_DIR)/figures
+FIGDIR?=figures
+FIGURES = $(addprefix $(shell pwd)/$(FIGDIR)/, $(shell figures $$(pwd)))
 
 #-- dia	 ----------------------------------------------------
 

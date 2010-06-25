@@ -1,3 +1,9 @@
+arco-tools (0.3-3) unstable; urgency=low
+
+  * enviroment variables for figures.sh.
+
+ -- ARCO Research Group <sysadm@arco.esi.uclm.es>  Sat, 26 Jun 2010 01:20:37 +0200
+
 arco-tools (0.3-2) unstable; urgency=low
 
   * package restructured

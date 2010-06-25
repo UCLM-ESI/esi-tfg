@@ -1,16 +1,12 @@
 # -*- coding:utf-8; mode:makefile -*-
 
-# TEX_SRC_DIR  = .
-# TEX_FIG_DIR  = ./figures
-
 include /usr/share/arco-tools/figures.mk
 
-TEX_SRC_DIR += $(wildcard sections/*.tex)
-FIGURES = $(addprefix $(TEX_FIG_DIR)/, $(shell figures `pwd`))
+TEX_SRC = $(wildcard *.tex)
 
 all: main.pdf biblio.bib
 
-main.pdf: main.tex $(TEX_SRC_DIR) $(FIGURES) biblio.bib
+main.pdf: $(TEX_SRC) $(FIGURES) biblio.bib
 	rubber --pdf $<
 
 clean:
@@ -23,4 +19,3 @@ vclean: clean
 
 %.pdf: %.tex
 	rubber --pdf $<
-
