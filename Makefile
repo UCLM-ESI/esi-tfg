@@ -8,6 +8,6 @@ clean:
 
 install:
 	install -vd $(DESTDIR)/usr/share/arco-tools/
-	install -v -m 644 $(shell find -name *.sh)  $(DESTDIR)/usr/share/arco-tools/
-	install -v -m 644 make/*.mk  $(DESTDIR)/usr/share/arco-tools/
+	install -v -m 555 $(shell find -name *.sh)  $(DESTDIR)/usr/share/arco-tools/
+	install -v -m 444 make/*.mk  $(DESTDIR)/usr/share/arco-tools/
 

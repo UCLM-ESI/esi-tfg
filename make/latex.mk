@@ -1,21 +1,21 @@
 
-BASEDIR=/usr/share/arco-tools
+TOOLDIR=/usr/share/arco-tools
+FIGDIR=figures
 
 RUBBER_WARN ?= refs
 RUBBER=rubber -m hyperref -m graphics --warn $(RUBBER_WARN)
 
-MAIN   ?= main.tex
+MAIN  ?= main.tex
 TARGET = $(MAIN:.tex=.pdf)
-TEXSRC = $(MAIN) $(shell $(BASEDIR)/tex/parts.sh $$(MAIN))
+TEXSRC = $(shell $(TOOLDIR)/parts.sh $(MAIN))
 
-include $(BASEDIR)/figures.mk
 
-FIGURES = $(shell $(BASEDIR)/figures.sh)
+
+FIGURES = $(addprefix $(FIGDIR)/, $(shell $(TOOLDIR)/figures.sh $(MAIN)))
 
 all: $(TARGET)
 
-$(MAIN): $(FIGURES)
-$(TARGET): $(TEXSRC)
+$(TARGET): $(TEXSRC) $(FIGURES)
 
 %.pdf: %.tex
 	$(RUBBER) --pdf $<
@@ -23,3 +23,11 @@ $(TARGET): $(TEXSRC)
 clean:
 	$(RUBBER) --clean --pdf $(MAIN)
 	$(RM) *~
+
+vclean: clean
+	$(RM) $(addsuffix .png, \
+	    $(filter $(basename $(wildcard $(FIGDIR)/*.svg $(FIGDIR)/*.dia)), \
+		         $(basename $(wildcard $(FIGDIR)/*.png))) \
+		)
+
+include $(TOOLDIR)/figures.mk

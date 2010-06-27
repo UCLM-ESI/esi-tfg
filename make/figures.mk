@@ -1,6 +1,6 @@
 
-FIGDIR?=figures
-FIGURES = $(addprefix $(shell pwd)/$(FIGDIR)/, $(shell figures $$(pwd)))
+#FIGDIR?=figures
+#FIGURES = $(addprefix $(shell pwd)/$(FIGDIR)/, $(shell figures $$(pwd)))
 
 #-- dia	 ----------------------------------------------------
 
