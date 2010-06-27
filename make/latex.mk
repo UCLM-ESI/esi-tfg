@@ -1,14 +1,16 @@
 
+BASEDIR=/usr/share/arco-tools
+
 RUBBER_WARN ?= refs
 RUBBER=rubber -m hyperref -m graphics --warn $(RUBBER_WARN)
 
 MAIN   ?= main.tex
 TARGET = $(MAIN:.tex=.pdf)
-TEXSRC = $(MAIN) $(shell ../../tex/parts.sh $$(MAIN))
+TEXSRC = $(MAIN) $(shell $(BASEDIR)/tex/parts.sh $$(MAIN))
 
-include ../../make/figures.mk
+include $(BASEDIR)/figures.mk
 
-FIGURES = $(shell ../../tex/figures.sh)
+FIGURES = $(shell $(BASEDIR)/figures.sh)
 
 all: $(TARGET)
 
