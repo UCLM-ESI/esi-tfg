@@ -18,7 +18,7 @@ PNGPPP=150
 #
 # include figures.mk
 # PNGPPP = <your quality>
-#
+
 %.png: %.svg
 	inkscape -d $(PNGPPP) -e $@ $<
 
