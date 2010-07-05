@@ -1,7 +1,4 @@
 
-#FIGDIR?=figures
-#FIGURES = $(addprefix $(shell pwd)/$(FIGDIR)/, $(shell figures $$(pwd)))
-
 #-- dia	 ----------------------------------------------------
 
 %.eps: %.dia
