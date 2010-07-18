@@ -3,7 +3,7 @@ Section: shells
 Priority: extra
 Maintainer: ARCO Research Group <sysadm@arco.esi.uclm.es>
 Build-Depends: debhelper (>= 7)
-Standards-Version: 3.8.4
+Standards-Version: 3.9.0
 Homepage: http://arco.esi.uclm.es
 
 Package: arco-tools

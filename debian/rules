@@ -5,7 +5,7 @@
 	dh  $@
 
 
-VERSION=0.3
+VERSION=0.31
 
 build-orig-source:
 	mkdir -p arco-tools-$(VERSION)

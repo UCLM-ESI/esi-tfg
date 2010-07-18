@@ -1,3 +1,10 @@
+arco-tools (0.31-1) unstable; urgency=low
+
+  * bug-fix in tex/parts.sh
+  * test for that
+
+ -- ARCO Research Group <sysadm@arco.esi.uclm.es>  Sun, 18 Jul 2010 22:45:18 +0100
+
 arco-tools (0.3-3) unstable; urgency=low
 
   * enviroment variables for figures.sh.
