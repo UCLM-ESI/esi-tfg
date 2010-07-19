@@ -20,6 +20,12 @@ $(TARGET): $(TEXSRC) $(FIGURES)
 %.pdf: %.tex
 	$(RUBBER) --pdf $<
 
+help:
+	@echo "- The filename for the master TeX file should be: 'main.tex'"
+	@echo "  But you can change that defining: 'MAIN = your_master.tex' in your Makefile"
+	@echo "- Put your image sources in the subdirectory 'figures'."
+	@echo
+
 clean:
 	$(RUBBER) --clean --pdf $(MAIN)
 	$(RM) *~
@@ -31,3 +37,12 @@ vclean: clean
 		)
 
 include $(TOOLDIR)/figures.mk
+
+
+## Local Variables:
+##  coding: utf-8
+##  mode: makefile
+##  mode: flyspell
+##  ispell-local-dictionary: "american"
+## End:
+
