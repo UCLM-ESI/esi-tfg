@@ -2,12 +2,13 @@ Source: arco-tools
 Section: shells
 Priority: extra
 Maintainer: ARCO Research Group <sysadm@arco.esi.uclm.es>
+Uploaders: David Villa Alises <David.Villa@uclm.es>, Cleto Martin Angelina <Cleto.Martin@gmail.com>
 Build-Depends: debhelper (>= 7)
-Standards-Version: 3.9.0
+Standards-Version: 3.9.1
 Homepage: http://arco.esi.uclm.es
 
 Package: arco-tools
 Architecture: all
-Depends: ${misc:Depends}, dh-make, devscripts
+Depends: ${misc:Depends}, dh-make, devscripts, yasnippet, inkscape
 Description: ARCO administrator tools
  Packaging and administrative tools for ARCO developers.

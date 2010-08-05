@@ -1,3 +1,9 @@
+arco-tools (0.32-1) unstable; urgency=low
+
+  * Yasnippets 
+
+ -- David Villa Alises <David.Villa@uclm.es>  Thu, 05 Aug 2010 16:27:28 +0100
+
 arco-tools (0.31-1) unstable; urgency=low
 
   * bug-fix in tex/parts.sh
