@@ -1,0 +1,124 @@
+#!/bin/bash
+
+SLEEP=3
+
+declare -a REQUIRED
+REQUIRED=(
+    "printf"
+    "kpasswd"
+    "seq"
+    "cat"
+    "pwgen"
+    )
+
+# chpw OLD_PASSWD NEW_PASSWD
+#
+# Change Kerberos/Active Directory password
+chpw() {
+    if [ "$VERBOSE" ]; then
+	echo "$1 -> $2"
+    fi
+
+    if ! printf "$1\n$2\n$2\n" | kpasswd "$USER" >/dev/null ; then
+	echo "Error setting passwd! I believe last password was '$1'" 1>&2
+	return 1
+    fi
+}
+
+# force_chpw OLD_PASSWD NEW_PASSWD
+#
+# Change Kerberos/Active Directory password circumventing the password
+# change policy
+force_chpw() {
+    declare -a TMPPWD
+    TMPPWD=( $(pwgen -c -n -N $NFORCE 10 ) )
+
+    if ! chpw "$1" "${TMPPWD[0]}" ; then
+ 	return 1
+    fi
+    [ -z "$VERBOSE" ] && printf "."
+    [ -n "$SLEEP" ] && sleep $SLEEP
+
+    for i in $(seq 0 $((${#TMPPWD[@]} - 2 )) ) ; do
+	if ! chpw "${TMPPWD[$i]}" "${TMPPWD[ $(($i + 1 )) ]}" ; then
+	    return 1
+	fi
+	[ -z "$VERBOSE" ] && printf "."
+	[ -n "$SLEEP" ] && sleep $SLEEP
+    done
+
+    if chpw "${TMPPWD[$((${#TMPPWD[@]} - 1))]}" "$2" ; then
+ 	printf "\nYour password is now '$2'\n"
+    fi
+}
+
+do_help() {
+    cat <<EOF
+Usage: $0 [OPTIONS]
+Change Kerberos/Active Directory passwords.
+
+   --user USERNAME	Set the user name (Kerberos principal).
+   --oldpw PASSWORD	Previous password. By default prompt the user.
+   --newpw PASSWORD	New password. By default prompt the user.
+   --force NUM		Circumvent the password policy forcing NUM password 
+			  changes.
+   --verbose		Print each password change.
+   --help		This help.
+EOF
+}
+
+main() {
+    VERBOSE=$DEBUG
+    CHPWCMD=chpw
+    while test $# -gt 0 ; do
+	case "$1" in
+	    --user)
+		USER="$2"
+		shift
+		;;
+	    --oldpw)
+		OPWD="$2"
+		NPWD="$2"
+		shift
+		;;
+	    --newpw)
+		NPWD="$2"
+		shift
+		;;
+	    --force)
+		CHPWCMD=force_chpw
+		NFORCE="$(( $2 ))"
+		shift
+		;;
+	    --help)
+		do_help
+		exit 0
+		;;
+	    --verbose)
+		VERBOSE=1
+		;;
+	    *)
+		do_help
+		exit 1
+		;;
+	esac
+	shift
+    done
+
+    [ "z$OPWD" = z ] && printf "Previous password: " && read -s OPWD && echo
+    [ "z$NPWD" = z ] && printf "New password: "      && read -s NPWD && echo
+	    
+    $CHPWCMD "$OPWD" "$NPWD"
+}
+
+
+# Check required programs
+for i in `seq 0 $((${#REQUIRED[@]} - 1))` ; do
+    if ! type -t "${REQUIRED[$i]}" > /dev/null ; then
+	echo "Missing required command '${REQUIRED[$i]}'" 1>&2
+	exit 1
+    fi
+done
+
+
+main "$@"
