@@ -50,8 +50,8 @@
   \null\pagestyle{empty}%
   \setlength{\unitlength}{1in}
   \begin{picture}(0,0)
-    \put(-1.5,-1.15){\includegraphics[width=6cm]{/usr/share/arco-tools/figures/uclm.pdf}}
-    \put(-0.65,-1.15){\textcolor{white}{\includegraphics[width=3.8cm]{/usr/share/arco-tools/figures/arco.pdf}}}
+    \put(-0.7,0.03){\includegraphics[width=4cm]{/usr/share/arco-tools/figures/uclm-A4.pdf}}
+    \put(-0.55,-0.9){\textcolor{white}{\includegraphics[width=3.6cm]{/usr/share/arco-tools/figures/arco.pdf}}}
     %\put(-0.75,-1.14){\makebox(0,0)[rb]{%
     \put(-0.75,-9){\makebox(0,0)[rb]{%
         \scriptsize\begin{sideways}\@docid\end{sideways}}}
