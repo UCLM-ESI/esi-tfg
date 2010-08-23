@@ -1,6 +1,18 @@
+arco-tools (0.34-1) unstable; urgency=low
+
+  * ARCO report Tex class
+
+ -- Cleto Martin Angelina <cleto.martin@gmail.com>  Tue, 24 Aug 2010 01:42:40 +0200
+
+arco-tools (0.33-1) unstable; urgency=low
+
+  * fmake and bash utils
+
+ -- Cleto Martin Angelina <cleto.martin@gmail.com>  Mon, 23 Aug 2010 18:32:48 +0200
+
 arco-tools (0.32-1) unstable; urgency=low
 
-  * Yasnippets 
+  * Yasnippets
 
  -- David Villa Alises <David.Villa@uclm.es>  Thu, 05 Aug 2010 16:27:28 +0100
 
@@ -13,7 +25,7 @@ arco-tools (0.31-1) unstable; urgency=low
 
 arco-tools (0.3-3) unstable; urgency=low
 
-  * enviroment variables for figures.sh.
+  * environment variables for figures.sh.
 
  -- ARCO Research Group <sysadm@arco.esi.uclm.es>  Sat, 26 Jun 2010 01:20:37 +0200
 
