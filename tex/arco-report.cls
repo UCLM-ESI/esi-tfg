@@ -51,7 +51,7 @@
   \setlength{\unitlength}{1in}
   \begin{picture}(0,0)
     \put(-0.7,0.03){\includegraphics[width=4cm]{/usr/share/arco-tools/figures/uclm-A4.pdf}}
-    \put(-0.7,-0.95){\colorbox[rgb]{.72,.70,.68}{\includegraphics[width=3.765cm]{arco-white.pdf}}}
+    \put(-0.7,-0.95){\colorbox[rgb]{.72,.70,.68}{\includegraphics[width=3.765cm]{/usr/share/arco-tools/figures/arco-white.pdf}}}
     %\put(-0.75,-1.14){\makebox(0,0)[rb]{%
     \put(-0.75,-9){\makebox(0,0)[rb]{%
         \scriptsize\begin{sideways}\@docid\end{sideways}}}
