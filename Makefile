@@ -2,6 +2,7 @@
 # -*- coding:utf-8 -*-
 
 DESTDIR?=~
+LOGOS=http://arco.esi.uclm.es/svn/public/doc/logos/
 
 clean:
 	$(RM) $(shell find -name *~)
@@ -20,8 +21,8 @@ install:
 	install -v -m 444 emacs/yasnippet/text-mode/*.yasnippet $(DESTDIR)/usr/share/emacs/site-lisp/yasnippet/snippets/text-mode/
 	install -v -m 444 emacs/yasnippet/text-mode/python-mode/*.yasnippet $(DESTDIR)/usr/share/emacs/site-lisp/yasnippet/snippets/text-mode/python-mode/
 
-	@wget http://arco.esi.uclm.es/svn/public/doc/logos/uclm-A4.pdf -O $(DESTDIR)/usr/share/arco-tools/figures/uclm.pdf --no-check-certificate -nv
-	@wget http://arco.esi.uclm.es/svn/public/doc/logos/arco.pdf -O $(DESTDIR)/usr/share/arco-tools/figures/arco.pdf --no-check-certificate -nv
+	@wget $(LOGOS)/uclm-A4.pdf -O $(DESTDIR)/usr/share/arco-tools/figures/uclm-A4.pdf --no-check-certificate -nv
+	@wget $(LOGOS)/arco.mask.pdf -O $(DESTDIR)/usr/share/arco-tools/figures/arco-mask.pdf --no-check-certificate -nv
 
 #	@for i in $(basename $(shell find bin -name "*.sh")); do \
 #		install -v -m 755 $$i.sh $(DESTDIR)/usr/bin/$$(basename $$i); \
