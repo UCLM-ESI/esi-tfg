@@ -21,7 +21,7 @@ install:
 	install -v -m 444 emacs/yasnippet/text-mode/python-mode/*.yasnippet $(DESTDIR)/usr/share/emacs/site-lisp/yasnippet/snippets/text-mode/python-mode/
 
 	@wget $(LOGOS)/uclm-A4.pdf -O $(DESTDIR)/usr/share/arco-tools/figures/uclm-A4.pdf --no-check-certificate -nv
-	@wget $(LOGOS)/arco.mask.pdf -O $(DESTDIR)/usr/share/arco-tools/figures/arco-mask.pdf --no-check-certificate -nv
+	@wget $(LOGOS)/arco.white.pdf -O $(DESTDIR)/usr/share/arco-tools/figures/arco-white.pdf --no-check-certificate -nv
 
 #	@for i in $(basename $(shell find bin -name "*.sh")); do \
 #		install -v -m 755 $$i.sh $(DESTDIR)/usr/bin/$$(basename $$i); \
