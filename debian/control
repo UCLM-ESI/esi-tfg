@@ -10,7 +10,8 @@ Homepage: http://arco.esi.uclm.es
 
 Package: arco-tools
 Architecture: all
-Depends: ${misc:Depends}, dh-make, devscripts, yasnippet, inkscape,
+Depends: ${misc:Depends}, dh-make, devscripts, yasnippet,
  inotify-tools, texlive-binaries
+Suggests: inkscape
 Description: ARCO administrator tools
  Packaging and administrative tools for ARCO developers.

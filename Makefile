@@ -9,13 +9,12 @@ clean:
 
 install:
 	install -vd $(DESTDIR)/usr/bin
-	install -vd $(DESTDIR)/usr/share/arco-tools/bash
 	install -vd $(DESTDIR)/usr/share/arco-tools/figures
 	install -vd $(DESTDIR)/usr/share/texmf-texlive/tex/latex/arco
 	install -v -m 444 make/*.mk  $(DESTDIR)/usr/share/arco-tools/
 	install -v -m 555 tex/*.sh  $(DESTDIR)/usr/share/arco-tools/
 	install -v -m 444 tex/*.cls  $(DESTDIR)/usr/share/texmf-texlive/tex/latex/arco
-	install -v -m 444 bash/*.sh  $(DESTDIR)/usr/share/arco-tools/bash
+	install -v -m 444 bash/*.sh  $(DESTDIR)/usr/share/arco-tools/
 
 	install -vd $(DESTDIR)/usr/share/emacs/site-lisp/yasnippet/snippets/text-mode/python-mode
 	install -v -m 444 emacs/yasnippet/text-mode/*.yasnippet $(DESTDIR)/usr/share/emacs/site-lisp/yasnippet/snippets/text-mode/

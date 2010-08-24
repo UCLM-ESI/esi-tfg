@@ -7,6 +7,11 @@
 
 VERSION=0.34
 
+override_dh_auto_build:
+
+	@sed '/#common.functions#/ r $(CURDIR)/debian/common.functions' < $(CURDIR)/debian/postinst.in > $(CURDIR)/debian/postinst
+	@sed '/#common.functions#/ r $(CURDIR)/debian/common.functions' < $(CURDIR)/debian/postrm.in > $(CURDIR)/debian/postrm
+
 build-orig-source:
 	mkdir -p arco-tools-$(VERSION)
 	tar --exclude=debian --exclude=\*~ --exclude=\.svn --exclude=arco-tools-$(VERSION) -cf - . \
