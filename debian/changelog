@@ -1,3 +1,21 @@
+arco-tools (0.36-3) unstable; urgency=low
+
+  * Spliting arco-tools packages
+
+ -- Cleto Martin Angelina <cleto.martin@gmail.com>  Fri, 03 Sep 2010 20:00:59 +0200
+
+arco-tools (0.36-2) unstable; urgency=low
+
+  * Paco's ldap auth script
+
+ -- Cleto Martin Angelina <cleto.martin@gmail.com>  Fri, 03 Sep 2010 19:29:33 +0200
+
+arco-tools (0.35-1) unstable; urgency=low
+
+  * Minor changes
+
+ -- Cleto Martin Angelina <cleto.martin@gmail.com>  Tue, 24 Aug 2010 17:29:45 +0200
+
 arco-tools (0.34-1) unstable; urgency=low
 
   * ARCO report Tex class

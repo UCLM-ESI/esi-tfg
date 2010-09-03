@@ -20,6 +20,8 @@ install:
 	install -v -m 444 emacs/yasnippet/text-mode/*.yasnippet $(DESTDIR)/usr/share/emacs/site-lisp/yasnippet/snippets/text-mode/
 	install -v -m 444 emacs/yasnippet/text-mode/python-mode/*.yasnippet $(DESTDIR)/usr/share/emacs/site-lisp/yasnippet/snippets/text-mode/python-mode/
 
+	install -v -m 755 bin/* $(DESTDIR)/usr/bin/
+
 	@wget $(LOGOS)/uclm-A4.pdf -O $(DESTDIR)/usr/share/arco-tools/figures/uclm-A4.pdf --no-check-certificate -nv
 	@wget $(LOGOS)/arco.white.pdf -O $(DESTDIR)/usr/share/arco-tools/figures/arco-white.pdf --no-check-certificate -nv
 
