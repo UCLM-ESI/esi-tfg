@@ -5,12 +5,11 @@
 	dh  $@
 
 
-VERSION=0.37
+VERSION=0.38
 
 override_dh_auto_build:
 
-	@sed '/#common.functions#/ r $(CURDIR)/debian/common.functions' < $(CURDIR)/debian/postinst.in > $(CURDIR)/debian/arco-latex.postinst
-	@sed '/#common.functions#/ r $(CURDIR)/debian/common.functions' < $(CURDIR)/debian/postrm.in > $(CURDIR)/debian/arco-latex.postrm
+	@sed '/#common.functions#/ r $(CURDIR)/debian/common.functions' < $(CURDIR)/debian/postinst.in > $(CURDIR)/debian/arco-authors.postinst
 
 build-orig-source:
 	mkdir -p arco-tools-$(VERSION)

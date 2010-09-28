@@ -1,2 +1,5 @@
+usr/share/arco-tools/devel.sh
+usr/share/arco-tools/flymake-c.mk
 usr/share/emacs/site-lisp/yasnippet/snippets/text-mode/
 usr/share/emacs/site-lisp/yasnippet/snippets/text-mode/python-mode/
+

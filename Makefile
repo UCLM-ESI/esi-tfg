@@ -13,6 +13,7 @@ install:
 	install -vd $(DESTDIR)/usr/share/texmf-texlive/tex/latex/arco
 	install -v -m 444 make/*.mk  $(DESTDIR)/usr/share/arco-tools/
 	install -v -m 555 tex/*.sh  $(DESTDIR)/usr/share/arco-tools/
+	install -v -m 555 docbook/*.sh  $(DESTDIR)/usr/share/arco-tools/
 	install -v -m 444 tex/*.cls  $(DESTDIR)/usr/share/texmf-texlive/tex/latex/arco
 	install -v -m 444 bash/*.sh  $(DESTDIR)/usr/share/arco-tools/
 

@@ -1,0 +1,24 @@
+
+
+authors:               inkscape, texlive, dblatex
+- figures.mk
+
+- latex.mk
+- figures-tex.sh
+- parts-tex.sh
+- arco-report.cls y figures descargadas
+
+- docbook.mk
+- figures-db.sh
+- parts-db.sh
+
+- figures.makefile.ex
+
+
+devel
+- bash/devel.sh
+- emacs/*
+
+
+user:
+- bin/*

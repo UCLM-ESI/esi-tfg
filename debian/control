@@ -10,46 +10,34 @@ Homepage: http://arco.esi.uclm.es
 
 Package: arco-tools
 Architecture: all
-Depends: ${misc:Depends}, arco-bin, arco-debian, arco-latex, arco-bashrc, arco-emacs, arco-make
+Depends: ${misc:Depends}, arco-authors, arco-devel, arco-user
 Description: ARCO administrator tools
  Packaging and administrative tools for ARCO developers.
 
+Package: arco-authors
+Replaces: arco-latex
+Conflicts: arco-latex, arco-make
+Architecture: all
+Depends: ${misc:Depends}, texlive-binaries, inkscape, dblatex
+Description: ARCO authors tools
+ LaTeX tools for ARCO authors.
 
-Package: arco-bin
+Package: arco-devel
+Replaces: arco-make, arco-debian, arco-bashrc
+Conflicts: arco-make, arco-debian, arco-bashrc
+Architecture: all
+Depends: ${misc:Depends}, yasnippet
+Description: ARCO devel tools
+ Tools for ARCO developers.
+
+Package: arco-user
+Replaces: arco-bin
+Conflicts: arco-bin
 Architecture: all
 Depends: ${misc:Depends}
-Description: ARCO administrator tools
- Administrative tools for ARCO developers.
+Description: ARCO user and staff tools
+ Tools for ARCO user and staff.
 
-Package: arco-debian
-Architecture: all
-Depends: ${misc:Depends}, dh-make, devscripts
-Description: ARCO debian tools
- Packaging tools for ARCO developers.
-
-Package: arco-make
-Architecture: all
-Depends: ${misc:Depends}
-Description: ARCO include Makefiles.
- ARCO Makefiles for ARCO developers.
-
-Package: arco-latex
-Architecture: all
-Depends: ${misc:Depends}, texlive-binaries, inkscape, arco-make
-Description: ARCO LaTeX tools
- LaTeX tools for ARCO developers.
-
-Package: arco-bashrc
-Architecture: all
-Depends: ${misc:Depends}, inotify-tools
-Description: Scripts for your bashrc.
- ARCO bashrc scripts for ARCO developers.
-
-Package: arco-emacs
-Architecture: all
-Depends: ${misc:Depends}, emacs23, yasnippet
-Description: ARCO emacs-helper files.
- ARCO Emacs files for ARCO developers.
 
 
 
