@@ -1,3 +1,15 @@
+arco-tools (0.40-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Cleto Martin Angelina <cleto.martin@gmail.com>  Wed, 29 Sep 2010 16:56:26 +0200
+
+arco-tools (0.39-1) unstable; urgency=low
+
+  * Little bug fixed on latex.mk
+
+ -- Cleto Martin Angelina <cleto.martin@gmail.com>  Wed, 29 Sep 2010 13:23:00 +0200
+
 arco-tools (0.38-1) unstable; urgency=low
 
   * New upstream release

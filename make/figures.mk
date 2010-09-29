@@ -10,7 +10,7 @@
 
 #-- inkscape -----------------------------------------------
 
-PNGPPP=150
+PNGPPP?=150
 # If you want other quality put next in your Makefile:
 #
 # include figures.mk
