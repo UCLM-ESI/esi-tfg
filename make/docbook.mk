@@ -13,7 +13,7 @@ all: $(TARGET)
 $(TARGET): $(XMLSRC) $(FIGURES)
 
 %.pdf: %.xml
-	dblatex  -I figures $< -o $@
+	dblatex -I figures $(DBLATEX_FLAGS) $< -o $@
 
 
 help:
