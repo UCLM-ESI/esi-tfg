@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+                      "http://www.docbook.org/xml/4.5/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib
+  "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2001/XInclude'">
+]>
+
+<article xmlns:xi="http://www.w3.org/2001/XInclude"
+  lang="es">
+
+  <title>Ponga aquí el título</title>
+
+  <informalfigure>
+	<mediaobject>
+	  <imageobject>
+		<imagedata width="50%" fileref="esi.png"/>
+	  </imageobject>
+	</mediaobject>
+  </informalfigure>
+
+  <xi:include href="sec1.xml"/>
+  <xi:include href="sec2.xml"/>
+
+</article>
+
+
+<!-- Local Variables: -->
+<!--  mode: sgml -->
+<!--  mode: flyspell -->
+<!--  ispell-local-dictionary: "castellano8" -->
+<!-- End: -->
+
