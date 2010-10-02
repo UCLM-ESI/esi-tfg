@@ -2,9 +2,14 @@
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
                  "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
 
-<sect1>
-	<title>Primera sección</title>
-	<para></para>
+<sect1
+  xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <title>Primera sección</title>
+
+  <para>
+	<xi:include href="../lorem-ipsum.txt" parse="text"/>
+  </para>
 </sect1>
 
 
