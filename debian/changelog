@@ -1,3 +1,15 @@
+arco-tools (0.42-1) unstable; urgency=low
+
+  * bugfix when no entityWatermark is provided
+
+ -- David Villa Alises <David.Villa@uclm.es>  Mon, 11 Oct 2010 15:46:41 +0200
+
+arco-tools (0.41-1) unstable; urgency=low
+
+  * New class arco-book generated from arco.cls.tmpl
+
+ -- David Villa Alises <David.Villa@uclm.es>  Mon, 11 Oct 2010 12:18:43 +0200
+
 arco-tools (0.40-1) unstable; urgency=low
 
   * New upstream release

@@ -1,13 +1,13 @@
 #!/usr/bin/make -f
 # -*- makefile -*-
 
+VERSION=0.42
+
 %:
 	dh  $@
 
-
-VERSION=0.40
-
 override_dh_auto_build:
+	dh_auto_build
 
 	@sed '/#common.functions#/ r $(CURDIR)/debian/common.functions' < $(CURDIR)/debian/postinst.in > $(CURDIR)/debian/arco-authors.postinst
 

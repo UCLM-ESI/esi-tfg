@@ -1,0 +1,157 @@
+% LaTeX2ε for class and package writers:
+%   http://www.latex-project.org/guides/clsguide.pdf
+%
+% Initial template taken from:
+%   http://stackoverflow.com/questions/581916/how-do-you-extend-article-document-class-in-latex
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesClass{arco-CLASS}[2010/10/09 Arco modified CLASS class]
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{CLASS}}
+\PassOptionsToClass{a4paper, 11pt}{CLASS}
+\ProcessOptions\relax
+\LoadClass{CLASS}
+
+\RequirePackage[left=25.4mm,right=25.4mm,top=25.4mm,bottom=25.4mm]{geometry}
+
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
+\RequirePackage[spanish]{babel}
+
+\RequirePackage{times}
+\RequirePackage[%
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=blue,
+  urlcolor=blue]{hyperref}
+
+\RequirePackage{graphicx}
+\RequirePackage{color}
+\RequirePackage{transparent}
+\RequirePackage[%
+% colorgrid,
+  texcoord]{eso-pic}
+
+\RequirePackage{amsmath}
+\RequirePackage{tocbibind}
+\RequirePackage{enumerate}
+\RequirePackage{sectsty}
+\RequirePackage{checkend}
+\RequirePackage{rotating}
+\RequirePackage[inline,marginclue,draft]{fixme}
+
+\RequirePackage{ifthen}
+\newboolean{watermarkdefined}
+
+\def\uclmLogo{/usr/share/arco-tools/figures/uclm-A4.pdf}
+
+\gdef\@entityAcro{ARCO}
+\def\entityAcro#1{\gdef\@entityAcro{#1}}
+\gdef\@entityName{Grupo de Arquitectura y Redes de Computadores}
+\def\entityName#1{\gdef\@entityName{#1}}
+\gdef\@entityLogo{/usr/share/arco-tools/figures/arco-white.pdf}
+\def\entityWatermark#1{%
+  \gdef\@entityWatermark{#1}
+  \setboolean{watermarkdefined}{true}
+}
+\gdef\@entityWatermark{}
+\def\entityLogo#1{\gdef\@entityLogo{#1}}
+\gdef\@docid{}
+\def\docid#1{\gdef\@docid{#1}}
+
+%\allsectionsfont{\sffamily}
+%\sectionfont{\mdseries\itshape}
+
+\parskip=0.2cm
+\reversemarginpar
+\marginparwidth=3cm
+
+% \renewcommand\FXMargin[2]{%
+%   \marginpar[\vspace{.4cm}\footnotesize\raggedleft\emph{#2}]{%
+%     \vspace{.4cm}\footnotesize\raggedright\emph{#2}}}
+
+
+\definecolor{uclmred}{rgb}{.60,.08,.15}   % PANTONE 7427
+\definecolor{uclmgray}{rgb}{.72,.70,.68}  % Cool Gray
+
+\newcommand{\maketitlepage}{%
+  \null\pagestyle{empty}
+  \add_frontpage_content
+  \vfil\null
+  \end{titlepage}%
+}
+
+\def\add_frontpage_content{
+  \AddToShipoutPicture*{
+    \setlength{\unitlength}{1mm}%
+    \put(12,-25){%
+      \includegraphics[width=3cm]{\uclmLogo}}
+
+    \put(12,-46){%
+      \renewcommand{\fboxsep}{0pt}%
+      \colorbox[rgb]{.72,.70,.68}{\includegraphics[width=3cm]{\@entityLogo}}}
+
+    \put(12,-267){%
+      \rotatebox{90}{\scriptsize\@entityAcro-\@docid}
+    }
+
+%    \put(0,-100){\makebox(0,0)[l]{\textsf{\entityName}}}
+
+    \put(48,-22){\makebox(0,0)[l]{\large\textsf{\textbf{%
+            \textcolor{uclmred}{\@entityName}}}}}
+
+    \put(190,-95){\makebox(0,0)[r]{%
+        \begin{minipage}[r]{15cm}
+          \begin{flushright}
+            \Huge\textsf{\textbf{\@title}}
+          \end{flushright}
+        \end{minipage}}}
+
+    \put(190,-153){\makebox(0,0)[r]{\Large \lineskip .75em
+        \begin{tabular}[t]{r}%
+          \@author
+        \end{tabular}}}
+
+    \put(190,-267){\makebox(0,0)[r]{\large \@date}}
+  }
+
+  \ifthenelse{\boolean{watermarkdefined}}{
+    \typeout{WATERMARK}
+    \AddToShipoutPicture{
+      \setlength{\unitlength}{1mm}%
+      \put(0,-297){%
+        \includegraphics[width=12cm]{\@entityWatermark}
+      }
+    }
+  }{}
+}
+
+\renewcommand\maketitle{%
+  \begin{titlepage}
+    \let\footnotesize\small%
+    \let\footnoterule\relax%
+    \let \footnote \thanks%
+
+    \maketitlepage%
+    \setcounter{footnote}{0}%
+
+    \global\let\thanks\relax
+    \global\let\maketitle\relax
+
+    \global\let\@thanks\@empty
+
+    \global\let\@author\@empty
+    \global\let\author\relax
+
+    \global\let\@date\@empty
+    \global\let\date\relax
+
+    \global\let\@docid\@empty
+    \global\let\docid\relax
+
+    \global\let\@title\@empty
+    \global\let\title\relax
+
+    \global\let\and\relax
+  }
+
+  \endinput

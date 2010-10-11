@@ -4,6 +4,11 @@
 DESTDIR?=~
 LOGOS=http://arco.esi.uclm.es/svn/public/doc/logos/
 
+
+all:
+	sed s/CLASS/book/g tex/arco.cls.tmpl > tex/arco-book.cls
+	sed s/CLASS/report/g tex/arco.cls.tmpl > tex/arco-report.cls
+
 clean:
 	$(RM) $(shell find -name *~)
 
@@ -25,6 +30,8 @@ install:
 
 	@wget $(LOGOS)/uclm-A4.pdf -O $(DESTDIR)/usr/share/arco-tools/figures/uclm-A4.pdf --no-check-certificate -nv
 	@wget $(LOGOS)/arco.white.pdf -O $(DESTDIR)/usr/share/arco-tools/figures/arco-white.pdf --no-check-certificate -nv
+	@wget $(LOGOS)/arco.watermark.pdf -O $(DESTDIR)/usr/share/arco-tools/figures/arco-watermark.pdf --no-check-certificate -nv
+
 
 #	@for i in $(basename $(shell find bin -name "*.sh")); do \
 #		install -v -m 755 $$i.sh $(DESTDIR)/usr/bin/$$(basename $$i); \
