@@ -14,6 +14,9 @@ all:
 	sed s/CLASS/book/g tex/arco.cls.tmpl > tex/arco-book.cls
 	sed s/CLASS/report/g tex/arco.cls.tmpl > tex/arco-report.cls
 
+	find emacs/config -name "*.el" | awk '{print "(byte-compile-file \"" $$1 "\")";}' > compile.el
+	/usr/bin/emacs -batch -l compile.el -kill
+
 clean:
 	$(RM) $(shell find -name *~)
 
@@ -43,7 +46,7 @@ install:
 	@wget $(LOGOS)/arco.watermark.pdf -O $(FIGURES)/arco-watermark.pdf --no-check-certificate -nv
 
 	install -vd $(EMACS)
-	install -vm 444 emacs/config/*.cfg.el $(EMACS)/
+	install -vm 444 emacs/config/*.cfg.elc $(EMACS)/
 
 
 #	@for i in $(basename $(shell find bin -name "*.sh")); do \
