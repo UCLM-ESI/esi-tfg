@@ -1,4 +1,4 @@
-;; Develop and keep personal snippets under ~/emacs.d/mysnippets
+;; Develop and keep personal snippets under ~/emacs.d/yasnippets
 (setq yas/root-directory "~/.emacs.d/yasnippets")
 
 ;; Load the snippets

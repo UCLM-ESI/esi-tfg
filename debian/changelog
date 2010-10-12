@@ -1,3 +1,15 @@
+arco-tools (0.44-1) unstable; urgency=low
+
+  * more config files for emacs
+
+ -- David Villa Alises <David.Villa@uclm.es>  Tue, 12 Oct 2010 19:51:07 +0200
+
+arco-tools (0.43-1) unstable; urgency=low
+
+  * emacs config 
+
+ -- David Villa Alises <David.Villa@uclm.es>  Tue, 12 Oct 2010 15:48:09 +0200
+
 arco-tools (0.42-1) unstable; urgency=low
 
   * bugfix when no entityWatermark is provided
