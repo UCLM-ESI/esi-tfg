@@ -1,7 +1,7 @@
 #!/usr/bin/make -f
 # -*- makefile -*-
 
-VERSION=0.44
+VERSION=0.45
 
 %:
 	dh  $@

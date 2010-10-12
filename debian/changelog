@@ -1,3 +1,9 @@
+arco-tools (0.45-1) unstable; urgency=low
+
+  * compile emacs packages
+
+ -- David Villa Alises <David.Villa@uclm.es>  Wed, 13 Oct 2010 00:46:27 +0200
+
 arco-tools (0.44-1) unstable; urgency=low
 
   * more config files for emacs
@@ -6,7 +12,7 @@ arco-tools (0.44-1) unstable; urgency=low
 
 arco-tools (0.43-1) unstable; urgency=low
 
-  * emacs config 
+  * emacs config
 
  -- David Villa Alises <David.Villa@uclm.es>  Tue, 12 Oct 2010 15:48:09 +0200
 
