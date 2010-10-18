@@ -1,5 +1,8 @@
 ; -*- mode:lisp -*-
 
+(custom-set-variables
+ '(whitespace-style (quote (trailing spaces tabs lines newline empty))))
+
 ; assure the file ends with newline at save
 (setq require-final-newline t)
 
