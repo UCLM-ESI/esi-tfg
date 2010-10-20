@@ -1,3 +1,5 @@
+(require 'speedbar)
+
 (speedbar-add-supported-extension ".ice")
 
 (global-set-key [f9] 'speedbar)
