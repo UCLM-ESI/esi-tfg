@@ -1,3 +1,9 @@
+arco-tools (0.46-1) unstable; urgency=low
+
+  * bugfix in emacs/config/speedbar.cfg.el: "requiere"
+
+ -- David Villa Alises <David.Villa@uclm.es>  Wed, 20 Oct 2010 15:48:36 +0200
+
 arco-tools (0.45-1) unstable; urgency=low
 
   * compile emacs packages
