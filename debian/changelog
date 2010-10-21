@@ -1,3 +1,9 @@
+arco-tools (0.46-2) unstable; urgency=low
+
+  * source-version dependency
+
+ -- Cleto Martin Angelina <cleto.martin@gmail.com>  Thu, 21 Oct 2010 12:59:38 +0200
+
 arco-tools (0.46-1) unstable; urgency=low
 
   * bugfix in emacs/config/speedbar.cfg.el: "requiere"
