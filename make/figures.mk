@@ -21,3 +21,8 @@ PNGPPP?=150
 
 %.pdf: %.svg
 	inkscape -A  $@ --export-text-to-path $<
+
+%.jpg: %.ods
+	unoconv -f html $<
+	mv $*_html_*.jpg $@
+	rm $*.html
