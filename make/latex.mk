@@ -1,4 +1,3 @@
-
 TOOLDIR=/usr/share/arco-tools
 FIGDIR=figures
 
@@ -26,11 +25,11 @@ help:
 	@echo "- Put your image sources in the subdirectory 'figures'."
 	@echo
 
-clean:
+clean::
 	$(RUBBER) --clean --pdf $(MAIN)
 	$(RM) *~
 
-vclean: clean
+vclean:: clean
 	$(RM) $(addsuffix .png, \
 	    $(filter $(basename $(wildcard $(FIGDIR)/*.svg $(FIGDIR)/*.dia)), \
 		         $(basename $(wildcard $(FIGDIR)/*.png))) \
@@ -45,4 +44,3 @@ include $(TOOLDIR)/figures.mk
 ##  mode: flyspell
 ##  ispell-local-dictionary: "american"
 ## End:
-
