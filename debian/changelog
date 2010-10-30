@@ -1,3 +1,9 @@
+arco-tools (0.48-1) unstable; urgency=low
+
+  * clean:: and vclean:: in latex.mk
+
+ -- David Villa Alises <David.Villa@uclm.es>  Sat, 30 Oct 2010 15:07:34 +0200
+
 arco-tools (0.47-1) unstable; urgency=low
 
   * Added unoconv converter openoffice charts to jpg.
