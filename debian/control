@@ -34,6 +34,6 @@ Package: arco-user
 Replaces: arco-bin
 Conflicts: arco-bin
 Architecture: all
-Depends: ${misc:Depends}
+Depends: ${misc:Depends}, pdftk
 Description: ARCO user and staff tools
  Tools for ARCO user and staff.
