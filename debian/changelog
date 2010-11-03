@@ -1,3 +1,9 @@
+arco-tools (0.49-1) unstable; urgency=low
+
+  * pdftitle included at arco-user
+
+ -- Cleto Martin Angelina <cleto.martin@gmail.com>  Tue, 02 Nov 2010 18:45:03 +0100
+
 arco-tools (0.48-1) unstable; urgency=low
 
   * clean:: and vclean:: in latex.mk
