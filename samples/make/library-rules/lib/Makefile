@@ -2,21 +2,14 @@
 CXXFLAGS = -I.
 LDFLAGS  = -L.
 
-LIB_NAME = test
+LIB_NAME = a
 LIB_VERSION = 2.3
 LIB_SONAME  = 23
-LIB_OBJS = test.o
+LIB_OBJS = a.o
 
+#LIB_HEADERS = a.h
+INSTALL_HEADERS_DIR = liba   #include <liba/a.h>
+
+include ../../../../make/default-flags.mk
 include ../../../../make/library-rules.mk
 
-install::
-	install -dv $(DESTDIR)/usr/include
-	install -m 644 test.h $(DESTDIR)/usr/include
-	@echo "End install"
-
-uninstall::
-	$(RM) $(DESTDIR)/usr/include/test.h
-	@echo "End uninstall"
-
-clean::
-	@echo "End clean"
