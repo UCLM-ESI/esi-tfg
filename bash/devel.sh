@@ -1,12 +1,17 @@
+# -*- tab-width:4 -*-
 # This file must not be executable.
 #
 # To use that functions and aliases, put next line in your .bashrc:
 #   source /usr/share/arco-tools/devel.sh
 
-function iexec() {
+function fexec() {
 	cmd=$*
 
 	while [ 1 ]; do
+		if type notify-send > /dev/null; then
+			notify-send -t 1500 -i gtk-info "fexec: starting" "$cmd" &
+		fi
+
 		$cmd
 		retval=$?
 
@@ -18,7 +23,7 @@ function iexec() {
 			else
 				icon='gtk-no'
 			fi
-			notify-send -t 2000 -i $icon "fmake: $retval" "$ $cmd"
+			notify-send -t 2000 -i $icon "fexec: $retval" "$ $cmd"
 		fi
 		inotifywait -qr -e MODIFY . || break
 		sync
@@ -26,4 +31,4 @@ function iexec() {
 	done
 }
 
-alias imake='iexec make'
+alias fmake='fexec make'
