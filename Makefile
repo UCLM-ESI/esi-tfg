@@ -47,8 +47,3 @@ install:
 
 	install -vd $(EMACS)
 	install -vm 444 emacs/config/*.cfg.elc $(EMACS)/
-
-
-#	@for i in $(basename $(shell find bin -name "*.sh")); do \
-#		install -v -m 755 $$i.sh $(DESTDIR)/usr/bin/$$(basename $$i); \
-#	done
