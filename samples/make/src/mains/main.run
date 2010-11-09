@@ -1,0 +1,5 @@
+#!/bin/bash
+
+LD_LIBRARY_PATH=/home/cleto/usr/lib/ ./mainA $@
+LD_LIBRARY_PATH=/home/cleto/usr/lib/ ./mainB $@
+LD_LIBRARY_PATH=/home/cleto/usr/lib/ ./mainC $@

@@ -1,0 +1,16 @@
+
+Suponiendo "libtest.so.2.3":
+
+* LIB_NAME = test
+* LIB_VERSION = 2.3
+* LIB_SONAME  = 23
+* LIB_OBJS = test.o
+* LIB_HEADERS = test.h (por defecto $(LIB_OBJS:.o=.h))
+* INSTALL_HEADERS_DIR = test (por defecto $(LIBNAME))
+	Directorio de instalación de los .h: $(DESTDIR)/usr/include/$(INSTALL_HEADERS_DIR)
+
+* Las librerías utilizan sus .h de la siguiente forma:
+	#include "header.h" y sin directorio. NO utilizar -I.
+
+
+
