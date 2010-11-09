@@ -1,16 +1,7 @@
-SUBDIRS = library-rules
 
-all:       RULE = all
-install:   RULE = install
-uninstall: RULE = uninstall
-clean:     RULE = clean
 
-all clean install uninstall: subdirs
+include $(ARCO_MK)/main.mk
 
-clean:
+clean::
 	$(RM) *~
 
-.PHONY: subdirs $(SUBDIRS)
-subdirs: $(SUBDIRS)
-$(SUBDIRS):
-	$(MAKE) -C $@ $(RULE)
