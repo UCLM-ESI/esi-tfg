@@ -20,6 +20,8 @@ all:
 
 clean:
 	$(RM) $(shell find -name *~)
+	find . -name "*.elc" -delete
+	$(RM) compile.el tex/arco-book.cls tex/arco-report.cls
 
 install:
 	install -vd $(BASE)
@@ -51,3 +53,4 @@ install:
 
 	install -vd $(SAMPLES)
 	cp -a samples/* $(SAMPLES)
+

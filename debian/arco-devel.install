@@ -1,7 +1,13 @@
 usr/share/arco-tools/devel.sh
 usr/share/arco-tools/flymake-c.mk
-usr/share/arco-tools/library-rules.mk
-usr/share/arco-tools/default-flags.mk
+usr/share/arco-tools/install.mk
+usr/share/arco-tools/compile.mk
+usr/share/arco-tools/subdirs.mk
+usr/share/arco-tools/main.mk
+usr/share/arco-tools/config.mk
+usr/share/arco-tools/lib.mk
+usr/share/arco-tools/bin.mk
+usr/share/arco-tools/slice.mk
 usr/share/arco-tools/emacs/
 usr/share/emacs/site-lisp/yasnippet/snippets/text-mode/
 usr/share/emacs/site-lisp/yasnippet/snippets/text-mode/python-mode/
