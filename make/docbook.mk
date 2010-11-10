@@ -4,7 +4,7 @@ FIGDIR=figures
 MAIN  ?= main.xml
 TARGET = $(MAIN:.xml=.pdf)
 XMLSRC = $(shell $(TOOLDIR)/parts-db.sh $(MAIN))
-DBLATEX_FLAGS=-T simple
+DBLATEX_FLAGS ?= -T simple
 
 FIGURES = $(addprefix $(FIGDIR)/, $(shell $(TOOLDIR)/figures-db.sh $(MAIN)))
 
@@ -13,6 +13,7 @@ all: $(TARGET)
 $(TARGET): $(XMLSRC) $(FIGURES)
 
 %.pdf: %.xml
+	xmllint --xinclude --noout $<	
 	dblatex -I figures $(DBLATEX_FLAGS) $< -o $@
 
 
