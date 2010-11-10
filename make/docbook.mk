@@ -25,6 +25,7 @@ help:
 
 clean::
 	$(RM) $(TARGET) *~
+	$(RM) *.aux *.cb *.cb2 *.out *.lof *.glo *.log *.idx *.toc
 
 vclean:: clean
 	$(RM) $(addsuffix .png, \
