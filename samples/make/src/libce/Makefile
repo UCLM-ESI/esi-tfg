@@ -7,6 +7,7 @@ LIB_OBJS = ce.o
 #LIB_HEADERS = ce.h
 INSTALL_HEADERS_DIR = libce   #include <libce/ce.h>
 
-include ../../../../make/install.mk
-include ../../../../make/lib.mk
-
+ARCO_MK ?= /usr/share/arco-tools
+include $(ARCO_MK)/compile.mk
+include $(ARCO_MK)/install.mk
+include $(ARCO_MK)/lib.mk

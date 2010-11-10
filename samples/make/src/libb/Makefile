@@ -7,6 +7,7 @@ LIB_OBJS = b.o
 #LIB_HEADERS = b.h
 INSTALL_HEADERS_DIR = libb   #include <libb/b.h>
 
-include ../../../../make/install.mk
-include ../../../../make/lib.mk
-
+ARCO_MK ?= /usr/share/arco-tools
+include $(ARCO_MK)/compile.mk
+include $(ARCO_MK)/install.mk
+include $(ARCO_MK)/lib.mk

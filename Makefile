@@ -9,6 +9,7 @@ LATEXSITE=$(DESTDIR)/usr/share/texmf-texlive/tex/latex
 YASNIPPET=$(DESTDIR)/usr/share/emacs/site-lisp/yasnippet/snippets/text-mode
 FIGURES=$(DESTDIR)/usr/share/arco-tools/figures
 EMACS=$(DESTDIR)/usr/share/arco-tools/emacs
+SAMPLES=$(DESTDIR)/usr/share/doc/arco-tools/samples
 
 all:
 	sed s/CLASS/book/g tex/arco.cls.tmpl > tex/arco-book.cls
@@ -47,3 +48,6 @@ install:
 
 	install -vd $(EMACS)
 	install -vm 444 emacs/config/*.cfg.elc $(EMACS)/
+
+	install -vd $(SAMPLES)
+	cp -a samples/* $(SAMPLES)
