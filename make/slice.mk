@@ -45,9 +45,9 @@ install:: all
 
 
 uninstall::
-	$(RM) $(DESTDIR)/usr/include/$(SLICE_INCLUDE_DIR)
+	$(RM) $(addprefix $(DESTDIR)/usr/include/, $(SLICE_HEADERS))
 	$(RM) $(DESTDIR)/usr/lib/$(SLICE_LIB)
 
 clean::
-	$(RM) *~ *.o *.cpp *.h $(PROJECT_LIBDIR)/$(SLICE_LIB) \
-	$(RM) -r $(SLICE_HEADERS_DIR)
+	$(RM) *~ *.o *.cpp *.h $(PROJECT_LIBDIR)/$(SLICE_LIB)
+	$(RM) $(addprefix $(SLICE_HEADERS_DIR)/, $(LIB_HEADERS))

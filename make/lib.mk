@@ -7,7 +7,6 @@ LIBNAME_A       = lib$(LIB_NAME).a
 
 LIB_LDFLAGS ?= -fPIC --shared -Wl,-soname=$(LIBNAME_SONAME)
 LIB_TARGETS ?= $(PROJECT_LIBDIR)/$(LIBNAME_SO) $(PROJECT_LIBDIR)/$(LIBNAME_A)
-LIB_HEADERS ?= $(LIB_OBJS:.o=.h)
 INSTALL_HEADERS_DIR ?= $(LIB_NAME)
 
 all: check $(PROJECT_LIBDIR) $(PROJECT_HDRDIR) $(LIB_TARGETS)
@@ -37,34 +36,36 @@ $(PROJECT_HDRDIR):
 
 $(PROJECT_LIBDIR)/$(LIBNAME_SO): $(PROJECT_LIBDIR)/$(LIBNAME_SONAME)
 	$(RM) $@
-	ln -fs $(LIBNAME_SONAME) $(LIBNAME_SO)
-	@mv $(LIBNAME_SO) $(PROJECT_LIBDIR)
+	ln -fs $(notdir $<) $@
 
 $(PROJECT_LIBDIR)/$(LIBNAME_SONAME): $(PROJECT_LIBDIR)/$(LIBNAME_VERSION)
 	$(RM) $@
-	ln -fs $(LIBNAME_VERSION) $(LIBNAME_SONAME)
-	@mv $(LIBNAME_SONAME) $(PROJECT_LIBDIR)
+	ln -fs $(notdir $<) $@
 
 $(PROJECT_LIBDIR)/$(LIBNAME_VERSION): LDFLAGS += $(LIB_LDFLAGS)
 $(PROJECT_LIBDIR)/$(LIBNAME_VERSION): $(LIB_OBJS)
 	$(CC) $(CFLAGS) $(LDFLAGS) $(LDLIBS) $^ -o $@
-	$(RM) -rf $(PROJECT_HDRDIR)/$(INSTALL_HEADERS_DIR)
+
+ifneq "$(LIB_HEADERS)" ""
+	$(RM) $(addprefix $(PROJECT_HDRDIR)/$(INSTALL_HEADERS_DIR)/, $(LIB_HEADERS))
 	install -dv $(PROJECT_HDRDIR)/$(INSTALL_HEADERS_DIR)
 	install -vm 644 $(LIB_HEADERS) $(PROJECT_HDRDIR)/$(INSTALL_HEADERS_DIR)
+endif
 
 $(PROJECT_LIBDIR)/$(LIBNAME_A): $(LIB_OBJS)
 	$(AR) rcs $@ $^
 
 install:: all
 	install -dv $(DESTDIR)/usr/lib/
-	install -dv $(DESTDIR)/usr/include/$(INSTALL_HEADERS_DIR)
 	install -m 644 $(PROJECT_LIBDIR)/$(LIBNAME_VERSION) $(PROJECT_LIBDIR)/$(LIBNAME_A) $(DESTDIR)/usr/lib/
-
 	@cd $(DESTDIR)/usr/lib/; \
 		ln -sf $(LIBNAME_VERSION) $(LIBNAME_SONAME); \
 		ln -sf $(LIBNAME_SONAME) $(LIBNAME_SO);
 
+ifneq "$(LIB_HEADERS)" ""
+	install -dv $(DESTDIR)/usr/include/$(INSTALL_HEADERS_DIR)
 	install -vm 644 $(LIB_HEADERS) $(DESTDIR)/usr/include/$(INSTALL_HEADERS_DIR)
+endif
 
 
 uninstall::
@@ -72,13 +73,18 @@ uninstall::
 	$(RM) $(DESTDIR)/usr/lib/$(LIBNAME_SONAME)
 	$(RM) $(DESTDIR)/usr/lib/$(LIBNAME_SO)
 	$(RM) $(DESTDIR)/usr/lib/$(LIBNAME_A)
-	$(RM) -r $(DESTDIR)/usr/include/$(INSTALL_HEADERS_DIR)
+
+ifneq "$(LIB_HEADERS)" ""
+	$(RM) $(addprefix $(DESTDIR)/usr/include/, $(LIB_HEADERS))
+endif
 
 clean::
 	$(RM) *~ *.o $(PROJECT_LIBDIR)/$(LIBNAME_VERSION) \
 			$(PROJECT_LIBDIR)/$(LIBNAME_SONAME) \
 			$(PROJECT_LIBDIR)/$(LIBNAME_SO) \
 			$(PROJECT_LIBDIR)/$(LIBNAME_A)
-	$(RM) -r $(PROJECT_HDRDIR)/$(INSTALL_HEADERS_DIR)
-	$(RM) -r $(PROJECT_BINDIR)/$(INSTALL_HEADERS_DIR)
+
+ifneq "$(LIB_HEADERS)" ""
+	$(RM) $(addprefix $(PROJECT_HDRDIR)/$(INSTALL_HEADERS_DIR)/, $(LIB_HEADERS))
+endif
 

@@ -1,3 +1,9 @@
+arco-tools (0.52-1) unstable; urgency=low
+
+  * Some bug fixes
+
+ -- Cleto Martin Angelina <cleto.martin@gmail.com>  Thu, 11 Nov 2010 13:45:09 +0100
+
 arco-tools (0.51-1) unstable; urgency=low
 
   * slice.mk
