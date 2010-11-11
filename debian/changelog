@@ -1,3 +1,9 @@
+arco-tools (0.53-1) unstable; urgency=low
+
+  * Initial release for policy Makefiles
+
+ -- Cleto Martin Angelina <cleto.martin@gmail.com>  Thu, 11 Nov 2010 19:25:38 +0100
+
 arco-tools (0.52-1) unstable; urgency=low
 
   * Some bug fixes

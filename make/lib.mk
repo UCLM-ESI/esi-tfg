@@ -47,7 +47,7 @@ $(PROJECT_LIBDIR)/$(LIBNAME_VERSION): $(LIB_OBJS)
 	$(CC) $(CFLAGS) $(LDFLAGS) $(LDLIBS) $^ -o $@
 
 ifneq "$(LIB_HEADERS)" ""
-	$(RM) $(addprefix $(PROJECT_HDRDIR)/$(INSTALL_HEADERS_DIR)/, $(LIB_HEADERS))
+	$(RM) $(addprefix $(PROJECT_HDRDIR)/$(INSTALL_HEADERS_DIR)/,$(LIB_HEADERS))
 	install -dv $(PROJECT_HDRDIR)/$(INSTALL_HEADERS_DIR)
 	install -vm 644 $(LIB_HEADERS) $(PROJECT_HDRDIR)/$(INSTALL_HEADERS_DIR)
 endif
@@ -75,7 +75,7 @@ uninstall::
 	$(RM) $(DESTDIR)/usr/lib/$(LIBNAME_A)
 
 ifneq "$(LIB_HEADERS)" ""
-	$(RM) $(addprefix $(DESTDIR)/usr/include/, $(LIB_HEADERS))
+	$(RM) $(addprefix $(DESTDIR)/usr/include/,$(LIB_HEADERS))
 endif
 
 clean::
@@ -85,6 +85,6 @@ clean::
 			$(PROJECT_LIBDIR)/$(LIBNAME_A)
 
 ifneq "$(LIB_HEADERS)" ""
-	$(RM) $(addprefix $(PROJECT_HDRDIR)/$(INSTALL_HEADERS_DIR)/, $(LIB_HEADERS))
+	$(RM) $(addprefix $(PROJECT_HDRDIR)/$(INSTALL_HEADERS_DIR)/,$(LIB_HEADERS))
 endif
 

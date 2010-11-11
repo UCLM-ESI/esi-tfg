@@ -1,6 +1,6 @@
 # -*- coding:utf-8; mode:make -*-
 
-BIN_OBJS ?= $(BIN_TARGET).o
+BIN_OBJS ?= $(patsubst %.c,%.o,$(wildcard *.c)) $(patsubst %.cpp,%.o,$(wildcard *.cpp))
 
 all: check $(PROJECT_BINDIR) $(PROJECT_BINDIR)/$(BIN_TARGET)
 
@@ -15,7 +15,7 @@ $(PROJECT_BINDIR)/$(BIN_TARGET): $(BIN_OBJS)
 $(PROJECT_BINDIR):
 	@mkdir -p $(PROJECT_BINDIR)
 
-install:: all $(TARGETS)
+install:: all
 	install -dv $(DESTDIR)/usr/bin
 	install -m 755 $(addprefix $(PROJECT_BINDIR)/,$(BIN_TARGET)) $(DESTDIR)/usr/bin
 
