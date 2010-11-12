@@ -14,14 +14,15 @@ uninstall = Test('make -C samples/make uninstall', env=ENV)
 for lib in ['liba','libb','libd']:
     for suffix in ['.so', '.so.23', '.so.2.3', '.a']:
         uninstall.post += FileExists(os.path.join('samples/make/lib/',lib+suffix))
-        uninstall.post += Not(FileExists(os.path.join(ENV['DESTDIR']+'/usr/lib/',lib+suffix)))
+        uninstall.post += Not(FileExists(os.path.join(ENV['DESTDIR'],'usr/lib/',lib+suffix)))
 
-    uninstall.post += DirExists(os.path.join('samples/make/include/',lib))
-    uninstall.post += FileExists(os.path.join(ENV['DESTDIR']+'/usr/include/',lib))
+    lib_path = os.path.join('samples/make/include/',lib)
 
-    uninstall.post += FileExists(os.path.join('samples/make/include/%s' % lib,
-                                                  lib[3:]+'.h'))
-    uninstall.post += Not(FileExists(os.path.join(ENV['DESTDIR']+'/usr/include/%s' % lib,
+    uninstall.post += DirExists(lib_path)
+    uninstall.post += FileExists(os.path.join(ENV['DESTDIR'],'usr/include/',lib))
+
+    uninstall.post += FileExists(os.path.join(lib_path, lib[3:]+'.h'))
+    uninstall.post += Not(FileExists(os.path.join(ENV['DESTDIR'],'usr/include/%s' % lib,
                                                   lib[3:]+'.h')))
 
 uninstall.post += FileExists('samples/make/bin/main')

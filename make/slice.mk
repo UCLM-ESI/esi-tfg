@@ -13,9 +13,9 @@ SLICE_LIB  = lib$(SLICE_LIB_NAME).la
 
 SLICES      ?= $(wildcard *.ice)
 SLICE_FLAGS ?= -I /usr/share/Ice/slice -I $(SLICE_DIR)
-SLICE_INCLUDE_DIR ?= $(notdir $(CURDIR))
+SLICE_INCLUDEDIR ?= $(notdir $(CURDIR))
 SLICE_HEADERS = $(SLICES:%.ice=%.h)
-SLICE_HEADERS_DIR = $(PROJECT_HDRDIR)/$(SLICE_INCLUDE_DIR)
+SLICE_HEADERS_DIR = $(PROJECT_INCLUDEDIR)/$(SLICE_INCLUDEDIR)
 SLICE_TARGETS ?= $(addprefix $(SLICE_HEADERS_DIR)/,$(SLICE_HEADERS)) $(PROJECT_LIBDIR)/$(SLICE_LIB)
 
 CXX = g++
@@ -37,13 +37,13 @@ $(PROJECT_LIBDIR)/$(SLICE_LIB): $(SLICES:%.ice=$(SLICE_HEADERS_DIR)/%.o)
 	ld -Ur -o $@ $^
 
 $(SLICE_HEADERS_DIR)/%.h $(SLICE_HEADERS_DIR)/%.cpp: %.ice
-	slice2cpp $(SLICE_FLAGS) -I $(SLICE_DIR) --include-dir=$(SLICE_INCLUDE_DIR) --output-dir=$(SLICE_HEADERS_DIR) $^
+	slice2cpp $(SLICE_FLAGS) -I $(SLICE_DIR) --include-dir=$(SLICE_INCLUDEDIR) --output-dir=$(SLICE_HEADERS_DIR) $^
 
 install:: all
 	install -dv $(DESTDIR)/usr/lib/
-	install -dv $(DESTDIR)/usr/include/$(SLICE_INCLUDE_DIR)
+	install -dv $(DESTDIR)/usr/include/$(SLICE_INCLUDEDIR)
 	install -m 644 $(PROJECT_LIBDIR)/$(SLICE_LIB) $(DESTDIR)/usr/lib/
-	install -vm 644 $(SLICE_HEADERS_DIR)/*.h $(DESTDIR)/usr/include/$(SLICE_INCLUDE_DIR)
+	install -vm 644 $(SLICE_HEADERS_DIR)/*.h $(DESTDIR)/usr/include/$(SLICE_INCLUDEDIR)
 
 
 uninstall::

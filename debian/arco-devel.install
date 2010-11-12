@@ -1,7 +1,7 @@
 usr/share/arco-tools/devel.sh
 usr/share/arco-tools/flymake-c.mk
 usr/share/arco-tools/install.mk
-usr/share/arco-tools/compile.mk
+usr/share/arco-tools/build.mk
 usr/share/arco-tools/subdirs.mk
 usr/share/arco-tools/main.mk
 usr/share/arco-tools/config.mk

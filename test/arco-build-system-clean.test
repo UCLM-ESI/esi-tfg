@@ -13,9 +13,9 @@ for lib in ['liba','libb','libd']:
     for suffix in ['.so', '.so.23', '.so.2.3', '.a']:
         clean.post += Not(FileExists(os.path.join('samples/make/lib/',lib+suffix)))
 
-    clean.post += DirExists(os.path.join('samples/make/include/',lib))
-    clean.post += Not(FileExists(os.path.join('samples/make/include/%s' % lib,
-                                              lib[3:]+'.h')))
+    lib_path = os.path.join('samples/make/include/',lib)
+    clean.post += DirExists(lib_path)
+    clean.post += Not(FileExists(os.path.join(lib_path, lib[3:]+'.h')))
 
 clean.post += Not(FileExists('samples/make/bin/main'))
 

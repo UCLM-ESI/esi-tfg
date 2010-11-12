@@ -7,9 +7,9 @@ LIBNAME_A       = lib$(LIB_NAME).a
 
 LIB_LDFLAGS ?= -fPIC --shared -Wl,-soname=$(LIBNAME_SONAME)
 LIB_TARGETS ?= $(PROJECT_LIBDIR)/$(LIBNAME_SO) $(PROJECT_LIBDIR)/$(LIBNAME_A)
-INSTALL_HEADERS_DIR ?= $(LIB_NAME)
+INSTALL_INCLUDEDIR ?= $(LIB_NAME)
 
-all: check $(PROJECT_LIBDIR) $(PROJECT_HDRDIR) $(LIB_TARGETS)
+all: check $(PROJECT_LIBDIR) $(PROJECT_INCLUDEDIR) $(LIB_TARGETS)
 
 check:
 ifndef LIB_NAME
@@ -31,8 +31,8 @@ endif
 $(PROJECT_LIBDIR):
 	@mkdir -p $(PROJECT_LIBDIR)
 
-$(PROJECT_HDRDIR):
-	@mkdir -p $(PROJECT_HDRDIR)
+$(PROJECT_INCLUDEDIR):
+	@mkdir -p $(PROJECT_INCLUDEDIR)
 
 $(PROJECT_LIBDIR)/$(LIBNAME_SO): $(PROJECT_LIBDIR)/$(LIBNAME_SONAME)
 	$(RM) $@
@@ -47,9 +47,9 @@ $(PROJECT_LIBDIR)/$(LIBNAME_VERSION): $(LIB_OBJS)
 	$(CC) $(CFLAGS) $(LDFLAGS) $(LDLIBS) $^ -o $@
 
 ifneq "$(LIB_HEADERS)" ""
-	$(RM) $(addprefix $(PROJECT_HDRDIR)/$(INSTALL_HEADERS_DIR)/,$(LIB_HEADERS))
-	install -dv $(PROJECT_HDRDIR)/$(INSTALL_HEADERS_DIR)
-	install -vm 644 $(LIB_HEADERS) $(PROJECT_HDRDIR)/$(INSTALL_HEADERS_DIR)
+	$(RM) $(addprefix $(PROJECT_INCLUDEDIR)/$(INSTALL_INCLUDEDIR)/,$(LIB_HEADERS))
+	install -dv $(PROJECT_INCLUDEDIR)/$(INSTALL_INCLUDEDIR)
+	install -vm 644 $(LIB_HEADERS) $(PROJECT_INCLUDEDIR)/$(INSTALL_INCLUDEDIR)
 endif
 
 $(PROJECT_LIBDIR)/$(LIBNAME_A): $(LIB_OBJS)
@@ -63,8 +63,8 @@ install:: all
 		ln -sf $(LIBNAME_SONAME) $(LIBNAME_SO);
 
 ifneq "$(LIB_HEADERS)" ""
-	install -dv $(DESTDIR)/usr/include/$(INSTALL_HEADERS_DIR)
-	install -vm 644 $(LIB_HEADERS) $(DESTDIR)/usr/include/$(INSTALL_HEADERS_DIR)
+	install -dv $(DESTDIR)/usr/include/$(INSTALL_INCLUDEDIR)
+	install -vm 644 $(LIB_HEADERS) $(DESTDIR)/usr/include/$(INSTALL_INCLUDEDIR)
 endif
 
 
@@ -75,7 +75,7 @@ uninstall::
 	$(RM) $(DESTDIR)/usr/lib/$(LIBNAME_A)
 
 ifneq "$(LIB_HEADERS)" ""
-	$(RM) $(addprefix $(DESTDIR)/usr/include/$(INSTALL_HEADERS_DIR)/,$(LIB_HEADERS))
+	$(RM) $(addprefix $(DESTDIR)/usr/include/$(INSTALL_INCLUDEDIR)/,$(LIB_HEADERS))
 endif
 
 clean::
@@ -85,6 +85,6 @@ clean::
 			$(PROJECT_LIBDIR)/$(LIBNAME_A)
 
 ifneq "$(LIB_HEADERS)" ""
-	$(RM) $(addprefix $(PROJECT_HDRDIR)/$(INSTALL_HEADERS_DIR)/,$(LIB_HEADERS))
+	$(RM) $(addprefix $(PROJECT_INCLUDEDIR)/$(INSTALL_INCLUDEDIR)/,$(LIB_HEADERS))
 endif
 

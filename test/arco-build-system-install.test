@@ -13,14 +13,15 @@ install = Test('make -C samples/make install', env=ENV)
 for lib in ['liba','libb','libd']:
     for suffix in ['.so', '.so.23', '.so.2.3', '.a']:
         install.post += FileExists(os.path.join('samples/make/lib/',lib+suffix))
-        install.post += FileExists(os.path.join(ENV['DESTDIR']+'/usr/lib/',lib+suffix))
+        install.post += FileExists(os.path.join(ENV['DESTDIR'],'usr/lib/',lib+suffix))
 
-    install.post += DirExists(os.path.join('samples/make/include/',lib))
-    install.post += FileExists(os.path.join(ENV['DESTDIR']+'/usr/include/',lib))
+    lib_path = os.path.join('samples/make/include/',lib)
 
-    install.post += FileExists(os.path.join('samples/make/include/%s' % lib,
-                                          lib[3:]+'.h'))
-    install.post += FileExists(os.path.join(ENV['DESTDIR']+'/usr/include/%s' % lib,
+    install.post += DirExists(lib_path)
+    install.post += FileExists(os.path.join(ENV['DESTDIR'],'usr/include/',lib))
+
+    install.post += FileExists(os.path.join(lib_path, lib[3:]+'.h'))
+    install.post += FileExists(os.path.join(ENV['DESTDIR'],'usr/include/%s' % lib,
                                             lib[3:]+'.h'))
 
 install.post += FileExists('samples/make/bin/main')
