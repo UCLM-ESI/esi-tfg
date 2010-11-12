@@ -5,7 +5,7 @@
 #include <liba/a.h>
 #include <libb/b.h>
 
-#include "ce.h"
+#include "d.h"
 
 int c(int v) {
 	a(4);

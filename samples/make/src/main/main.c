@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#include <libce/ce.h>
+#include <libd/d.h>
 
 int main () {
 	c(4);

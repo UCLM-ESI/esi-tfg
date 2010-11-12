@@ -1,5 +1,5 @@
 
-SUBDIRS=liba libb libce main
+SUBDIRS=liba libb libd main
 
 include ../../../make/subdirs.mk
 

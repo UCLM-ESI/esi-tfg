@@ -1,0 +1,22 @@
+#!/usr/bin/python
+# -*- mode:python; coding:utf-8; tab-width:4 -*-
+
+import os
+
+ENV = {'ARCO_MK':os.path.abspath('make')}
+
+Command('make -C samples/make distclean', env=ENV)
+
+build = Test('make -C samples/make', env=ENV)
+
+for lib in ['liba','libb','libd']:
+    for suffix in ['.so', '.so.23', '.so.2.3', '.a']:
+        build.post += FileExists(os.path.join('samples/make/lib/',lib+suffix))
+
+    build.post += DirExists(os.path.join('samples/make/include/',lib))
+    build.post += FileExists(os.path.join('samples/make/include/%s' % lib,
+                                          lib[3:]+'.h'))
+
+build.post += FileExists('samples/make/bin/main')
+
+Command('make -C samples/make distclean', env=ENV)

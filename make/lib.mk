@@ -75,7 +75,7 @@ uninstall::
 	$(RM) $(DESTDIR)/usr/lib/$(LIBNAME_A)
 
 ifneq "$(LIB_HEADERS)" ""
-	$(RM) $(addprefix $(DESTDIR)/usr/include/,$(LIB_HEADERS))
+	$(RM) $(addprefix $(DESTDIR)/usr/include/$(INSTALL_HEADERS_DIR)/,$(LIB_HEADERS))
 endif
 
 clean::

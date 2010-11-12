@@ -1,7 +1,7 @@
 
 ARCO_MK ?= /usr/share/arco-tools
 
-LDFLAGS += -lce -lb -la
+LDFLAGS += -la -lb -ld
 include $(ARCO_MK)/compile.mk
 include $(ARCO_MK)/install.mk
 
