@@ -1,3 +1,10 @@
+arco-tools (0.54-2) unstable; urgency=low
+
+  * rubber dependency added.
+  * libnotify-bin as suggested in arco-devel.
+
+ -- Cleto Martin Angelina <cleto.martin@gmail.com>  Mon, 15 Nov 2010 19:16:59 +0100
+
 arco-tools (0.54-1) unstable; urgency=low
 
   * compile.mk -> build.mk and other minor changes.
