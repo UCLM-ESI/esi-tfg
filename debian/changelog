@@ -1,3 +1,15 @@
+arco-tools (0.55-2) unstable; urgency=low
+
+  * emacs-goodies-el dependency.
+
+ -- Cleto Martin Angelina <cleto.martin@gmail.com>  Tue, 16 Nov 2010 19:49:20 +0100
+
+arco-tools (0.55-1) unstable; urgency=low
+
+  * vclean the figures
+
+ -- Cleto Martin Angelina <cleto.martin@gmail.com>  Tue, 16 Nov 2010 19:27:28 +0100
+
 arco-tools (0.54-2) unstable; urgency=low
 
   * rubber dependency added.

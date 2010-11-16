@@ -30,10 +30,7 @@ clean::
 	$(RM) *~
 
 vclean:: clean
-	$(RM) $(addsuffix .png, \
-	    $(filter $(basename $(wildcard $(FIGDIR)/*.svg $(FIGDIR)/*.dia)), \
-		         $(basename $(wildcard $(FIGDIR)/*.png))) \
-		)
+	$(RM) $(FIGURES)
 
 include $(TOOLDIR)/figures.mk
 
