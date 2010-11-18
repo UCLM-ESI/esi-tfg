@@ -1,4 +1,5 @@
 ; -*- mode:lisp -*-
+; author: David.Villa@uclm.es
 
 (custom-set-faces
  '(tabbar-default ((t (:inherit variable-pitch :background "gray94" :foreground "gray25" :height 0.8))))

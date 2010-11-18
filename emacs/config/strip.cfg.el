@@ -1,4 +1,5 @@
 ; -*- mode:lisp -*-
+; author: David.Villa@uclm.es
 
 (custom-set-variables
  '(whitespace-style (quote (trailing spaces tabs lines newline empty))))

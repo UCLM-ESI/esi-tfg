@@ -1,3 +1,6 @@
+; -*- mode:lisp -*-
+; author: David.Villa@uclm.es
+
 (require 'speedbar)
 
 (speedbar-add-supported-extension ".ice")
