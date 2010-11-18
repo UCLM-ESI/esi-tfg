@@ -1,3 +1,10 @@
+arco-tools (0.59-1) unstable; urgency=low
+
+  * NEW emacs/config/develock.cfg.el
+  * NEW emacs/yasnippet/text-mode/latex-mode/includegraphics.yesnippet
+
+ -- David Villa Alises <David.Villa@uclm.es>  Thu, 18 Nov 2010 23:17:42 +0100
+
 arco-tools (0.58-1) unstable; urgency=low
 
   * latex.mk: solved no-source figures bug.
