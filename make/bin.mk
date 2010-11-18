@@ -22,5 +22,5 @@ install:: all
 uninstall::
 	$(RM) $(addprefix $(DESTDIR)/usr/bin/,$(BIN_TARGET))
 
-clean:
+clean::
 	$(RM) *.o $(addprefix $(PROJECT_BINDIR)/,$(BIN_TARGET)) *~ \#*

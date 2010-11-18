@@ -27,10 +27,13 @@ help:
 
 clean::
 	$(RUBBER) --clean --pdf $(MAIN)
-	$(RM) *~
+	$(RM) *~ *.maf *.mtc *.lol
+
 
 vclean:: clean
-	$(RM) $(FIGURES)
+	$(RM) $(foreach figure,\
+				$(FIGURES),\
+				$(shell test "1" != `find figures/ -maxdepth 1 -name $(basename $(notdir $(figure))).* | wc -l` && echo $(figure)))
 
 include $(TOOLDIR)/figures.mk
 

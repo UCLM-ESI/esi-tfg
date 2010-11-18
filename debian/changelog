@@ -1,3 +1,22 @@
+arco-tools (0.58-1) unstable; urgency=low
+
+  * latex.mk: solved no-source figures bug.
+  * latex.mk: improving clean rule
+
+ -- Cleto Martin Angelina <cleto.martin@gmail.com>  Thu, 18 Nov 2010 20:33:53 +0100
+
+arco-tools (0.57-1) unstable; urgency=low
+
+  * bin.mk clean rule may be expanded
+
+ -- Cleto Martin Angelina <cleto.martin@gmail.com>  Thu, 18 Nov 2010 12:08:00 +0100
+
+arco-tools (0.56-1) unstable; urgency=low
+
+  * emacs/config/zoom.cfg.el
+
+ -- Cleto Martin Angelina <cleto.martin@gmail.com>  Tue, 16 Nov 2010 20:30:30 +0100
+
 arco-tools (0.55-2) unstable; urgency=low
 
   * emacs-goodies-el dependency.
