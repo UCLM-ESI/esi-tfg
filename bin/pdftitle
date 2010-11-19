@@ -1,5 +1,6 @@
 #!/bin/bash
 # -*- coding:utf-8 -*-
+# author: David.Villa@uclm.es
 
 function get_title() {
 	pdf=$1

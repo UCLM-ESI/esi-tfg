@@ -1,4 +1,5 @@
 #!/bin/bash
+# author: Francisco.Moya@uclm.es
 
 krb5_conf() {
     /bin/cat <<EOF
@@ -347,4 +348,3 @@ fi
 apt-get install libnss-ldap libnss-db nss-updatedb libpam-modules libpam-krb5 libpam-ldap libpam-ccreds
 
 activate "$1"
-
