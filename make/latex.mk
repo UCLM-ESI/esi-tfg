@@ -33,7 +33,7 @@ clean::
 vclean:: clean
 	$(RM) $(foreach figure,\
 				$(FIGURES),\
-				$(shell test "1" != `find figures/ -maxdepth 1 -name $(basename $(notdir $(figure))).* | wc -l` && echo $(figure)))
+				$(shell test "1" != `ls figures/$(basename $(notdir $(figure))).* | wc -l` && echo $(figure)))
 
 include $(TOOLDIR)/figures.mk
 

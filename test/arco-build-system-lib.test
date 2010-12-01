@@ -1,0 +1,13 @@
+#!/usr/bin/python
+# -*- mode:python; coding:utf-8; tab-width:4 -*-
+
+import os
+
+ENV = {'ARCO_MK':os.path.abspath('make')}
+
+c_build = Test('CFLAGS=C_COMPILER make -nC samples/make/src/liba/', env=ENV, shell=True)
+c_build.post += FileContains("C_COMPILER")
+
+cpp_build = Test('CXXFLAGS=C_COMPILER make -nC samples/make/src/liba/', env=ENV, shell=True)
+cpp_build.post += Not(FileContains("C_COMPILER"))
+

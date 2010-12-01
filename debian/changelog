@@ -1,3 +1,10 @@
+arco-tools (0.60-1) unstable; urgency=low
+
+  * Skipping default directories without Makefile at main.mk
+  * ls->find at latex.mk
+
+ -- Cleto Martin Angelina <cleto.martin@gmail.com>  Wed, 01 Dec 2010 20:48:20 +0100
+
 arco-tools (0.59-1) unstable; urgency=low
 
   * NEW emacs/config/develock.cfg.el
