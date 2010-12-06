@@ -33,8 +33,10 @@ install:
 	install -vd $(LATEXSITE)/arco
 	install -v -m 444 tex/*.cls $(LATEXSITE)/arco
 
-	install -vd $(YASNIPPET)/python-mode
+	install -vd $(YASNIPPET)
 	install -v -m 444 emacs/yasnippet/text-mode/*.yasnippet $(YASNIPPET)/
+
+	install -vd $(YASNIPPET)/python-mode
 	install -v -m 444 emacs/yasnippet/text-mode/python-mode/*.yasnippet $(YASNIPPET)/python-mode/
 
 	install -vd $(YASNIPPET)/latex-mode
@@ -51,6 +53,8 @@ install:
 	install -vd $(EMACS)
 	install -vm 444 emacs/config/*.cfg.elc $(EMACS)/
 
+	install -vd $(EMACS)/template
+	install -vm 444 emacs/template/* $(EMACS)/template/
+
 	install -vd $(SAMPLES)
 	cp -a samples/* $(SAMPLES)
-

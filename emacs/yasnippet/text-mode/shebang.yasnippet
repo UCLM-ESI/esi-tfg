@@ -1,5 +1,14 @@
-#contributor : <David.Villa@uclm.es>
+#contributor: <David.Villa@uclm.es>
 #name: #!/she/bang
-#key: #
+#key: !
 # --
-#!/${$$(yas/choose-value '("bin/bash --" "usr/bin/python" "usr/bin/make"))}
+#!/${$$(yas/choose-value '(\
+"bin/bash --
+# -*- coding:utf-8; tab-width:4; mode:shell-script -*-
+"\
+"usr/bin/python
+# -*- coding:utf-8; tab-width:4; mode:python -*-
+"\
+"usr/bin/make
+# -*- mode:makefile -*-
+"))}

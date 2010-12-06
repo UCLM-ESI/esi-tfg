@@ -9,5 +9,6 @@
 
 ;; remove trailing blanks at end of lines and empty lines at begin and end of buffer
 (add-hook 'before-save-hook 'whitespace-cleanup)
+
 (custom-set-variables
  '(whitespace-style (quote (trailing spaces tabs lines newline empty))))
