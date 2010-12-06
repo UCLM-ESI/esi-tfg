@@ -1,3 +1,9 @@
+arco-tools (0.61-1) unstable; urgency=low
+
+  * New auto-insert.cfg.el
+
+ -- David Villa Alises <David.Villa@uclm.es>  Mon, 06 Dec 2010 22:13:11 +0100
+
 arco-tools (0.60-1) unstable; urgency=low
 
   * Skipping default directories without Makefile at main.mk
