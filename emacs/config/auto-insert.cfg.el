@@ -7,4 +7,4 @@
 (setq auto-insert-query nil)  ; don't ask about insertions
 (define-auto-insert "\.py" "header.py")
 (define-auto-insert "\.sh" "header.sh")
-(define-auto-insert "\.tex" "template.tex")
+(define-auto-insert "main.tex" "template.tex")
