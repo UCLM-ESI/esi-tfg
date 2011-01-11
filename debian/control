@@ -18,7 +18,8 @@ Package: arco-authors
 Replaces: arco-latex
 Conflicts: arco-latex, arco-make
 Architecture: all
-Depends: ${misc:Depends}, texlive-binaries, inkscape, dblatex, unoconv, rubber
+Depends: ${misc:Depends}, texlive-binaries, inkscape, dblatex,
+ unoconv, rubber, netpbm
 Description: ARCO authors tools
  LaTeX tools for ARCO authors.
 

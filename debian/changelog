@@ -1,3 +1,9 @@
+arco-tools (0.62-1) unstable; urgency=low
+
+  * New image-generator rule for arco-authors (png->jpg)
+
+ -- Cleto Martin Angelina <cleto.martin@gmail.com>  Tue, 11 Jan 2011 23:12:26 +0100
+
 arco-tools (0.61-1) unstable; urgency=low
 
   * New auto-insert.cfg.el

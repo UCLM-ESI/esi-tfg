@@ -1,7 +1,7 @@
 #!/usr/bin/make -f
 # -*- makefile -*-
 
-VERSION=0.61
+VERSION=$(shell head -n 1 debian/changelog | cut -f2 -d " " | tr -d "()" | cut -f1 -d "-")
 
 %:
 	dh  $@
