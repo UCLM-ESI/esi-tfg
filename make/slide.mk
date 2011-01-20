@@ -12,7 +12,6 @@ PDFM=$(patsubst %.pdf, %.2x4.pdf, $(PDF1))
 PDF=$(PDF1) $(PDF3) $(PDFM)
 
 all:  $(PDF)
-	echo $(PDF)
 
 %.pdf: %.odp
 	odt2pdf $<
