@@ -1,6 +1,10 @@
 # requires: unovonv, pdfjam, pdftk
 
-SRC=$(wildcard *.odp)
+.INTERMEDIATE: *.first.pdf *.2x2.pdf
+
+IGNORE~=
+
+SRC=$(filter-out $(IGNORE), $(wildcard *.odp))
 PDF1=$(notdir $(patsubst %.odp, %.pdf, $(SRC)))
 PDF3=$(patsubst %.pdf, %.1x3.pdf, $(PDF1))
 PDFM=$(patsubst %.pdf, %.2x4.pdf, $(PDF1))
@@ -8,6 +12,7 @@ PDFM=$(patsubst %.pdf, %.2x4.pdf, $(PDF1))
 PDF=$(PDF1) $(PDF3) $(PDFM)
 
 all:  $(PDF)
+	echo $(PDF)
 
 %.pdf: %.odp
 	odt2pdf $<
