@@ -6,5 +6,6 @@
 (setq auto-insert-directory "/usr/share/arco-tools/emacs/template/")  ; where de templates are
 (setq auto-insert-query nil)  ; don't ask about insertions
 (define-auto-insert "\.py" "header.py")
+(define-auto-insert "\.rb" "header.rb")
 (define-auto-insert "\.sh" "header.sh")
 (define-auto-insert "main.tex" "template.tex")
