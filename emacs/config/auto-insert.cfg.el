@@ -8,4 +8,6 @@
 (define-auto-insert "\.py" "header.py")
 (define-auto-insert "\.rb" "header.rb")
 (define-auto-insert "\.sh" "header.sh")
+(define-auto-insert "\.cpp" "header.cpp")
+(define-auto-insert "\.cc" "header.cpp")
 (define-auto-insert "main.tex" "template.tex")
