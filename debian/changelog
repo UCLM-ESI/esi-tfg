@@ -1,3 +1,10 @@
+arco-tools (0.63-1) unstable; urgency=low
+
+  * cpp header
+  * slide.mk with IGNORE and cleaning generated pdfs (by david)
+
+ -- Cleto Martin Angelina <cleto.martin@gmail.com>  Mon, 07 Feb 2011 10:36:05 +0100
+
 arco-tools (0.62-1) unstable; urgency=low
 
   * New image-generator rule for arco-authors (png->jpg)
