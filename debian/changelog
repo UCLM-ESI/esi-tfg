@@ -1,3 +1,9 @@
+arco-tools (0.64-1) unstable; urgency=low
+
+  * new python yasnippet for create unittests
+
+ -- David Villa Alises <David.Villa@uclm.es>  Wed, 23 Feb 2011 19:04:32 +0100
+
 arco-tools (0.63-1) unstable; urgency=low
 
   * cpp header

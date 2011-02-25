@@ -25,7 +25,7 @@ function fexec() {
 			fi
 			notify-send -t 2000 -i $icon "fexec: $retval" "$ $cmd"
 		fi
-		inotifywait -qr -e MODIFY . || break
+		inotifywait -qr -e MODIFY . @*~ @.* @#*# || break
 		clear
 		sync
 		sleep 0.5
