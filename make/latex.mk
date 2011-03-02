@@ -10,7 +10,7 @@ TEXSRC = $(shell $(TOOLDIR)/parts-tex.sh $(MAIN))
 
 
 
-FIGURES = $(addprefix $(FIGDIR)/, $(shell $(TOOLDIR)/figures-tex.sh $(MAIN)))
+FIGURES = $(addprefix $(FIGDIR)/, $(foreach tex, $(TEXSRC), $(shell $(TOOLDIR)/figures-tex.sh $(tex))))
 
 all: $(TARGET)
 
@@ -32,8 +32,8 @@ clean::
 
 vclean:: clean
 	$(RM) $(foreach figure,\
-				$(FIGURES),\
-				$(shell test "1" != `ls figures/$(basename $(notdir $(figure))).* | wc -l` && echo $(figure)))
+		$(FIGURES),\
+		$(shell test "1" != `ls figures/$(basename $(notdir $(figure))).* | wc -l` && echo $(figure)))
 
 include $(TOOLDIR)/figures.mk
 
