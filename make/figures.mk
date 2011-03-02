@@ -21,11 +21,16 @@ PNGPPP?=150
 # include figures.mk
 # PNGPPP = <your quality>
 
+%.pdf: %.dia
+	inkscape -A $@ --export-text-to-path $<
+
 %.png: %.svg
 	inkscape -d $(PNGPPP) -e $@ $<
 
 %.pdf: %.svg
 	inkscape -A  $@ --export-text-to-path $<
+
+#-- libreoffice -----------------------------------------------
 
 %.jpg: %.ods
 	unoconv -f html $<

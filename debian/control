@@ -4,7 +4,7 @@ Priority: extra
 Maintainer: ARCO Research Group <sysadm@arco.esi.uclm.es>
 Uploaders: David Villa Alises <David.Villa@uclm.es>, Cleto Martin
  Angelina <cleto.martin@gmail.com>
-Build-Depends: debhelper (>= 7.0.50~)
+Build-Depends: debhelper (>= 7.0.50~), develock-el
 Standards-Version: 3.9.1
 Homepage: http://arco.esi.uclm.es
 
