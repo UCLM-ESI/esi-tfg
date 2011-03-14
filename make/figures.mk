@@ -27,6 +27,9 @@ PNGPPP?=150
 %.png: %.svg
 	inkscape -d $(PNGPPP) -e $@ $<
 
+%.300.png: %.svg
+	inkscape -d 300 -e $@ $<
+
 %.pdf: %.svg
 	inkscape -A  $@ --export-text-to-path $<
 

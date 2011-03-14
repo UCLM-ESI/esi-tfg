@@ -1,4 +1,4 @@
-arco-tools (0.65-2) unstable; urgency=low
+arco-tools (0.65-4) unstable; urgency=low
 
   * Weird mistake: tabbar.cfg.elc missing! in binary package
 
