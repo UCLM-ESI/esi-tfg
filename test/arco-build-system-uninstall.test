@@ -4,7 +4,7 @@
 import os
 
 ENV = {'ARCO_MK':os.path.abspath('make'),
-       'DESTDIR':'/tmp'}
+       'DESTDIR':'$tmp'}
 
 Command('make -C samples/make distclean', env=ENV)
 Command('make -C samples/make install', env=ENV)
