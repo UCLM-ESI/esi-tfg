@@ -1,0 +1,11 @@
+#contributor : <miguelangel.garcia@gmail.com>
+#name: RSpec
+#key: spec
+# --
+describe ${1:MyClass}, "${2:#sut}" do
+    context "$3" do
+    	it "${4:should work}" do
+	    $5
+	end
+    end
+end
