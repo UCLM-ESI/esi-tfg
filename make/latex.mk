@@ -8,8 +8,6 @@ MAIN  ?= main.tex
 TARGET = $(MAIN:.tex=.pdf)
 TEXSRC = $(shell $(TOOLDIR)/parts-tex.sh $(MAIN))
 
-
-
 FIGURES = $(addprefix $(FIGDIR)/, $(foreach tex, $(TEXSRC), $(shell $(TOOLDIR)/figures-tex.sh $(tex))))
 
 all: $(TARGET)
