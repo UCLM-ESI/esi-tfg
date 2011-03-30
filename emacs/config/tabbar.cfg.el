@@ -7,7 +7,7 @@
  '(tabbar-selected ((t (:inherit tabbar-default :background "white" :weight bold)))))
 
 (require 'tabbar)
-(tabbar-mode) ;comment out this line to start without the tab on top
+(tabbar-mode 1)
 (setq tabbar-separator (quote (1)))
 (setq tabbar-background-color "gray75")
 (setq tabbar-cycle-scope (quote tabs))
