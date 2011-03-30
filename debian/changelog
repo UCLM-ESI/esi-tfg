@@ -1,3 +1,11 @@
+arco-tools (0.67-1) unstable; urgency=low
+
+  * logos.mk added.
+  * Fixing a bug in clean rule of latex.mk.
+  * add-auth-arco-repo simple script.
+
+ -- Cleto Martin Angelina <cleto.martin@gmail.com>  Wed, 30 Mar 2011 17:12:12 +0200
+
 arco-tools (0.66-1) unstable; urgency=low
 
   * New toggle-split.cfg.el
