@@ -27,7 +27,7 @@ Package: arco-devel
 Replaces: arco-make, arco-debian, arco-bashrc
 Conflicts: arco-make, arco-debian, arco-bashrc
 Architecture: all
-Depends: ${misc:Depends}, yasnippet, devscripts-el, emacs-goodies-el
+Depends: ${misc:Depends}, yasnippet, devscripts-el, emacs-goodies-el, aexec
 Suggests: libnotify-bin
 Description: ARCO devel tools
  Tools for ARCO developers.
