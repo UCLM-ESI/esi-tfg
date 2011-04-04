@@ -12,5 +12,5 @@
 (define-auto-insert "\.cpp" "header.cpp")
 (define-auto-insert "\.cc" "header.cpp")
 (define-auto-insert "\.tex" "header.tex")
-ne-auto-insert "main.tex" "main.tex.tmpl")
+(define-auto-insert "main.tex" "main.tex.tmpl")
 
