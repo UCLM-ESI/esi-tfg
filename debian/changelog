@@ -1,8 +1,15 @@
+arco-tools (0.68-1) unstable; urgency=low
+
+  * bug fix (Closes: #329)
+
+ -- Cleto Martin Angelina <cleto.martin@gmail.com>  Mon, 04 Apr 2011 17:04:41 +0200
+
 arco-tools (0.67-1) unstable; urgency=low
 
   * logos.mk added.
   * Fixing a bug in clean rule of latex.mk.
   * add-auth-arco-repo simple script.
+  * header.tex as emacs template.
 
  -- Cleto Martin Angelina <cleto.martin@gmail.com>  Wed, 30 Mar 2011 17:12:12 +0200
 
