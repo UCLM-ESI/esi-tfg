@@ -19,7 +19,7 @@ Replaces: arco-latex
 Recommends: unoconv
 Conflicts: arco-latex, arco-make
 Architecture: all
-Depends: ${misc:Depends}, texlive-binaries, inkscape, dblatex, rubber, netpbm
+Depends: ${misc:Depends}, texlive-binaries, inkscape, dblatex, rubber, netpbm, dia
 Description: ARCO authors tools
  LaTeX tools for ARCO authors.
 
