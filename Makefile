@@ -53,6 +53,14 @@ install:
 	install -vd $(EMACS)
 	install -vm 444 emacs/config/*.cfg.elc $(EMACS)/
 
+	install -vm 444 emacs/config/schemas.xml $(EMACS)/
+	@wget -nv http://www.oasis-open.org/docbook/rng/4.5/docbook.rnc -O $(EMACS)/docbook.rnc
+	@wget -nv http://www.oasis-open.org/docbook/rng/4.5/dbnotnx.rnc -O $(EMACS)/dbnotnx.rnc
+	@wget -nv http://www.oasis-open.org/docbook/rng/4.5/dbpoolx.rnc -O $(EMACS)/dbpoolx.rnc
+	@wget -nv http://www.oasis-open.org/docbook/rng/4.5/htmltblx.rnc -O $(EMACS)/htmltblx.rnc
+	@wget -nv http://www.oasis-open.org/docbook/rng/4.5/calstblx.rnc -O $(EMACS)/calstblx.rnc
+	@wget -nv http://www.oasis-open.org/docbook/rng/4.5/dbhierx.rnc -O $(EMACS)/dbhierx.rnc
+
 	install -vd $(EMACS)/template
 	install -vm 444 emacs/template/* $(EMACS)/template/
 
