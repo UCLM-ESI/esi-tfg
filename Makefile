@@ -32,6 +32,7 @@ install:
 
 	install -vd $(LATEXSITE)/arco
 	install -v -m 444 tex/*.cls $(LATEXSITE)/arco
+	install -v -m 444 tex/*.sty $(LATEXSITE)/arco
 
 	install -vd $(YASNIPPET)
 	install -v -m 444 emacs/yasnippet/text-mode/*.yasnippet $(YASNIPPET)/

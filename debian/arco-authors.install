@@ -1,7 +1,6 @@
 usr/share/arco-tools/figures*
 usr/share/arco-tools/parts*
 usr/share/texmf-texlive/tex/latex/arco
-usr/share/texmf-texlive/tex/latex/atbeginend.sty
 usr/share/arco-tools/slide.mk
 usr/share/arco-tools/latex.mk
 usr/share/arco-tools/logos.mk
