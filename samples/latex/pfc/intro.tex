@@ -1,0 +1,92 @@
+% -*- coding: utf-8 -*-
+
+\chapter{Introducción}
+
+\drop{L}{etra} capital para empezar el capítulo. Este párrafo debería tener al menos cinco
+líneas para que la letra capital quede bien. Este párrafo debería tener al menos cinco
+líneas para que la letra capital quede bien. Este párrafo debería tener al menos cinco
+líneas para que la letra capital quede bien. Este párrafo debería tener al menos cinco
+líneas para que la letra capital quede bien.
+
+
+\section{Una sección}
+
+Casi vacía.
+
+
+\section{Un cuadro}
+
+Se denominan «tablas» cuando contienen datos con relaciones numéricas. En
+general se denominan «cuadros». Si las columnas están bien alineadas, las líneas
+verticales estorban más que ayudan (no las pongas). Los cuadros se referencian
+de este modo (ver cuadro~\ref{tab:rpc-semantics}).
+
+\begin{table}[htbp]
+  \centering
+  {\small
+  \input{tables/RPC-semantics.tex}
+  }
+  \caption[Semánticas de \acs{RPC} en presencia de distintos fallos]
+  {Semánticas de \acs{RPC} en presencia de distintos fallos
+    (\textsc{Puder}~\cite{puder05:_distr_system_archit})}
+  \label{tab:rpc-semantics}
+\end{table}
+
+
+\section{Una figura}
+
+Las figuras se referencian así (ver figura~\ref{fig:informatica}). Recuerda que
+no tienen porqué aparecer en el lugar donde se ponen (mira un libro de
+verdad). \LaTeX{} las colocará donde mejor queden, lo te empeñes en
+contradecirle, él sabe más que tú sobre tipografía.
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=0.2\textwidth]{emblema_informatica.pdf}
+\caption{Escudo oficial de informática}
+\label{fig:informatica}
+\end{center}
+\end{figure}
+
+Por cierto, los títulos de tablas, figuras y otro elementos flotantes (los
+\texttt{caption}) no acaba en punto.
+
+
+\section{Un listado de código}
+
+Puedes referenciar un listado con~\ref{code:hello}. Éste es un listado flotante,
+pero también pueden ser «no flotantes».
+
+\begin{listing}[
+  float,
+  language = C,
+  caption  = {Hola mundo en C},
+  label    = code:hello]
+#include <stdio.h>
+int main(int argc, char *argv[]) {
+    puts("Hola mundo\n");
+}
+\end{listing}
+
+
+\section{Citas}
+
+Una cita~\cite{design_patterns}. Si estás viendo la versión PDF de este
+documento puedes pinchar la cita, es un enlace que lleva a la página de la
+bibliografía en la que aparece la entrada correspondiente.
+
+
+
+\section{Más texto para que ocupe varias páginas}
+
+\input{lorem-ipsum.txt}
+
+
+
+% Local Variables:
+% coding: utf-8
+% mode: latex
+% TeX-master: "main"
+% mode: flyspell
+% ispell-local-dictionary: "castellano8"
+% End:
