@@ -173,6 +173,58 @@
 
 
 
+%% -- FORMATO DE CAPÍTULOS Y SECCIONES -----------------------------------------
+\usepackage[rigidchapters, clearempty]{titlesec}
+% - rigidchapters: Todos los títulos de capítulo tienen la misma altura
+% - clearempty: Elimina encabezados y piés de páginas (izquierdas) vacías.
+
+\newcommand{\chapterformat}[1]{%
+  \fontsize{22}{22}\selectfont\sffamily #1%
+  }
+
+% doc: \titleformat{ command }[ shape ]{ format }{ label }{ sep }{ before }[ after ]
+
+\newcommand{\frontchapters}{
+  \titleformat{\chapter}[display]%
+    {}
+    {\thechapter}
+    {0cm}
+    {\chapterformat}
+
+  \pagestyle{fancy}
+  \renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{##1}}{}}
+  \titlespacing{\chapter}{-1cm}{2cm}{2cm}
+}
+
+\newcommand{\mainchapters}{
+  \titleformat{\chapter}[display]
+    {\normalfont\Large}
+    {\chaptertitlename\ \thechapter}
+    {0cm}
+    {\chapterformat}
+
+  \pagestyle{fancy}
+  \renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ \textsc{##1}}{}}
+  \titlespacing{\chapter}{0cm}{1cm}{3.8cm}
+}
+
+\newcommand{\backchapters}{
+    \titleformat{\chapter}[display]%
+    {\chapterformat}
+    {\thechapter}
+    {0pt}
+    {}
+
+  \titlespacing{\chapter}{-1cm}{2cm}{3cm}
+}
+
+% espaciado entre secciones, subseciones, etc.
+% doc: \titlespacing*{ command }{ left }{ beforesep }{ aftersep }[ right ]
+\titlespacing{\section}{0pt}{5mm}{0mm}
+\titlespacing{\subsection}{0pt}{4mm}{-1mm}
+\titlespacing{\subsubsection}{0pt}{4mm}{-1mm}
+
+
 %% -- ESTILO DE PÁGINA, ENCABEZADOS Y PIES -------------------------------------
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -188,76 +240,17 @@
 \headheight=13pt
 \fancyhead[EL,OR]{\thepage}
 \fancyhead[ER,OL]{\leftmark}
-\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\chaptermark}[1]{%
   \markboth{\thechapter.\ \textsc{#1}}{}%
 }
 
-\renewcommand{\headrulewidth}{0.4pt}
-
 \newlength{\myoffset}
-\myoffset=32pt
+\myoffset=16pt
 \fancyhfoffset[EL,OR]{\myoffset}
 
 \addtolength{\footskip}{8pt}
 
-
-%% -- FORMATO DE CAPÍTULOS Y SECCIONES -----------------------------------------
-\usepackage[rigidchapters, clearempty]{titlesec}
-% - rigidchapters: Todos los títulos de capítulo tienen la misma altura
-% - clearempty: Elimina encabezados y piés de páginas (izquierdas) vacías.
-
-\newcommand{\chapterformat}[1]{%
-  \fontsize{22}{22}\selectfont\sffamily #1%
-  }
-
-\newsavebox{\numbox}
-\newlength{\numberwidth}
-\newcommand{\chapternumberbg}{\fontsize{130}{90}\selectfont\bfseries\thechapter}
-\newcommand{\chapternumberfg}{\fontsize{90}{90}\selectfont\bfseries\thechapter}
-
-% doc: \titlespacing*{ command }{ left }{ beforesep }{ aftersep }[ right ]
-
-\newcommand{\frontchapters}{
-  \titleformat{\chapter}[display]%
-  {}
-  {\thechapter}
-  {0cm}
-  {\chapterformat}
-
-  \pagestyle{fancy}
-  \renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{##1}}{}}
-  \titlespacing{\chapter}{-1cm}{2cm}{2cm}
-}
-
-\newcommand{\mainchapters}{
-\titleformat{\chapter}[frame]
-  {\normalfont}
-  {\filright
-   \footnotesize
-   \enspace \large \chaptertitlename~\thechapter\enspace}
-  {20pt}
-  {\filcenter\chapterformat}
-
-  \pagestyle{fancy}
-  \renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ \textsc{##1}}{}}
-  \titlespacing{\chapter}{0cm}{1cm}{3.8cm}
-}
-
-\newcommand{\backchapters}{
-  \titleformat{\chapter}[display]%
-  {\chapterformat}
-  {\thechapter}
-  {0pt}
-  {}
-
-  \titlespacing{\chapter}{-1cm}{2cm}{3cm}
-}
-
-% espaciado entre secciones, subseciones, etc
-\titlespacing{\section}{0pt}{5mm}{0mm}
-\titlespacing{\subsection}{0pt}{4mm}{-1mm}
-\titlespacing{\subsubsection}{0pt}{4mm}{-1mm}
 
 
 %% -- Otros paquetes
@@ -336,7 +329,7 @@
 
 % - portadilla
 % Sólo aparece el título de la obra a la misma altura,
-% fuente y estilo que en la portada pero en un tamaña 2/3 el de
+% fuente y estilo que en la portada pero en un tamaño 2/3 el de
 % ésta. Opcionalmente puede aparecer el autor.
 \newcommand{\pretitle}{%
   \cleardoublepage
@@ -386,7 +379,7 @@
     \medskip \noindent
     \parbox{4em}{\emph{E-mail:}}   \@email \\
     \parbox{4em}{\emph{Telefono:}} \@phone \\
-    \parbox{4em}{\emph{Web site:}} \url{\@homepage} \\
+    \parbox{4em}{\emph{Web site:}} {\small \url{\@homepage}} \\
     \bigskip \noindent
     \copyright\ \number\@publishyear\ \ \@author \par
     \smallskip \noindent
@@ -402,26 +395,19 @@
   \thispagestyle{empty}
   \noindent\underline{\textbf{{\Large TRIBUNAL:}}}
   \vspace{0.9cm}
-
-  \textbf{{\large Presidente:}} \\
-
-  \textbf{{\large Vocal 1:}} \\
-
-  \textbf{{\large Vocal 2:}} \\
-
-  \textbf{{\large Secretario:}} \\
-
+  \par
+  \textbf{{\large Presidente:}} \\ \par
+  \textbf{{\large Vocal 1:}} \\ \par
+  \textbf{{\large Vocal 2:}} \\ \par
+  \textbf{{\large Secretario:}} \\ \par
   \vspace{1.8cm}
-  \noindent\underline{\textbf{{\Large FECHA DE DEFENSA:}}}
-
+  \noindent\underline{\textbf{{\Large FECHA DE DEFENSA:}}} \par
   \vspace{2.9cm}
-  \noindent\underline{\textbf{{\Large CALIFICACIÓN:}}}
-
+  \noindent\underline{\textbf{{\Large CALIFICACIÓN:}}} \par
   \vspace{3.6cm}
-  \textbf{PRESIDENTE \hfil VOCAL 1 \hfil VOCAL 2 \hfil SECRETARIO}
-
+  \textbf{PRESIDENTE \hfil VOCAL 1 \hfil VOCAL 2 \hfil SECRETARIO} \par
   \vspace{3.1cm}
-  \textbf{Fdo.: \hfil Fdo.: \hfil Fdo.: \hfil Fdo.:}
+  \textbf{Fdo.: \hfil Fdo.: \hfil Fdo.: \hfil Fdo.:} \par
 }
 
 
@@ -443,7 +429,7 @@
 %% -- letras capitales
 \usepackage{lettrine}
 \newcommand{\drop}[2]{%
-  \lettrine[lines=2,findent=2pt,nindent=0pt, loversize=0.25]% lhang=0.33
+  \lettrine[lines=2,findent=2pt,nindent=3pt,loversize=0.1]% lhang=0.33
   {\textcolor[gray]{0.4}{#1}}{#2}%
   }
 
@@ -454,7 +440,7 @@
   \setlength{\extrarowheight}{1pt}
 }
 
-%% -- Algunos comando útiles
+%% -- Algunos comandos útiles
 \newcommand{\quoteauthor}[1]{\par\hfill#1\hspace{1em}\mbox{}}
 
 
