@@ -39,6 +39,4 @@ include $(TOOLDIR)/figures.mk
 ## Local Variables:
 ##  coding: utf-8
 ##  mode: makefile
-##  mode: flyspell
-##  ispell-local-dictionary: "american"
 ## End:
