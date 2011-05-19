@@ -15,6 +15,7 @@ Casi vacía.
 
 
 \section{Un cuadro}
+\label{sec:uncuadro}
 
 Se denominan «tablas» cuando contienen datos con relaciones numéricas. En
 general se denominan «cuadros». Si las columnas están bien alineadas, las líneas
@@ -49,13 +50,15 @@ contradecirle, él sabe más de tipografía que tú.
 \end{figure}
 
 Por cierto, los títulos de tablas, figuras y otro elementos flotantes (los
-\texttt{caption}) no acaba en punto.
+\texttt{caption}) no acaban en punto.
 
 
 \section{Un listado de código}
+\label{sec:listado}
 
 Puedes referenciar un listado con~\ref{code:hello}. Éste es un listado flotante,
-pero también pueden ser «no flotantes».
+pero también pueden ser «no flotantes» (mira la documentación del paquete
+\href{http://www.ctan.org/get/macros/latex/contrib/listings/listings.pdf}{«listings»}).
 
 \begin{listing}[
   float,
@@ -69,11 +72,18 @@ int main(int argc, char *argv[]) {
 \end{listing}
 
 
-\section{Citas}
 
-Una cita~\cite{design_patterns}. Si estás viendo la versión PDF de este
-documento puedes pinchar la cita, es un enlace que lleva a la página de la
-bibliografía en la que aparece la entrada correspondiente.
+
+\section{Citas y referencias cruzadas}
+
+Una cita~\cite{design_patterns} y una referencia a la segunda sección (véase
+\S\,\ref{sec:uncuadro}).
+
+Si estás viendo la versión PDF de este documento puedes pinchar la cita o el
+número de sección. Son enlaces que llevan al elemento correspondiente. Todos los
+elementos que hacen referencia a otra cosa (figuras, tablas, listados,
+secciones, capítulos, citas, páginas web, etc.) pueden ser «pinchables» gracias al
+paquete \href{http://latex.tugraz.at/_media/docs/hyperref.pdf}{«hyperref»}.
 
 
 
