@@ -11,6 +11,7 @@ TEXSRC = $(shell $(TOOLDIR)/parts-tex.sh $(MAIN))
 FIGURES = $(addprefix $(FIGDIR)/, $(foreach tex, $(TEXSRC), $(shell $(TOOLDIR)/figures-tex.sh $(tex))))
 
 all: $(TARGET)
+	-@grep Citation $(basename $(MAIN)).log
 
 $(TARGET): $(TEXSRC) $(FIGURES)
 
