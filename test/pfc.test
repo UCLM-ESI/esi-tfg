@@ -1,9 +1,10 @@
 # -*- coding:utf-8; tab-width:4; mode:python -*-
 
-cwd='$basedir/../samples/latex/pfc'
+cls='$basedir/tex/arco-pfc.cls'
+sample='$basedir/samples/latex/pfc'
 
-cls = '%s/arco-pfc.cls' % cwd
-t = Test('cp %s $testdir' % cls)
-t.gen += 'arco-pfc.cls'
+t = Test('cp %s %s' % (cls, sample))
+t.gen += '%s/arco-pfc.cls' % sample
 
-Test('make clean all', cwd=cwd)
+Test('make clean all', cwd=sample)
+Test('make clean', cwd=sample)
