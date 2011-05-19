@@ -1,10 +1,13 @@
 # -*- coding:utf-8; tab-width:4; mode:python -*-
 
-cls='$basedir/tex/arco-pfc.cls'
+tex='$basedir/tex/'
 sample='$basedir/samples/latex/pfc'
 
-t = Test('cp %s %s' % (cls, sample))
+t = Test('cp %s/arco-pfc.cls %s' % (tex, sample))
 t.gen += '%s/arco-pfc.cls' % sample
+
+t = Test('cp %s/atbeginend.sty %s' % (tex, sample))
+t.gen += '%s/atbeginend.sty' % sample
 
 Test('make clean all', cwd=sample)
 Test('make clean', cwd=sample)
