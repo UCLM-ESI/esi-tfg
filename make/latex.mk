@@ -1,7 +1,7 @@
 TOOLDIR=/usr/share/arco-tools
 FIGDIR=figures
 
-RUBBER_WARN ?= refs
+RUBBER_WARN ?= all
 RUBBER=rubber -m hyperref -m graphics $(RUBBER_FLAGS) --warn $(RUBBER_WARN)
 
 MAIN  ?= main.tex
