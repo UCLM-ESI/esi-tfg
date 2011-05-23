@@ -1,3 +1,9 @@
+arco-tools (0.71-1) unstable; urgency=low
+
+  * New release
+
+ -- David Villa Alises <David.Villa@uclm.es>  Mon, 23 May 2011 02:46:27 +0200
+
 arco-tools (0.70-1) unstable; urgency=low
 
   * arco-pfc latex class
