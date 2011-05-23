@@ -347,7 +347,7 @@
 \newcommand{\frontpage}{%
   \thispagestyle{empty}%
   \begin{center}
-    \includegraphics[width=3.7cm]{figures/emblema_informatica.pdf}\\
+    \includegraphics[width=3.7cm]{logos/emblema_informatica.pdf}\\
     \vspace{25mm}
     {\Large \textbf{UNIVERSIDAD DE CASTILLA-LA MANCHA}} \\
     \bigskip
