@@ -29,3 +29,7 @@ preview_logo_escudo_uclm.svg:
 
 preview_logo_escudo_tsi.svg:
 	$(shell eog $(URL)/tsi.svg)
+
+
+# Para usar la redirección
+#	curl -L http://arco.esi.uclm.es/logos/$(notdir $@) -o $@
