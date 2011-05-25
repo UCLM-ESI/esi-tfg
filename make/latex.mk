@@ -1,7 +1,7 @@
 TOOLDIR=/usr/share/arco-tools
 FIGDIR=figures
 
-RUBBER_WARN ?= all
+RUBBER_WARN ?= ref
 RUBBER=rubber -m hyperref -m graphics $(RUBBER_FLAGS) --warn $(RUBBER_WARN)
 
 MAIN  ?= main.tex
@@ -27,6 +27,7 @@ help:
 clean::
 	$(RUBBER) --clean --pdf $(MAIN)
 	$(RM) *~ *.maf *.mtc *.lol
+	$(RM) $(addprefix $(basename $(notdir $(MAIN))), .blg, .bbl)
 
 
 vclean:: clean

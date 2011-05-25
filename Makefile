@@ -6,6 +6,7 @@ DESTDIR?=~
 LOGOS=http://arco.esi.uclm.es/svn/public/doc/logos/
 BASE=$(DESTDIR)/usr/share/arco-tools
 LATEXSITE=$(DESTDIR)/usr/share/texmf-texlive/tex/latex
+BIBDIR=$(DESTDIR)/usr/share/texmf-texlive/bibtex/bst/es-bib
 YASNIPPET=$(DESTDIR)/usr/share/emacs/site-lisp/yasnippet/snippets/text-mode
 FIGURES=$(DESTDIR)/usr/share/arco-tools/figures
 EMACS=$(DESTDIR)/usr/share/arco-tools/emacs
@@ -33,6 +34,8 @@ install:
 	install -vd $(LATEXSITE)/arco
 	install -v -m 444 tex/*.cls $(LATEXSITE)/arco
 	install -v -m 444 tex/*.sty $(LATEXSITE)/arco
+	install -vd $(BIBDIR)
+	install -v -m 444 tex/*.bst $(BIBDIR)
 
 	install -vd $(YASNIPPET)
 	install -v -m 444 emacs/yasnippet/text-mode/*.yasnippet $(YASNIPPET)/
