@@ -1,5 +1,7 @@
 ; -*- mode:lisp -*-
 
+(defvar old-fullscreen)
+
 (defun toggle-fullscreen (&optional f)
   (interactive)
   (let ((current-value (frame-parameter nil 'fullscreen)))

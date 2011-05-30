@@ -4,6 +4,7 @@
 DESTDIR?=~
 
 LOGOS=http://arco.esi.uclm.es/svn/public/doc/logos/
+
 BASE=$(DESTDIR)/usr/share/arco-tools
 LATEXSITE=$(DESTDIR)/usr/share/texmf-texlive/tex/latex
 BIBDIR=$(DESTDIR)/usr/share/texmf-texlive/bibtex/bst/es-bib
@@ -28,7 +29,7 @@ install:
 	install -vd $(BASE)
 	install -v -m 444 make/*.mk $(BASE)/
 	install -v -m 555 tex/*.sh  $(BASE)/
-	install -v -m 555 docbook/*.sh  $(BASE)/
+	install -v -m 555 docbook/*.sh $(BASE)/
 	install -v -m 444 bash/*.sh  $(BASE)/
 
 	install -vd $(LATEXSITE)/arco
@@ -39,15 +40,15 @@ install:
 
 	install -vd $(YASNIPPET)
 	install -v -m 444 emacs/yasnippet/text-mode/*.yasnippet $(YASNIPPET)/
-
 	install -vd $(YASNIPPET)/python-mode
 	install -v -m 444 emacs/yasnippet/text-mode/python-mode/*.yasnippet $(YASNIPPET)/python-mode/
-
 	install -vd $(YASNIPPET)/latex-mode
 	install -v -m 444 emacs/yasnippet/text-mode/latex-mode/*.yasnippet $(YASNIPPET)/latex-mode/
 
 	install -vd $(DESTDIR)/usr/bin
 	install -v -m 755 bin/* $(DESTDIR)/usr/bin/
+
+	install -v -m 755 bin.share/* $(BASE)/
 
 	install -vd $(DESTDIR)/usr/share/arco-tools/figures
 	@wget $(LOGOS)/uclm-A4.pdf -O $(FIGURES)/uclm-A4.pdf --no-check-certificate -nv

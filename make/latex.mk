@@ -10,13 +10,13 @@ TEXSRC = $(shell $(TOOLDIR)/parts-tex.sh $(MAIN))
 
 FIGURES = $(addprefix $(FIGDIR)/, $(foreach tex, $(TEXSRC), $(shell $(TOOLDIR)/figures-tex.sh $(tex))))
 
-all: $(TARGET)
-	-@grep Citation $(basename $(MAIN)).log
+all:: $(TARGET)
 
 $(TARGET): $(TEXSRC) $(FIGURES)
 
 %.pdf: %.tex
 	$(RUBBER) --pdf $<
+	-@grep Citation $(basename $(MAIN)).log
 
 help:
 	@echo "- The filename for the master TeX file should be: 'main.tex'"

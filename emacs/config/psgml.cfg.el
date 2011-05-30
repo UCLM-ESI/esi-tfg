@@ -1,5 +1,9 @@
 ; -*- mode:lisp -*-
 
+(defvar sgml-set-face)
+(defvar sgml-markup-faces)
+(defvar sgml-auto-activate-dtd)
+
 (defun psgml-ext ()
 (setq sgml-set-face t)  ; without this, all SGML text is in same color
 (setq sgml-markup-faces

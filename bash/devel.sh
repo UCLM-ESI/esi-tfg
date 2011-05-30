@@ -34,5 +34,3 @@
 
 alias fexec='fexec is deprecated, use aexec'
 alias fmake='fmake is deprecated, use amake'
-
-alias amake='aexec make'

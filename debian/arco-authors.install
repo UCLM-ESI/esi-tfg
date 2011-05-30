@@ -6,3 +6,4 @@ usr/share/arco-tools/slide.mk
 usr/share/arco-tools/latex.mk
 usr/share/arco-tools/logos.mk
 usr/share/arco-tools/docbook.mk
+usr/share/arco-tools/flymake-latex-checker

@@ -4,9 +4,9 @@ Priority: extra
 Maintainer: ARCO Research Group <sysadm@arco.esi.uclm.es>
 Uploaders: David Villa Alises <David.Villa@uclm.es>, Cleto Martin
  Angelina <cleto.martin@gmail.com>
-Build-Depends: debhelper (>= 7.0.50~), develock-el
-Standards-Version: 3.9.1
-Homepage: http://arco.esi.uclm.es
+Build-Depends: debhelper (>= 7.0.50~), yasnippet, emacs-goodies-el, develock-el
+Standards-Version: 3.9.2
+Homepage: https://arco.esi.uclm.es/svn/public/prj/arco-tools
 
 Package: arco-tools
 Architecture: all
@@ -27,7 +27,7 @@ Package: arco-devel
 Replaces: arco-make, arco-debian, arco-bashrc
 Conflicts: arco-make, arco-debian, arco-bashrc
 Architecture: all
-Depends: ${misc:Depends}, yasnippet, devscripts-el, emacs-goodies-el, aexec
+Depends: ${misc:Depends}, yasnippet, devscripts-el, emacs-goodies-el, aexec, auto-complete-el
 Suggests: libnotify-bin
 Description: ARCO devel tools
  Tools for ARCO developers.
@@ -39,3 +39,9 @@ Architecture: all
 Depends: ${misc:Depends}, pdftk
 Description: ARCO user and staff tools
  Tools for ARCO user and staff.
+
+Package: arco-emacs-python
+Architecture: all
+Depends: ${misc:Depends}, arco-devel, pylint, pep8, pyflakes
+Description: Python emacs support
+ Emacs packages and utilities for Python programming

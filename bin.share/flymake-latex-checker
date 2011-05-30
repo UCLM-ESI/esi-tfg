@@ -1,0 +1,12 @@
+#!/bin/bash
+# -*- coding:latin-1; tab-width:4; mode:shell-script -*-
+
+TMP=/tmp/$$
+ln -s $1 $TMP
+
+pdflatex -no-shell-escape -file-line-error -draftmode -interaction=nonstopmode $TMP |\
+    grep "Error\|Warning" |\
+    sed "s|LaTeX Warning|$TMP:1: Warning|g" |\
+    sed "s|$TMP|$1|g"
+
+rm $TMP $(dirname $1)/$$.*
