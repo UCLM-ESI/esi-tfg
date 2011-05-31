@@ -10,3 +10,10 @@
  '(flyspell-duplicate ((t (:background "#ffeecc" :foreground "gray10"))))
  '(flyspell-incorrect ((default (:background "#ffd0d0" :foreground "gray10")) (nil nil)))
  )
+
+
+(autoload 'flyspell-mode "flyspell" "On-the-fly spelling checker." t)
+(add-hook 'LaTeX-mode-hook 'turn-on-flyspell)
+(add-hook 'rst-mode-hook 'turn-on-flyspell)
+(add-hook 'conf-mode-hook 'turn-on-flyspell)
+(add-hook 'sgml-mode-hook 'turn-on-flyspell)

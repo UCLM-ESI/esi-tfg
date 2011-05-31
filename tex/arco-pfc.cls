@@ -1,6 +1,6 @@
 % -*- coding: utf-8 -*-
 
-% pfc.sty
+% arco-pfc.cls
 %
 % Copyright © 2011 David Villa Alises
 %
@@ -25,12 +25,10 @@
 \ProcessOptions\relax
 \LoadClass{book}
 
-
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage{times}
-
 
 \usepackage[htt]{hyphenat}
 \usepackage{atbeginend}
@@ -434,10 +432,15 @@
   }
 
 
-%% -- Inicialización después de \begin{document}
-\newcommand{\pfcInit}{%
+
+\AtBeginDocument{
   % separación entre filas en los cuadros
   \setlength{\extrarowheight}{1pt}
+}
+
+%% -- Inicialización después de \begin{document}
+\newcommand{\pfcInit}{%
+  El comando ``pfcInit'' está obsoleto y ya no es necesario.
 }
 
 %% -- Algunos comandos útiles

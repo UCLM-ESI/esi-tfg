@@ -27,7 +27,7 @@ help:
 clean::
 	$(RUBBER) --clean --pdf $(MAIN)
 	$(RM) *~ *.maf *.mtc *.lol
-	$(RM) $(addprefix $(basename $(notdir $(MAIN))), .blg, .bbl)
+	$(RM) $(addprefix $(basename $(notdir $(MAIN))), .blg .bbl)
 
 
 vclean:: clean
