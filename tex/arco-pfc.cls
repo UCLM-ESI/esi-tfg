@@ -87,9 +87,10 @@
 \renewcommand{\lstlistingname}{Listado}
 
 % de tocbibind, para que el índice de listados aparezca en la ToC
-\renewcommand{\lstlistoflistings}{\begingroup
-   \tocfile{\lstlistlistingname}{lol}
-\endgroup}
+\renewcommand{\lstlistoflistings}{%
+  \begingroup
+  \tocfile{\lstlistlistingname}{lol}
+  \endgroup}
 
 \newcommand{\lstfont}{\ttfamily\fontfamily{pcr}}
 
@@ -166,6 +167,10 @@
 \renewcommand{\bibname}{Referencias}
 \bibliographystyle{es-alpha}
 
+\newcommand{\bibfont}{\small}      % Bibliography's font size
+%% \setlength{\bibhang}{4ex}       % Indent of Bibliography entries
+%% \setlength{\bibsep}{3pt}
+
 % añadir listados, bibliografia, etc a la tabla de contenido
 \usepackage{tocbibind}
 
@@ -174,7 +179,7 @@
 %% -- FORMATO DE CAPÍTULOS Y SECCIONES -----------------------------------------
 \usepackage[rigidchapters, clearempty]{titlesec}
 % - rigidchapters: Todos los títulos de capítulo tienen la misma altura
-% - clearempty: Elimina encabezados y piés de páginas (izquierdas) vacías.
+% - clearempty: Elimina encabezados y pies de páginas (izquierdas) vacías.
 
 \newcommand{\chapterformat}[1]{%
   \fontsize{22}{22}\selectfont\sffamily #1%
@@ -432,13 +437,12 @@
   }
 
 
-
 \AtBeginDocument{
   % separación entre filas en los cuadros
   \setlength{\extrarowheight}{1pt}
 }
 
-%% -- Inicialización después de \begin{document}
+
 \newcommand{\pfcInit}{%
   El comando ``pfcInit'' está obsoleto y ya no es necesario.
 }

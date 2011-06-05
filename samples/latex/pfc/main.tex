@@ -10,9 +10,7 @@
 \lstloadlanguages{[ISO]C++, Python, XML}
 
 
-
 \begin{document}
-
 
 
 %---------- Variables de la clase arco-pfc --------------
@@ -26,10 +24,9 @@
 \logo{informatica.png}
 \publishdate{2011}{Marzo}
 
-%\license{Texto de licencia el gusto de cada uno.}
+%\license{Texto de licencia al gusto de cada uno.}
 
 %--------------------------------------------------------
-
 
 
 \pagestyle{empty}
@@ -41,41 +38,35 @@
 \jury
 
 \singlespacing
-
 \frontchapters
 \input{resumen.tex}
-
 \tableofcontents
 \listoftables
 \listoffigures
 \lstlistoflistings
-
 \input{acro.tex}
-\input{thanks.tex} \cleardoublepage
+\input{thanks.tex}
+\cleardoublepage
 
-\mainmatter \mainchapters
-
+\mainmatter
+\mainchapters
 \onehalfspacing
-
 \input{intro.tex}
 %\input{antecedentes.tex}
 %\input{objetivos.tex}
 %\input{resultados.tex}
 %\input{conclusiones.tex}
 
-
 \appendix
 \appendixtitle
 \input{apendice1.tex}
-
-%{\scriptsize
-%  \input{GFDL.tex}
-%}
+%{\scriptsize \input{GFDL.tex}}
 
 
-\backmatter \backchapters
+\backmatter
+\backchapters
 \cleardoublepage
-{\small\bibliography{main}}
+\bibliography{main}
 \cleardoublepage
 
 \end{document}
