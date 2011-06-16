@@ -352,7 +352,7 @@
 \newcommand{\frontpage}{%
   \thispagestyle{empty}%
   \begin{center}
-    \includegraphics[width=35mm]{figures/emblema_informatica_gray.png}\\
+    \includegraphics[width=35mm]{logos/emblema_informatica-gray.pdf}\\
     \vspace{25mm}
     {\Large \textbf{UNIVERSIDAD DE CASTILLA-LA MANCHA}} \\
     \bigskip
@@ -375,10 +375,11 @@
     \hfill
     {\large \textbf{\@publishmonth, \@publishyear}}
   \end{center}
+
   \cleardoublepage
 
   \begin{center}
-    \includegraphics[width=35mm]{figures/emblema_informatica_gray.png}\\
+    \includegraphics[width=35mm]{logos/emblema_informatica-gray.pdf}\\
     \vspace{15mm}
     {\Large \textbf{UNIVERSIDAD DE CASTILLA-LA MANCHA}} \\
     \bigskip

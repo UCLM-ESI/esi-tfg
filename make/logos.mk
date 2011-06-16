@@ -1,22 +1,22 @@
 
-
 URL=https://arco.esi.uclm.es/svn/public/doc/logos
 LOGOSDIR=figures/logos
 
-$(LOGOSDIR)/emblema_informatica.svg: | $(LOGOSDIR)
+.PRECIOUS: $(LOGOSDIR)/%.svg
+ 
+$(LOGOSDIR)/%.svg: | $(LOGOSDIR)
 	$(shell wget $(URL)/$(notdir $@) -O $@)
 
-$(LOGOSDIR)/arco.svg: | $(LOGOSDIR)
+$(LOGOSDIR)/%.png: | $(LOGOSDIR)
 	$(shell wget $(URL)/$(notdir $@) -O $@)
 
-$(LOGOSDIR)/escudo_uclm.svg: | $(LOGOSDIR)
-	$(shell wget $(URL)/$(notdir $@) -O $@)
-
-$(LOGOSDIR)/tsi.svg: | $(LOGOSDIR)
+$(LOGOSDIR)/%.pdf: | $(LOGOSDIR)
 	$(shell wget $(URL)/$(notdir $@) -O $@)
 
 $(LOGOSDIR):
 	@mkdir -p figures/logos
+
+
 
 preview_logo_emblema_informatica.svg:
 	$(shell eog $(URL)/emblema_informatica.svg)

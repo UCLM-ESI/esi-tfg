@@ -17,7 +17,8 @@
   (add-to-list 'flymake-allowed-file-name-masks
 			   '("\\.py\\'" flymake-python-checker-init)))
 
-(add-hook 'find-file-hook 'flymake-find-file-hook)
+
+(add-hook 'python-mode-hook 'flymake-find-file-hook)
 
 
 (defun my-flymake-show-help ()

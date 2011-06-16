@@ -16,7 +16,7 @@ $(TARGET): $(TEXSRC) $(FIGURES)
 
 %.pdf: %.tex
 	$(RUBBER) --pdf $<
-	-@grep Citation $(basename $(MAIN)).log
+	-@ ! grep Citation $(basename $(MAIN)).log
 
 help:
 	@echo "- The filename for the master TeX file should be: 'main.tex'"
