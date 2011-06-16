@@ -209,6 +209,7 @@
   \pagestyle{fancy}
   \renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ \textsc{##1}}{}}
   \titlespacing{\chapter}{0cm}{1cm}{3.8cm}
+  \cleardoublepage
 }
 
 \newcommand{\backchapters}{
@@ -219,6 +220,7 @@
     {}
 
   \titlespacing{\chapter}{-1cm}{2cm}{3cm}
+  \cleardoublepage
 }
 
 % espaciado entre secciones, subseciones, etc.
@@ -350,7 +352,7 @@
 \newcommand{\frontpage}{%
   \thispagestyle{empty}%
   \begin{center}
-    \includegraphics[width=3.7cm]{logos/emblema_informatica.pdf}\\
+    \includegraphics[width=35mm]{figures/emblema_informatica_gray.png}\\
     \vspace{25mm}
     {\Large \textbf{UNIVERSIDAD DE CASTILLA-LA MANCHA}} \\
     \bigskip
@@ -359,17 +361,66 @@
     {\Large \textbf{INGENIERÍA}} \\
     \bigskip
     {\Large \textbf{EN INFORMÁTICA}} \\
-    \vspace{26mm}
+    \vspace{30mm}
     {\Large \textbf{PROYECTO FIN DE CARRERA}} \\
     \vspace{14mm}
-    {\Large \@title}\\
+
+    \begin{doublespace}
+      {\Large \@title}
+    \end{doublespace}
+
     \vspace{12mm}
     {\large \@author}\\
     \vfill
     \hfill
     {\large \textbf{\@publishmonth, \@publishyear}}
   \end{center}
+  \cleardoublepage
+
+  \begin{center}
+    \includegraphics[width=35mm]{figures/emblema_informatica_gray.png}\\
+    \vspace{15mm}
+    {\Large \textbf{UNIVERSIDAD DE CASTILLA-LA MANCHA}} \\
+    \bigskip
+    {\Large \textbf{ESCUELA SUPERIOR DE INFORMÁTICA}}\\
+    \bigskip
+    {\Large Departamento de Tecnologías y Sistemas de Información}\\
+    \vspace{45mm}
+    {\Large \textbf{PROYECTO FIN DE CARRERA}} \\
+    \bigskip
+
+    \begin{doublespace}
+      {\Large \@title}\\
+    \end{doublespace}
+  \end{center}
+
+  \vspace{25mm}
+
+  \begin{onehalfspace}
+  \begin{flushleft}
+    {\large Autor:\hspace{5mm} \@author}\\
+    {\large Director: \@advisortitle~\@advisor}\\
+  \end{flushleft}
+  \end{onehalfspace}
+
+  \vfill
+  \hfill
+  {\large \textbf{\@publishmonth, \@publishyear}}
+  \cleardoublepage
 }
+
+\newcommand{\dedication}[1]{%
+  \thispagestyle{empty}%
+  \cleardoublepage
+  \vspace*{5cm}
+  \thispagestyle{empty}
+  \begin{flushright}
+    \textit{#1}
+  \end{flushright}
+  \vfill\null
+  \cleardoublepage
+}
+
 
 \newcommand{\copyrightpage}{%
   \newpage
@@ -390,27 +441,28 @@
       \@license
     \end{minipage}
   \end{singlespace}
-  \newpage
+  \cleardoublepage
 }
 
 
 \newcommand{\jury}{%
   \thispagestyle{empty}
+  \vspace*{2cm}
   \noindent\underline{\textbf{{\Large TRIBUNAL:}}}
-  \vspace{0.9cm}
+  \vspace{1.3cm}
   \par
   \textbf{{\large Presidente:}} \\ \par
   \textbf{{\large Vocal 1:}} \\ \par
   \textbf{{\large Vocal 2:}} \\ \par
   \textbf{{\large Secretario:}} \\ \par
-  \vspace{1.8cm}
+  \vspace{2.5cm}
   \noindent\underline{\textbf{{\Large FECHA DE DEFENSA:}}} \par
-  \vspace{2.9cm}
+  \vspace{2.2cm}
   \noindent\underline{\textbf{{\Large CALIFICACIÓN:}}} \par
   \vspace{3.6cm}
   \textbf{PRESIDENTE \hfil VOCAL 1 \hfil VOCAL 2 \hfil SECRETARIO} \par
   \vspace{3.1cm}
-  \textbf{Fdo.: \hfil Fdo.: \hfil Fdo.: \hfil Fdo.:} \par
+  Fdo.: \hfil Fdo.: \hfil Fdo.: \hfil Fdo.: \par
 }
 
 
