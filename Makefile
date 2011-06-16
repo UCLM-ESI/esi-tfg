@@ -52,8 +52,8 @@ install:
 
 	install -vd $(DESTDIR)/usr/share/arco-tools/figures
 	@wget $(LOGOS)/uclm-A4.pdf -O $(FIGURES)/uclm-A4.pdf --no-check-certificate -nv
-	@wget $(LOGOS)/arco.white.pdf -O $(FIGURES)/arco-white.pdf --no-check-certificate -nv
-	@wget $(LOGOS)/arco.watermark.pdf -O $(FIGURES)/arco-watermark.pdf --no-check-certificate -nv
+	@wget $(LOGOS)/arco-white.pdf -O $(FIGURES)/arco-white.pdf --no-check-certificate -nv
+	@wget $(LOGOS)/arco-watermark.pdf -O $(FIGURES)/arco-watermark.pdf --no-check-certificate -nv
 
 	install -vd $(EMACS)
 	install -vm 444 emacs/config/*.cfg.elc $(EMACS)/
