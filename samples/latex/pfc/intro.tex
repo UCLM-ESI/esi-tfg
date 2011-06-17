@@ -11,7 +11,36 @@ líneas para que la letra capital quede bien.
 
 \section{Una sección}
 
-Casi vacía.
+Para hacer viñetas como ésta (cambiando márgenes u otras propiedades)
+
+\begin{itemize}[noitemsep, label=$\triangleright$]
+\item esto es
+\item una pequeña
+\item muestra
+\end{itemize}
+
+te recomiendo el paquete
+\href{http://mirror.ctan.org/macros/latex/contrib/enumitem/enumitem.pdf}{«enumitem»}
+(ya incluido en \texttt{arco-pfc.cls}).
+
+
+\section{Una figura}
+
+Las figuras se referencian así (ver figura~\ref{fig:informatica}). Recuerda que
+no tienen porqué aparecer en el lugar donde se ponen (mira un libro de
+verdad). \LaTeX{} las colocará donde mejor queden, No te empeñes en
+contradecirle, él sabe más de tipografía que tú.
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[width=0.2\textwidth]{logos/emblema_informatica-gray.pdf}
+\caption{Escudo oficial de informática}
+\label{fig:informatica}
+\end{center}
+\end{figure}
+
+Por cierto, los títulos de tablas, figuras y otro elementos flotantes (los
+\texttt{caption}) no deben acabar en punto~\cite{Sousa08}.
 
 
 \section{Un cuadro}
@@ -32,25 +61,6 @@ de este modo (ver cuadro~\ref{tab:rpc-semantics}).
     (\textsc{Puder}~\cite{puder05:_distr_system_archit})}
   \label{tab:rpc-semantics}
 \end{table}
-
-
-\section{Una figura}
-
-Las figuras se referencian así (ver figura~\ref{fig:informatica}). Recuerda que
-no tienen porqué aparecer en el lugar donde se ponen (mira un libro de
-verdad). \LaTeX{} las colocará donde mejor queden, No te empeñes en
-contradecirle, él sabe más de tipografía que tú.
-
-\begin{figure}[!h]
-\begin{center}
-\includegraphics[width=0.2\textwidth]{logos/emblema_informatica-gray.pdf}
-\caption{Escudo oficial de informática}
-\label{fig:informatica}
-\end{center}
-\end{figure}
-
-Por cierto, los títulos de tablas, figuras y otro elementos flotantes (los
-\texttt{caption}) no acaban en punto.
 
 
 \section{Un listado de código}
