@@ -10,8 +10,6 @@ usr/share/arco-tools/bin.mk
 usr/share/arco-tools/slice.mk
 usr/share/arco-tools/emacs/auto-complete.cfg.elc
 usr/share/arco-tools/emacs/auto-insert.cfg.elc
-usr/share/arco-tools/emacs/develock.cfg.elc
-usr/share/arco-tools/emacs/develock-py.cfg.elc
 usr/share/arco-tools/emacs/docbook.cfg.elc
 usr/share/arco-tools/emacs/flymake.cfg.elc
 usr/share/arco-tools/emacs/flyspell.cfg.elc

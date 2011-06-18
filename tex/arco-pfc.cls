@@ -32,6 +32,7 @@
 
 \usepackage[htt]{hyphenat}
 \usepackage{atbeginend}
+\usepackage{enumitem}
 
 % Las normas tipográficas que aparecen en los comentarios corresponden al libro:
 % J. Martínez de Sousa. Ortografía y ortotipografía del español actual. Trea, 2008.
