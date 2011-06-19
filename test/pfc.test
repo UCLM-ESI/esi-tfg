@@ -1,13 +1,16 @@
 # -*- coding:utf-8; tab-width:4; mode:python -*-
 
-tex='$basedir/tex/'
+import os
+
+tex='$basedir/tex'
 sample='$basedir/samples/latex/pfc'
 
-t = Test('cp %s/arco-pfc.cls %s' % (tex, sample))
-t.gen += '%s/arco-pfc.cls' % sample
+def copy(srcdir, fname, dstdir):
+    Test('cp {srcdir}/{fname} {dstdir}'.format(**locals()),
+         gen=os.path.join(dstdir, fname))
 
-t = Test('cp %s/atbeginend.sty %s' % (tex, sample))
-t.gen += '%s/atbeginend.sty' % sample
+for fname in ['arco-pfc.cls', 'atbeginend.sty', 'es-alpha.bst']:
+    copy(tex, fname, sample)
 
 Test('make clean all', cwd=sample)
 Test('make clean', cwd=sample)
