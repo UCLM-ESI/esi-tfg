@@ -29,17 +29,14 @@
 %--------------------------------------------------------
 
 
-\pagestyle{empty}
 \frontmatter
+
 \pretitle
 \frontpage
 \copyrightpage
-\dedication{A alguien muy querido y/o respetado}
 
 \jury
 
-\singlespacing
-\frontchapters
 \input{resumen.tex}
 \tableofcontents
 \listoftables
@@ -47,14 +44,15 @@
 \lstlistoflistings
 \input{acro.tex}
 \input{thanks.tex}
-\cleardoublepage
+\dedication{A alguien muy querido y/o respetado}
+
 
 \mainmatter
-\mainchapters
-\onehalfspacing
+
 \input{intro.tex}
 %\input{antecedentes.tex}
 %\input{objetivos.tex}
+%\input{metodo.tex}
 %\input{resultados.tex}
 %\input{conclusiones.tex}
 
@@ -65,8 +63,6 @@
 
 
 \backmatter
-\backchapters
-\cleardoublepage
 \bibliography{main}
 \cleardoublepage
 
