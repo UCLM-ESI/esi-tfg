@@ -104,8 +104,8 @@
      framexleftmargin   = 0.4cm,
      framesep           = 0pt,
      rulesep            = .4pt,
-     backgroundcolor    = \color{gray95},
-     rulesepcolor       = \color{black},
+%     backgroundcolor    = \color{gray95},
+%     rulesepcolor       = \color{black},
      captionpos         = b,
      floatplacement     = htbp,
      %
@@ -184,43 +184,59 @@
 
 \newcommand{\chapterformat}[1]{%
   \fontsize{22}{22}\selectfont\sffamily #1%
-  }
+}
 
 % doc: \titleformat{ command }[ shape ]{ format }{ label }{ sep }{ before }[ after ]
 
-\newcommand{\frontchapters}{
+\newcommand{\frontchapterformat}{
   \titleformat{\chapter}[display]%
     {}
-    {\thechapter}
-    {0cm}
+    {}
+    {0mm}
     {\chapterformat}
 
-  \pagestyle{fancy}
-  \renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{##1}}{}}
-  \titlespacing{\chapter}{-1cm}{2cm}{2cm}
+  \titlespacing{\chapter}{0cm}{2cm}{2cm}
 }
 
-\newcommand{\mainchapters}{
+\let\frontmatterorig\frontmatter
+\renewcommand{\frontmatter}{
+  \frontmatterorig
+  \singlespacing
+  \pagestyle{fancy}
+  \frontchapterformat
+  \renewcommand{\chaptermark}[1]{\markboth{\uppercase{##1}}{}}
+}
+
+\newcommand{\mainchapterformat}{
   \titleformat{\chapter}[display]
-    {\normalfont\Large}
+    {\normalfont\large\sffamily}
     {\chaptertitlename\ \thechapter}
-    {0cm}
+    {0mm}
     {\chapterformat}
 
+  \titlespacing{\chapter}{0cm}{1cm}{3.8cm}
+}
+
+\let\mainmatterorig\mainmatter
+\renewcommand{\mainmatter}{
+  \cleardoublepage
+  \mainmatterorig
+  \mainchapterformat
   \pagestyle{fancy}
   \renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ \textsc{##1}}{}}
-  \titlespacing{\chapter}{0cm}{1cm}{3.8cm}
+  \onehalfspacing
   \cleardoublepage
 }
 
-\newcommand{\backchapters}{
-    \titleformat{\chapter}[display]%
-    {\chapterformat}
-    {\thechapter}
-    {0pt}
-    {}
 
-  \titlespacing{\chapter}{-1cm}{2cm}{3cm}
+\newcommand{\backchapterformat}{
+  \frontchapterformat
+}
+
+\let\backmatterorig\backmatter
+\renewcommand{\backmatter}{
+  \backmatterorig
+  \backchapterformat
   \cleardoublepage
 }
 
@@ -351,7 +367,7 @@
 
 
 \newcommand{\frontpage}{%
-  \thispagestyle{empty}%
+  \pagestyle{empty}
   \begin{center}
     \includegraphics[width=35mm]{logos/emblema_informatica-gray.pdf}\\
     \vspace{25mm}
