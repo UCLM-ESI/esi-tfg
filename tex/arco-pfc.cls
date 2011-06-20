@@ -354,14 +354,13 @@
 % fuente y estilo que en la portada pero en un tamaño 2/3 el de
 % ésta. Opcionalmente puede aparecer el autor.
 \newcommand{\pretitle}{%
-  \cleardoublepage
-  \thispagestyle{empty}%
+  \thispagestyle{empty}
   \begin{center}%
     \vspace*{\stretch{3.2}}%
-    {\large \textsc{\@title} \par}
+    {\large \textsc{\@title}}
+     \par
     \vspace*{\stretch{6.8}}%
   \end{center}%
-  \vfill\null
   \cleardoublepage
 }
 
@@ -428,21 +427,18 @@
 }
 
 \newcommand{\dedication}[1]{%
-  \thispagestyle{empty}%
   \cleardoublepage
-  \vspace*{5cm}
-  \thispagestyle{empty}
+  \null\vspace{\stretch{1}}
   \begin{flushright}
     \textit{#1}
   \end{flushright}
-  \vfill\null
+  \vspace{\stretch{2}}\null
   \cleardoublepage
 }
 
 
 \newcommand{\copyrightpage}{%
   \newpage
-  \thispagestyle{empty}
   \begin{singlespace}
     \null \vfill \noindent
     \textbf{\@author} \par
@@ -464,7 +460,6 @@
 
 
 \newcommand{\jury}{%
-  \thispagestyle{empty}
   \vspace*{2cm}
   \noindent\underline{\textbf{{\Large TRIBUNAL:}}}
   \vspace{1.3cm}
