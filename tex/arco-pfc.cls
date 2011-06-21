@@ -21,7 +21,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{arco-pfc}[2011/05/16 Arco modified book class]
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
-\PassOptionsToClass{a4paper, 12pt, twoside, openright}{book}
+\PassOptionsToClass{a4paper, 12pt, openright}{book}
 \ProcessOptions\relax
 \LoadClass{book}
 
