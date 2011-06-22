@@ -33,6 +33,8 @@
 \usepackage[htt]{hyphenat}
 \usepackage{atbeginend}
 \usepackage{enumitem}
+\usepackage{xifthen}
+
 
 % Las normas tipográficas que aparecen en los comentarios corresponden al libro:
 % J. Martínez de Sousa. Ortografía y ortotipografía del español actual. Trea, 2008.
@@ -293,14 +295,12 @@
 
 \newcommand{\@address}{}
 \newcommand{\address}[1]{\renewcommand{\@address}{#1}}
-\newcommand{\@city}{}
+\newcommand{\@city}{Ciudad Real}
 \newcommand{\city}[1]{\renewcommand{\@city}{#1}}
-\newcommand{\@country}{}
+\newcommand{\@country}{Spain}
 \newcommand{\country}[1]{\renewcommand{\@country}{#1}}
-\newcommand{\@phone}{}
-\newcommand{\phone}[1]{\renewcommand{\@phone}{#1}}
-\newcommand{\@email}{}
-\newcommand{\email}[1]{\renewcommand{\@email}{#1}}
+\newcommand{\phone}[1]{\newcommand{\@phone}{#1}}
+\newcommand{\email}[1]{\newcommand{\@email}{#1}}
 \newcommand{\@homepage}{}
 \newcommand{\homepage}[1]{\renewcommand{\@homepage}{#1}}
 
@@ -415,8 +415,8 @@
 
   \begin{onehalfspace}
   \begin{flushleft}
-    {\large Autor:\hspace{5mm} \@author}\\
-    {\large Director: \@advisortitle~\@advisor}\\
+    {\large Autor:\hspace{5mm} \@authortitle\,\@author}\\
+    {\large Director: \@advisortitle\,\@advisor}\\
   \end{flushleft}
   \end{onehalfspace}
 
@@ -443,10 +443,10 @@
     \null \vfill \noindent
     \textbf{\@author} \par
     \smallskip \noindent
-    \@city\\ \@country \par
+    \@city\ -- \@country \par
     \medskip \noindent
-    \parbox{4em}{\emph{E-mail:}}   \@email \\
-    \parbox{4em}{\emph{Telefono:}} \@phone \\
+    \ifthenelse{\NOT \isundefined{\@email}}{\parbox{4em}{\emph{E-mail:}}   \@email \\}{}
+    \ifthenelse{\NOT \isundefined{\@phone}}{\parbox{4em}{\emph{Teléfono:}} \@phone \\}{}
     \parbox{4em}{\emph{Web site:}} {\small \url{\@homepage}} \\
     \bigskip \noindent
     \copyright\ \number\@publishyear\ \ \@author \par
@@ -478,6 +478,7 @@
   Fdo.: \hfil Fdo.: \hfil Fdo.: \hfil Fdo.: \par
 }
 
+\addto\captionsspanish{\renewcommand{\appendixname}{Anexo}}
 
 \newcommand{\appendixtitle} {
   \cleardoublepage
