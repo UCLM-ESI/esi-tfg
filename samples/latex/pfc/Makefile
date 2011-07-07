@@ -4,3 +4,4 @@
 include /usr/share/arco-tools/latex.mk
 include /usr/share/arco-tools/logos.mk
 
+main.tex: figures/logos/emblema_informatica-gray.pdf
