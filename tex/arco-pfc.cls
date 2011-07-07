@@ -304,9 +304,18 @@
 \newcommand{\@homepage}{}
 \newcommand{\homepage}[1]{\renewcommand{\@homepage}{#1}}
 
-
-\newcommand{\@logo}{}
-\newcommand{\logo}[1]{\renewcommand{\@logo}{#1}}
+%\newcommand{\@logo}{}
+\newcommand{\logo}[1]{\newcommand{\@logo}{#1}}
+\newcommand{\putlogo}{%
+  \ifthenelse{\NOT \isundefined{\@logo}}{
+    \includegraphics[width=35mm]{\@logo}\\
+  }{
+    \vspace*{2cm}
+    NO SE HA DEFINIDO UN LOGO\\
+    Utiliza  \texttt{$\backslash$logo}\\
+    \vspace{2cm}
+  }
+}
 
 \newcommand{\@publishmonth}{}
 \newcommand{\@publishyear}{\year}
@@ -368,7 +377,7 @@
 \newcommand{\frontpage}{%
   \pagestyle{empty}
   \begin{center}
-    \includegraphics[width=35mm]{logos/emblema_informatica-gray.pdf}\\
+    \putlogo
     \vspace{25mm}
     {\Large \textbf{UNIVERSIDAD DE CASTILLA-LA MANCHA}} \\
     \bigskip
@@ -395,7 +404,7 @@
   \cleardoublepage
 
   \begin{center}
-    \includegraphics[width=35mm]{logos/emblema_informatica-gray.pdf}\\
+    \putlogo
     \vspace{15mm}
     {\Large \textbf{UNIVERSIDAD DE CASTILLA-LA MANCHA}} \\
     \bigskip

@@ -2,8 +2,7 @@ Source: arco-tools
 Section: shells
 Priority: extra
 Maintainer: ARCO Research Group <sysadm@arco.esi.uclm.es>
-Uploaders: David Villa Alises <David.Villa@uclm.es>, Cleto Martin
- Angelina <cleto.martin@gmail.com>
+Uploaders: David Villa Alises <David.Villa@uclm.es>
 Build-Depends: debhelper (>= 7.0.50~), yasnippet, emacs-goodies-el
 Standards-Version: 3.9.2
 Homepage: https://arco.esi.uclm.es/svn/public/prj/arco-tools
