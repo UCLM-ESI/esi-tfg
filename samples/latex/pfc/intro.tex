@@ -2,100 +2,35 @@
 
 \chapter{Introducción}
 
-\drop{L}{etra} capital para empezar el capítulo. Este párrafo debería tener al menos cinco
-líneas para que la letra capital quede bien. Este párrafo debería tener al menos cinco
-líneas para que la letra capital quede bien. Este párrafo debería tener al menos cinco
-líneas para que la letra capital quede bien. Este párrafo debería tener al menos cinco
-líneas para que la letra capital quede bien.
-
-
-\section{Una sección}
-
-Para hacer viñetas como ésta (cambiando márgenes u otras propiedades)
-
-\begin{itemize}[noitemsep, label=$\triangleright$]
-\item esto es
-\item una pequeña
-\item muestra
-\end{itemize}
-
-te recomiendo el paquete
-\href{http://mirror.ctan.org/macros/latex/contrib/enumitem/enumitem.pdf}{«enumitem»}
-(ya incluido en \texttt{arco-pfc.cls}).
-
-
-\section{Una figura}
-
-Las figuras se referencian así (ver figura~\ref{fig:informatica}). Recuerda que
-no tienen porqué aparecer en el lugar donde se ponen (mira un libro de
-verdad). \LaTeX{} las colocará donde mejor queden, No te empeñes en
-contradecirle, él sabe más de tipografía que tú.
-
-\begin{figure}[!h]
-\begin{center}
-%\includegraphics[width=0.2\textwidth]{}
-\caption{Escudo oficial de informática}
-\label{fig:informatica}
-\end{center}
-\end{figure}
-
-Por cierto, los títulos de tablas, figuras y otro elementos flotantes (los
-\texttt{caption}) no deben acabar en punto~\cite{Sousa08}.
-
-
-\section{Un cuadro}
-\label{sec:uncuadro}
-
-Se denominan «tablas» cuando contienen datos con relaciones numéricas. En
-general se denominan «cuadros». Si las columnas están bien alineadas, las líneas
-verticales estorban más que ayudan (no las pongas). Los cuadros se referencian
-de este modo (ver cuadro~\ref{tab:rpc-semantics}).
-
-\begin{table}[htbp]
-  \centering
-  {\small
-  \input{tables/RPC-semantics.tex}
-  }
-  \caption[Semánticas de \acs{RPC} en presencia de distintos fallos]
-  {Semánticas de \acs{RPC} en presencia de distintos fallos
-    (\textsc{Puder}~\cite{puder05:_distr_system_archit})}
-  \label{tab:rpc-semantics}
-\end{table}
-
-
-\section{Un listado de código}
-\label{sec:listado}
-
-Puedes referenciar un listado con~\ref{code:hello}. Éste es un listado flotante,
-pero también pueden ser «no flotantes» (mira la documentación del paquete
-\href{http://www.ctan.org/get/macros/latex/contrib/listings/listings.pdf}{«listings»}).
-
-\begin{listing}[
-  float,
-  language = C,
-  caption  = {«Hola mundo» en C},
-  label    = code:hello]
-#include <stdio.h>
-int main(int argc, char *argv[]) {
-    puts("Hola mundo\n");
-}
-\end{listing}
+\drop{E}{sto} se llama «letra capital» y debería utilizarse únicamente al
+comienzo de capítulo como artificio decorativo. Para que resulte estéticamente
+adecuada, este primer párrafo debería tener más del doble de líneas de lo que
+ocupe verticalmente la letra capital (dos en este caso). El capítulo de
+introducción debe dar al lector una perspectiva básica ---pero completa--- del
+problema que se pretende abordar, pero también de la estrategia y enfoque que el
+autor propone para su resolución. El lector debería poder determinar si este
+documento le interesa leyendo únicamente la introducción.
 
 
 
+\section{Título del proyecto}
 
-\section{Citas y referencias cruzadas}
-
-Una cita~\cite{design_patterns} y una referencia a la segunda sección (véase
-\S\,\ref{sec:uncuadro}).
-
-Si estás viendo la versión PDF de este documento puedes pinchar la cita o el
-número de sección. Son enlaces que llevan al elemento correspondiente. Todos los
-elementos que hacen referencia a otra cosa (figuras, tablas, listados,
-secciones, capítulos, citas, páginas web, etc.) pueden ser «pinchables» gracias al
-paquete \href{http://latex.tugraz.at/_media/docs/hyperref.pdf}{«hyperref»}.
+En la portada ---y otras páginas de presentación--- el nombre o título del
+proyecto debe aparecer sin comillas, cursiva u otros formatos. Si se cita el
+título de otra obra, o el nombre de un capítulo sí debe aparecer entre
+comillas. Por cierto, las comillas que deben usarse en castellano son las
+«latinas», dejando las ``inglesas'' para los raros casos en los que aparezca una
+cita en el cuerpo otra~\cite{sousa}.
 
 
+\section{Estructura del documento}
+
+Pueden incluirse aquí una sección con algunos consejos para la lectura del
+documento dependiendo de la motivación o conocimientos del lector.  También
+puede ser útil incluir una lista con el nombre y finalidad de cada uno de los
+capítulos restantes.
+
+FIXME
 
 \section{Más texto para que ocupe varias páginas}
 
