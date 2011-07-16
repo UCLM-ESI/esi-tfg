@@ -1,3 +1,10 @@
+arco-tools (0.20110716-1) unstable; urgency=low
+
+  * New binary package: arco-pfc
+  * Samples installed by the corresponding package
+
+ -- David Villa Alises <David.Villa@uclm.es>  Sat, 16 Jul 2011 12:25:05 +0200
+
 arco-tools (0.20110708-1) unstable; urgency=low
 
   * New relese

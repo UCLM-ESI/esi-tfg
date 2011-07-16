@@ -12,6 +12,7 @@ YASNIPPET=$(DESTDIR)/usr/share/emacs/site-lisp/yasnippet/snippets/text-mode
 FIGURES=$(DESTDIR)/usr/share/arco-tools/figures
 EMACS=$(DESTDIR)/usr/share/arco-tools/emacs
 SAMPLES=$(DESTDIR)/usr/share/doc/arco-tools/samples
+DOCDIR=$(DESTDIR)/usr/share/doc
 
 all:
 	sed s/CLASS/book/g tex/arco.cls.tmpl > tex/arco-book.cls
@@ -69,5 +70,14 @@ install:
 	install -vd $(EMACS)/template
 	install -vm 444 emacs/template/* $(EMACS)/template/
 
-	install -vd $(SAMPLES)
-	cp -a samples/* $(SAMPLES)
+#	install -vd $(SAMPLES)
+#	cp -a samples/* $(SAMPLES)
+
+	install -vd $(DOCDIR)/arco-authors/samples
+	cp -a samples/latex/* $(DOCDIR)/arco-authors/samples
+
+	install -vd $(DOCDIR)/arco-pfc
+	cp -a samples/pfc $(DOCDIR)/arco-pfc/sample
+
+	install -vd $(DOCDIR)/arco-devel/samples
+	cp -a samples/make $(DOCDIR)/arco-devel/samples

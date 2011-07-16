@@ -28,12 +28,19 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
-\usepackage{times}
+
+%% -- Fundiciones
+\renewcommand{\rmdefault}{ptm}  % times
+\renewcommand{\sfdefault}{lmss} % lmoderm sans sherif
+\renewcommand{\ttdefault}{lmtt} % lmoderm typewriter
 
 \usepackage[htt]{hyphenat}
 \usepackage{atbeginend}
-\usepackage{enumitem}
 \usepackage{xifthen}
+
+
+\usepackage{enumitem}
+\setlist{topsep=0pt, itemsep=0pt}
 
 
 % Las normas tipográficas que aparecen en los comentarios corresponden al libro:

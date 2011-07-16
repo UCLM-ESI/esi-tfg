@@ -10,17 +10,27 @@ Homepage: https://arco.esi.uclm.es/svn/public/prj/arco-tools
 Package: arco-tools
 Architecture: all
 Depends: ${misc:Depends}, arco-authors (= ${source:Version}), arco-devel (= ${source:Version}), arco-user (= ${source:Version})
-Description: ARCO administrator tools
- Packaging and administrative tools for ARCO developers.
+Description: ARCO tools
+ Metapackage for developmente and administrative tools for ARCO developers, and
+ others.
 
 Package: arco-authors
 Replaces: arco-latex
 Recommends: unoconv
 Conflicts: arco-latex, arco-make
 Architecture: all
-Depends: ${misc:Depends}, texlive-binaries, inkscape, dblatex, rubber, netpbm, dia, aspell-en
+Depends: ${misc:Depends}, texlive-binaries, texlive-latex-extra,
+ texlive-lang-spanish, texlive-latex-recommended, cm-super, inkscape, dblatex,
+ rubber, netpbm, dia, aspell-en
 Description: ARCO authors tools
- LaTeX tools for ARCO authors.
+ LaTeX and DocBook utilities and styles for ARCO authors.
+
+Package: arco-pfc
+Architecture: all
+Depends:  ${misc:Depends}, arco-authors (= ${source:Version})
+Description: LaTeX class and utilities for PFC typesetting.
+ This package provides the arco-pfc LaTeX class created specifically to simplify
+ PFC typesetting.
 
 Package: arco-devel
 Replaces: arco-make, arco-debian, arco-bashrc
@@ -29,7 +39,7 @@ Architecture: all
 Depends: ${misc:Depends}, yasnippet, devscripts-el, emacs-goodies-el, aexec, auto-complete-el
 Suggests: libnotify-bin
 Description: ARCO devel tools
- Tools for ARCO developers.
+ Development tools for ARCO staff.
 
 Package: arco-user
 Replaces: arco-bin

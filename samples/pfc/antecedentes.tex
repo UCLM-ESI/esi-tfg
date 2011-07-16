@@ -1,9 +1,49 @@
 \chapter{Antecedentes}
 
+Este capítulo incluye unas nociones básicas de \LaTeX{} y algunos consejos
+sencillos de composición para sacar todo el jugo a la clase \emph{arco-pfc}. Ten
+presente que este capítulo está pensado para que leas el código fuente y lo
+compares con el resultado en PDF.
 
-\section{Una sección}
+\section{Estilos de texto}
 
-Para hacer viñetas como ésta (cambiando márgenes u otras propiedades):
+Debido a su continuo uso, se muestra entre paréntesis la combinación de emacs
+para incluir el comando \LaTeX{} correspondiente.
+
+\begin{itemize}[noitemsep]
+\item Normal.
+\item \textbf{Negrita} (C-c-f-b).
+\item \textit{Itálica} (C-c-f-i).
+\item \emph{Enfatizada} (C-c-f-e). Fíjate que el estilo que se obtiene al
+  enfatizar depende del estilo del texto en el que se incluya: \textit{texto en
+    itálica y \emph{enfatizado} en medio}.
+\item \texttt{Monoespaciada} (C-c-f-t)
+\end{itemize}
+
+Otros de menos uso:
+
+\begin{itemize}[noitemsep]
+\item \textsc{Versalita} (C-c-f-c).
+\item \textsf{Serifa}, es decir, sin remates o paloseco (C-c-f-f).
+\item \textrm{Romana} (C-c-f-r).
+\end{itemize}
+
+
+\section{Viñetas y enumerados}
+
+En \LaTeX{} hay tres tipos básicos de viñetas:
+
+\begin{itemize}
+\item itemize.
+\item enumerate.
+\item description.
+\end{itemize}
+
+
+Es posible hacer viñetas (como la siguiente) cambiando márgenes u otras
+propiedades gracias al paquete al paquete
+\href{http://mirror.ctan.org/macros/latex/contrib/enumitem/enumitem.pdf}{\emph{enumitem}}
+(ya incluido en \emph{arco-pfc}).
 
 \begin{itemize}[noitemsep, label=$\triangleright$]
 \item esto es
@@ -11,9 +51,8 @@ Para hacer viñetas como ésta (cambiando márgenes u otras propiedades):
 \item muestra
 \end{itemize}
 
-se recomienda el paquete
-\href{http://mirror.ctan.org/macros/latex/contrib/enumitem/enumitem.pdf}{«enumitem»}
-(ya incluido en \texttt{arco-pfc.cls}).
+El paquete \emph{enumitem} ofrece muchas otras posibilidades para personalizar
+las viñetas (individual o globalmente) o crear nuevas.
 
 
 \section{Una figura}

@@ -19,9 +19,10 @@ $(TARGET): $(TEXSRC) $(FIGURES)
 	-@ ! grep Citation $(basename $(MAIN)).log
 
 help:
-	@echo "- The filename for the master TeX file should be: 'main.tex'"
-	@echo "  But you can change that defining: 'MAIN = your_master.tex' in your Makefile"
+	@echo "- The name for the master TeX file should be: 'main.tex'"
+	@echo "  But you can changed defining: 'MAIN = your_master.tex' in your Makefile"
 	@echo "- Put your image sources in the subdirectory 'figures'."
+	@echo "- 'vclean' target remove automatically converted images."
 	@echo
 
 clean::
