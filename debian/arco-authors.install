@@ -1,5 +1,5 @@
-usr/share/arco-tools/figures*
-usr/share/arco-tools/parts*
+usr/share/arco-tools/*figures.sh
+usr/share/arco-tools/*parts.sh
 usr/share/texmf-texlive/tex/latex/arco
 usr/share/texmf-texlive/bibtex/bst/es-bib
 usr/share/arco-tools/slide.mk

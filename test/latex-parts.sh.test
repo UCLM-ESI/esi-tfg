@@ -1,6 +1,6 @@
 # -*- mode:python; coding:utf-8 -*-
 
-t = Test('$basedir/tex/parts-tex.sh $testdir/sample1.tex')
+t = Test('$basedir/tex/latex-parts.sh $testdir/sample1.tex')
 t.post += FileContains('sample1.tex')
 t.post += FileContains('sec1.tex')
 t.post += FileContains('sec2.tex')

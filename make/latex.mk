@@ -6,9 +6,9 @@ RUBBER=rubber -m hyperref -m graphics $(RUBBER_FLAGS) --warn $(RUBBER_WARN)
 
 MAIN  ?= main.tex
 TARGET = $(MAIN:.tex=.pdf)
-TEXSRC = $(shell $(TOOLDIR)/parts-tex.sh $(MAIN))
+TEXSRC = $(shell $(TOOLDIR)/latex-parts.sh $(MAIN))
 
-FIGURES = $(addprefix $(FIGDIR)/, $(foreach tex, $(TEXSRC), $(shell $(TOOLDIR)/figures-tex.sh $(tex))))
+FIGURES = $(addprefix $(FIGDIR)/, $(foreach tex, $(TEXSRC), $(shell $(TOOLDIR)/latex-figures.sh $(tex))))
 
 all:: $(TARGET)
 

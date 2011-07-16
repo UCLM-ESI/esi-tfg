@@ -40,7 +40,10 @@
 (setq kill-read-only-ok 1)
 
 ; disable C-z on X11 sessions
-(when window-system (global-unset-key "\C-z"))
+(when window-system
+  (global-unset-key "\C-z")
+  (global-unset-key "\C-x\C-z")
+  )
 
 ; Remember cursor position in edited files
 (require 'saveplace)

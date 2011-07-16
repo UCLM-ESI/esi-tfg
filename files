@@ -3,13 +3,13 @@ authors:               inkscape, texlive, dblatex
 - figures.mk
 
 - latex.mk
-- figures-tex.sh
-- parts-tex.sh
+- tex-figures.sh
+- tex-parts.sh
 - arco-report.cls y figures descargadas
 
 - docbook.mk
-- figures-db.sh
-- parts-db.sh
+- db-figures.sh
+- db-parts.sh
 
 - figures.makefile.ex
 
@@ -21,4 +21,3 @@ devel
 
 user:
 - bin/*
- 

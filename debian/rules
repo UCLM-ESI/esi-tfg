@@ -1,7 +1,8 @@
 #!/usr/bin/make -f
 # -*- makefile -*-
 
-VERSION=$(shell head -n 1 debian/changelog | cut -f2 -d " " | tr -d "()" | cut -f1 -d "-")
+#VERSION=$(shell head -n 1 debian/changelog | cut -f2 -d " " | tr -d "()" | cut -f1 -d "-")
+VERSION=$(shell dpkg-parsechangelog | grep ^Version: | cut -d' ' -f2 | cut -d'-' -f1)
 
 %:
 	dh  $@
