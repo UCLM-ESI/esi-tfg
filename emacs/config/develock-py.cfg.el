@@ -10,6 +10,9 @@
 ;; Last update Sun Feb 14 09:27:12 2010 Daniel Farina
 ;;
 
+;| develock-mode for python.
+
+
 (require 'develock)
 
 (defcustom develock-python-font-lock-keywords

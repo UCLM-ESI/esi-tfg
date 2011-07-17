@@ -1,5 +1,10 @@
 ; -*- tab-width:4; fill-column:90; mode:lisp -*-
 
+;| Activates and binds RefTeX minor mode.
+;| Configure a checker for flymake (disabled by default). To enable it::
+;|
+;|   M-x flymake-mode
+
 ; Activate and connect RefTeX
 (add-hook 'LaTeX-mode-hook 'turn-on-reftex)
 (setq reftex-plug-into-AUCTeX t)

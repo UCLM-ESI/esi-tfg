@@ -1,5 +1,8 @@
 ; -*- mode:lisp -*-
 
+;| - Better faces and highlight for sgml-mode
+;| - Automatic DTD detection and loading.
+
 (defvar sgml-set-face)
 (defvar sgml-markup-faces)
 (defvar sgml-auto-activate-dtd)

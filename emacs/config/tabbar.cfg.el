@@ -1,6 +1,17 @@
 ; -*- mode:lisp -*-
 ; author: David.Villa@uclm.es
 
+;| A very good customization for tabbar-mode.
+;|
+;| - Better faces for tabs.
+;| - Separate buffers in three independent groups: user files, dired and messages.
+;|
+;| It provides next keystrokes:
+;|
+;| - C-S-left and C-S-right to change among buffers in the same group.
+;| - C-S-up and C-S-down to change among groups.
+
+
 (custom-set-faces
  '(tabbar-default ((t (:inherit variable-pitch :background "gray94" :foreground "gray25" :height 0.8))))
  '(tabbar-highlight ((t (:foreground "blue"))))

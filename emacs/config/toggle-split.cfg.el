@@ -1,7 +1,10 @@
 ; -*- mode:lisp -*-
+; http://www.emacswiki.org/emacs/ToggleWindowSplit
+
+;| It provides the keystroke C-x 4 to change among vertical and horizontal
+;| two-window layouts.
 
 ;--- horiz to vert split ---
-; http://www.emacswiki.org/emacs/ToggleWindowSplit
 (defun toggle-window-split ()
   "Vertical split shows more of each line, horizontal split shows
 more lines. This code toggles between them. It only works for

@@ -1,5 +1,8 @@
 ; -*- tab-width:4; fill-column:90; mode:lisp -*-
 
+;| flymake configuration for python-mode (enabled by default).
+;| Set pyflakes as Python syntax checker. Run with C-c C-v
+
 (load "flymake.cfg")
 
 ; avoid warnings

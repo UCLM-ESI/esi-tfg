@@ -1,5 +1,12 @@
 ; -*- tab-width:4; fill-column:90; mode:lisp -*-
 
+;| Better config and colors for the flyspell minor mode.
+;| It is automatically loadad for LaTeX, resT, conf and sgml modes.
+;|
+;| To load on other modes add something like next to your config::
+;|
+;|   (add-hook 'foo-mode-hook 'turn-on-flyspell)
+
 (custom-set-variables
  '(flyspell-highlight-flag t)
  '(flyspell-highlight-properties t)

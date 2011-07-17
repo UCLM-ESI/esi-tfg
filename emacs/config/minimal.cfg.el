@@ -1,5 +1,8 @@
 ; -*- tab-width:4; fill-column:90; mode:lisp -*-
 
+;| Basic customization useful for most of users. It does not provide any keystroke or
+;| command.
+
 ; do not show welcome screen
 (setq inhibit-splash-screen t)
 

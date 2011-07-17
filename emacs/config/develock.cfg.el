@@ -1,3 +1,6 @@
+
+;| sane colors for develock-mode.
+
 (custom-set-faces
  '(develock-long-line-2 ((t (:background "gray90" :foreground "red"))))
  '(develock-whitespace-1 ((t (:background "light gray"))))

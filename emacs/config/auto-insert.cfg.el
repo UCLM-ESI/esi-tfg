@@ -1,6 +1,11 @@
 ; -*- mode:lisp -*-
 ; http://www.emacswiki.org/emacs/AutoInsertMode
 
+;| It contains a set of templates that are automatically inserted when you
+;| create empty files. It includes default headers for Python, bash, LaTeX and
+;| others.
+
+
 (require 'autoinsert)
 (auto-insert-mode t)
 (setq auto-insert-directory "/usr/share/arco-tools/emacs/template/")  ; where the templates are

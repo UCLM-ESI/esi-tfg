@@ -1,6 +1,8 @@
 ; -*- mode:lisp -*-
 ; author: David.Villa@uclm.es
 
+;| It provides F9 to show/hide the speedbar, and set position to right.
+
 (require 'speedbar)
 
 (speedbar-add-supported-extension ".ice")
