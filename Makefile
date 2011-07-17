@@ -73,11 +73,11 @@ install:
 #	install -vd $(SAMPLES)
 #	cp -a samples/* $(SAMPLES)
 
-	install -vd $(DOCDIR)/arco-authors/samples
-	cp -a samples/latex/* $(DOCDIR)/arco-authors/samples
+	install -vd $(DOCDIR)/arco-authors
+	tar cvfz $(DOCDIR)/arco-authors/samples.tgz --exclude \.svn --directory samples latex docbook
 
 	install -vd $(DOCDIR)/arco-pfc
-	cp -a samples/pfc $(DOCDIR)/arco-pfc/sample
+	tar cvfz $(DOCDIR)/arco-pfc/sample.tgz --exclude \.svn --directory samples pfc
 
-	install -vd $(DOCDIR)/arco-devel/samples
-	cp -a samples/make $(DOCDIR)/arco-devel/samples
+	install -vd $(DOCDIR)/arco-devel
+	tar cvfz $(DOCDIR)/arco-devel/sample.tgz --exclude \.svn --directory samples make

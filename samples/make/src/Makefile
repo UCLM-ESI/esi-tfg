@@ -1,5 +1,5 @@
 
 SUBDIRS=liba libb libd main
 
-include ../../../make/subdirs.mk
-
+ARCO_MK ?= /usr/share/arco-tools
+include $(ARCO_MK)/subdirs.mk

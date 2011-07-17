@@ -8,7 +8,7 @@
   <title>Primera sección</title>
 
   <para>
-	<xi:include href="../lorem-ipsum.txt" parse="text"/>
+	<xi:include href="lorem-ipsum.txt" parse="text"/>
   </para>
 </sect1>
 
@@ -18,4 +18,3 @@
 <!--  mode: flyspell -->
 <!--  ispell-local-dictionary: "castellano8" -->
 <!-- End: -->
-

@@ -3,7 +3,7 @@
 import os
 
 tex='$basedir/tex'
-sample='$basedir/samples/latex/pfc'
+sample='$basedir/samples/pfc'
 
 def copy(srcdir, fname, dstdir):
     Test('cp {srcdir}/{fname} {dstdir}'.format(**locals()),
