@@ -31,7 +31,7 @@ install:
 	install -v -m 444 make/*.mk $(BASE)/
 	install -v -m 555 tex/*.sh  $(BASE)/
 	install -v -m 555 docbook/*.sh $(BASE)/
-	install -v -m 444 bash/*.sh  $(BASE)/
+#	install -v -m 444 bash/*.sh  $(BASE)/
 
 	install -vd $(LATEXSITE)/arco
 	install -v -m 444 tex/*.cls $(LATEXSITE)/arco

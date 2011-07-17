@@ -1,33 +1,22 @@
 #!/usr/bin/python
 # -*- coding:utf-8; tab-width:4; mode:python -*-
 
+import sys
 import glob
 
+REPO = 'http://arco.esi.uclm.es/svn/public/prj/arco-tools/emacs/config'
 
 def gen_title(text, level='='):
-    return text + '\n' + level * len(text) + '\n\n'
+    title = "`{0} <{1}/{0}.el>`_".format(text, REPO)
+    return "{0}\n{1}\n\n".format(title, level * len(title))
 
 
-doc = file('doc.rst', 'w')
 
-doc.write('''\
-===========================
-Modular emacs configuration
-===========================
+doc = file(sys.argv[1], 'w')
 
-It is a set of configuration "fragments" that you may use independently.
-
-To use one of these in your Emacs you must install the arco-devel debian package
-and write down something like that in your ~/.emacs::
-
-  (add-to-list 'load-path "/usr/share/arco-tools/emacs")
-  (load "tabbar.cfg")
-  (load "maximize.cfg")
-
-''')
+doc.write(file('header.rst').read() + '\n')
 
 for fname in sorted(glob.glob('*.cfg.el')):
-    print fname
     doc.write(gen_title(fname[:-3]))
 
     with file(fname) as fd:
