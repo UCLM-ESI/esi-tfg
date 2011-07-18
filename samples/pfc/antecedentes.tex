@@ -1,7 +1,7 @@
 \chapter{Antecedentes}
 
 Este capítulo incluye unas nociones básicas de \LaTeX{} y algunos consejos
-sencillos de composición para sacar todo el jugo a la clase \emph{arco-pfc}. Ten
+sencillos de composición para sacar todo el jugo a la clase \arcopfc. Ten
 presente que este capítulo está pensado para que leas el código fuente y lo
 compares con el resultado en PDF.
 
@@ -43,7 +43,7 @@ En \LaTeX{} hay tres tipos básicos de viñetas:
 Es posible hacer viñetas (como la siguiente) cambiando márgenes u otras
 propiedades gracias al paquete al paquete
 \href{http://mirror.ctan.org/macros/latex/contrib/enumitem/enumitem.pdf}{\emph{enumitem}}
-(ya incluido en \emph{arco-pfc}).
+(ya incluido en \arcopfc).
 
 \begin{itemize}[noitemsep, label=$\triangleright$]
 \item esto es
@@ -55,7 +55,7 @@ El paquete \emph{enumitem} ofrece muchas otras posibilidades para personalizar
 las viñetas (individual o globalmente) o crear nuevas.
 
 
-\section{Una figura}
+\section{Figuras}
 
 Las figuras se referencian así (ver figura~\ref{fig:informatica}). Recuerda que
 no tienen porqué aparecer en el lugar donde se ponen (mira un libro de
@@ -74,7 +74,7 @@ Por cierto, los títulos de tablas, figuras y otro elementos flotantes (los
 \texttt{caption}) no deben acabar en punto~\cite{sousa}.
 
 
-\section{Un cuadro}
+\section{Cuadros}
 \label{sec:uncuadro}
 
 Se denominan «tablas» cuando contienen datos con relaciones numéricas. En
@@ -94,7 +94,7 @@ de este modo (ver cuadro~\ref{tab:rpc-semantics}).
 \end{table}
 
 
-\section{Un listado de código}
+\section{Listados de código}
 \label{sec:listado}
 
 Puedes referenciar un listado con~\ref{code:hello}. Éste es un listado flotante,
@@ -125,6 +125,27 @@ número de sección. Son hiper-enlaces que llevan al elemento correspondiente. T
 elementos que hacen referencia a otra cosa (figuras, tablas, listados,
 secciones, capítulos, citas, páginas web, etc.) pueden ser «pinchables» gracias al
 paquete \href{http://latex.tugraz.at/_media/docs/hyperref.pdf}{«hyperref»}.
+
+
+\section{Páginas}
+\label{sec:paginas}
+
+La normativa dice que el documento debería ser impreso a una cara, pero si el
+número de páginas es alto puede imprimirse a dos caras. Como eso es bastante
+subjetivo, mi consejo es que ronde las 100 \textbf{hojas}. Es decir, si el
+documento tiene más de 200 páginas imprímelo a doble cara, si tiene menos
+imprímelo a una.
+
+Por defecto, \arcopfc imprime a una cara (oneside), si quieres imprimir a doble cara,
+escribe en el preámbulo:
+
+\begin{listing}
+  \documentclass[twoside]{arco-pfc}
+\end{listing}
+
+Esto es importante porque a doble cara los márgenes son simétricos y a una cara
+no. Si llevas el PFC a la copistería y pides que te lo impriman de modo
+diferente al generado quedará mal.
 
 
 % Local Variables:
