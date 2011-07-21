@@ -1,3 +1,9 @@
+arco-tools (0.20110721-1) unstable; urgency=low
+
+  * New release
+
+ -- David Villa Alises <David.Villa@uclm.es>  Thu, 21 Jul 2011 22:20:15 +0200
+
 arco-tools (0.20110716-1) unstable; urgency=low
 
   * New binary package: arco-pfc
