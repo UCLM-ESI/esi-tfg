@@ -18,7 +18,7 @@ all:
 	sed s/CLASS/book/g tex/arco.cls.tmpl > tex/arco-book.cls
 	sed s/CLASS/report/g tex/arco.cls.tmpl > tex/arco-report.cls
 
-	find emacs/config -name "*.el" | awk '{print "(byte-compile-file \"" $$1 "\")";}' > compile.el
+	find emacs/config -name "*.cfg.el" | awk '{print "(byte-compile-file \"" $$1 "\")";}' > compile.el
 	/usr/bin/emacs -batch -l compile.el -kill
 
 clean:

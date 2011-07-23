@@ -7,7 +7,6 @@ usr/share/arco-tools/config.mk
 usr/share/arco-tools/lib.mk
 usr/share/arco-tools/bin.mk
 usr/share/arco-tools/slice.mk
-usr/share/arco-tools/emacs/*.cfg.elc
 usr/share/arco-tools/emacs/auto-complete.cfg.elc
 usr/share/arco-tools/emacs/auto-insert.cfg.elc
 usr/share/arco-tools/emacs/develock.cfg.elc
@@ -25,11 +24,9 @@ usr/share/arco-tools/emacs/psgml.cfg.elc
 usr/share/arco-tools/emacs/schemas.xml
 usr/share/arco-tools/emacs/speedbar.cfg.elc
 usr/share/arco-tools/emacs/strip.cfg.elc
-usr/share/arco-tools/emacs/style.css
 usr/share/arco-tools/emacs/tabbar.cfg.elc
 usr/share/arco-tools/emacs/toggle-split.cfg.elc
 usr/share/arco-tools/emacs/uniquify.cfg.elc
-usr/share/arco-tools/emacs/yasnippet-init.elc
 usr/share/arco-tools/emacs/zoom.cfg.elc
 usr/share/arco-tools/emacs/template/
 usr/share/emacs/site-lisp/yasnippet/snippets/text-mode/
