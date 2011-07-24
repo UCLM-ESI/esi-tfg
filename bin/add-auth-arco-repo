@@ -1,3 +1,0 @@
-#!/bin/bash
-
-wget -O- http://babel.esi.uclm.es/arco/key.asc | sudo apt-key add -

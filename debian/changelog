@@ -1,3 +1,9 @@
+arco-tools (0.20110724-1) UNRELEASED; urgency=low
+
+  * add-auth-arco-repo is now a new package: arco-archive-keyring
+
+ --
+
 arco-tools (0.20110723-1) unstable; urgency=low
 
   * New release
