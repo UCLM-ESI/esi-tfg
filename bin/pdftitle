@@ -3,57 +3,11 @@
 # author: David.Villa@uclm.es
 
 function get_title() {
-	pdf=$1
-	retval=""
-
-	data=$(mktemp)
-	titlelabel="InfoKey: Title"
-
-	pdftk $pdf dump_data > $data
-	grep "$titlelabel" $data > /dev/null
-	if [ $? -eq 0 ]; then
-		found=0
-		while read line
-		do
-			if [ $found -eq 1 ]; then
-				retval=${line#*:}
-				break
-			fi
-			if [ "$line" = "$titlelabel" ]; then
-				found=1
-			fi
-		done < $data
-	fi
-	echo $retval
+	exiftool $1 -p '$Title'
 }
 
 function set_title() {
-	pdf=$1
-	title=$2
-
-	tmp=$(mktemp)
-	metadata=$(mktemp)
-
-#	echo "pdf:" $pdf
-#	echo "tmp:" $tmp
-#	echo "meta:" $metadata
-
-	mv $pdf $tmp
-
-	cat > $metadata <<EOF
--*- coding:utf-8 -*-
-InfoKey: Title
-InfoValue: $title
-InfoKey: Creator
-InfoValue:
-InfoKey: Producer
-InfoValue:
-InfoKey: ModDate
-InfoValue:
-EOF
-
-	pdftk $tmp update_info $metadata output $pdf
-	echo \'$oldtitle\' "->" \'$newtitle\'
+	exiftool -Title="$2" $1
 }
 
 

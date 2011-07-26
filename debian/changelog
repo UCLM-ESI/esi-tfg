@@ -1,6 +1,7 @@
 arco-tools (0.20110724-1) UNRELEASED; urgency=low
 
   * add-auth-arco-repo is now a new package: arco-archive-keyring
+  * pdftitle depends on exiftools instead of pdftk
 
  --
 

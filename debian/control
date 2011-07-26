@@ -45,7 +45,7 @@ Package: arco-user
 Replaces: arco-bin
 Conflicts: arco-bin
 Architecture: all
-Depends: ${misc:Depends}, pdftk
+Depends: ${misc:Depends}, libimage-exiftool-perl
 Description: ARCO user and staff tools
  Tools for ARCO user and staff.
 
