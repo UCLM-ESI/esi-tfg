@@ -7,7 +7,7 @@ tmp = tempfile.mktemp()
 Test('cp test/sample.pdf %s' % tmp)
 
 t1 = Test('bin/pdftitle %s' % tmp)
-t1.pre += DebPkgInstalled('pdftk')
+t1.pre += DebPkgInstalled('libimage-exiftool-perl')
 t1.post += FileContains('Sample title')
 
 t2 = Test('bin/pdftitle %s "new Title"' % tmp,
