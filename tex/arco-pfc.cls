@@ -25,9 +25,15 @@
 \ProcessOptions\relax
 \LoadClass{book}
 
+\makeatletter
+
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
+
+% -- no usar ~ para atildar ñ
+% http://www.aq.upm.es/Departamentos/Fisica/agmartin/webpublico/latex/FAQ-CervanTeX/FAQ-CervanTeX-6.html#ss6.7
+\deactivatetilden
 
 %% -- Fundiciones
 \renewcommand{\rmdefault}{ptm}  % times
@@ -172,6 +178,14 @@
   pdfsubject = {Proyecto Fin de Carrera},
 }
 
+% -- urls
+% https://www.joachim-breitner.de/blog/archives/519-guid.html
+\let\UrlSpecialsOld\UrlSpecials
+\def\UrlSpecials{\UrlSpecialsOld\do\/{\Url@slash}\do\_{\Url@underscore}}%
+\def\Url@slash{\@ifnextchar/{\kern-.11em\mathchar47\kern-.2em}%
+    {\kern-.0em\mathchar47\kern-.08em\penalty\UrlBigBreakPenalty}}
+\def\Url@underscore{\nfss@text{\leavevmode \kern.06em\vbox{\hrule\@width.3em}}}
+\let\urlOld\url
 
 %% -- BIBLIOGRAFÍA -------------------------------------------------------------
 \renewcommand{\bibname}{Referencias}
