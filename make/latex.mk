@@ -2,7 +2,7 @@ TOOLDIR=/usr/share/arco-tools
 FIGDIR=figures
 
 RUBBER_WARN ?= ref
-RUBBER=rubber -m hyperref -m graphics $(RUBBER_FLAGS) --warn $(RUBBER_WARN)
+RUBBER=rubber -m hyperref $(RUBBER_FLAGS) --warn $(RUBBER_WARN)
 
 MAIN  ?= main.tex
 TARGET = $(MAIN:.tex=.pdf)
