@@ -10,6 +10,7 @@
 ;; Last update Sun Feb 14 09:27:12 2010 Daniel Farina
 ;;
 
+;| :skip:
 ;| develock-mode for python.
 
 

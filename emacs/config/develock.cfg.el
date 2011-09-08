@@ -1,4 +1,5 @@
 
+;| :skip:
 ;| sane colors for develock-mode.
 
 (custom-set-faces

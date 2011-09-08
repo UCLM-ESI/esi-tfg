@@ -1,7 +1,7 @@
 ; -*- mode:lisp -*-
 
 ;| Minimal configuration for auto-complete mode. This minor mode is not
-;| activated by default. Your must run::
+;| activated by default. You must run::
 ;|
 ;|   M-x auto-complete-mode
 

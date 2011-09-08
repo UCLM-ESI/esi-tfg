@@ -1,7 +1,7 @@
 ; -*- tab-width:4; fill-column:90; mode:lisp -*-
 
 ;| Activates and binds RefTeX minor mode.
-;| Configure a checker for flymake (disabled by default). To enable it::
+;| It provides a live checker for flymake (disabled by default). To enable it::
 ;|
 ;|   M-x flymake-mode
 
