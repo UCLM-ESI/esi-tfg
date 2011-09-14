@@ -4,7 +4,7 @@ FIGDIR=figures
 RUBBER_WARN ?= ref
 RUBBER=rubber -m hyperref $(RUBBER_FLAGS) --warn $(RUBBER_WARN)
 
-MAIN  ?= main.tex
+MAIN ?= main.tex
 TARGET = $(MAIN:.tex=.pdf)
 TEXSRC = $(shell $(TOOLDIR)/latex-parts.sh $(MAIN))
 
@@ -16,7 +16,7 @@ $(TARGET): $(TEXSRC) $(FIGURES)
 
 %.pdf: %.tex
 	$(RUBBER) --pdf $<
-	-@ ! grep Citation $(basename $(MAIN)).log
+	-@ ! grep Citation $(<:.tex=.log)
 
 help:
 	@echo "- The name for the master TeX file should be: 'main.tex'"

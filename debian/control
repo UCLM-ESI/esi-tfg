@@ -11,7 +11,7 @@ Package: arco-tools
 Architecture: all
 Depends: ${misc:Depends}, arco-authors (= ${source:Version}), arco-devel (= ${source:Version}), arco-user (= ${source:Version})
 Description: ARCO tools
- Metapackage for developmente and administrative tools for ARCO developers, and
+ Metapackage for development and administrative tools for ARCO developers, and
  others.
 
 Package: arco-authors
