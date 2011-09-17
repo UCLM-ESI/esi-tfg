@@ -1,11 +1,16 @@
 TOOLDIR=/usr/share/arco-tools
 
 MAIN ?= main.nw
-TARGET = $(MAIN:.nw=.pdf)
+TEX_MAIN = $(MAIN:.nw=.tex)
+#TARGET = $(MAIN:.nw=.pdf)
+SOURCE = $(MAIN)
 
-all:: $(TARGET)
+include $(TOOLDIR)/latex.mk
 
+.PRECIOUS: %.tex
 %.tex: %.nw
 	noweave -delay -index $< > $@
 
-include $(TOOLDIR)/latex.mk
+vclean::
+	$(RM) $(TEX_MAIN)
+

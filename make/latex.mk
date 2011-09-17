@@ -5,14 +5,17 @@ RUBBER_WARN ?= ref
 RUBBER=rubber -m hyperref $(RUBBER_FLAGS) --warn $(RUBBER_WARN)
 
 MAIN ?= main.tex
-TARGET = $(MAIN:.tex=.pdf)
-TEXSRC = $(shell $(TOOLDIR)/latex-parts.sh $(MAIN))
+TEX_MAIN ?= $(MAIN)
+TARGET = $(TEX_MAIN:.tex=.pdf)
+SOURCE ?= $(shell $(TOOLDIR)/latex-parts.sh $(TEX_MAIN))
 
-FIGURES = $(addprefix $(FIGDIR)/, $(foreach tex, $(TEXSRC), $(shell $(TOOLDIR)/latex-figures.sh $(tex))))
+TEX_FIGURES = $(addprefix $(FIGDIR)/, \
+	        $(foreach file, $(SOURCE), \
+                  $(shell $(TOOLDIR)/latex-figures.sh $(file))))
 
 all:: $(TARGET)
 
-$(TARGET): $(TEXSRC) $(FIGURES)
+$(TARGET): $(TEX_SOURCE) $(TEX_FIGURES)
 
 %.pdf: %.tex
 	$(RUBBER) --pdf $<
@@ -26,15 +29,16 @@ help:
 	@echo
 
 clean::
-	$(RUBBER) --clean --pdf $(MAIN)
+	-$(RUBBER) --clean --pdf $(TEX_MAIN)
 	$(RM) *~ *.maf *.mtc *.lol
-	$(RM) $(addprefix $(basename $(notdir $(MAIN))), .blg .bbl)
-
+	$(RM) $(foreach tex, \
+		$(TEX_MAIN), \
+	        $(addprefix $(basename $(notdir $(tex))), .blg .bbl))
 
 vclean:: clean
-	$(RM) $(foreach figure,\
-		$(FIGURES),\
-		$(shell test "1" != `ls $(basename $(figure)).* | wc -l` && echo $(figure)))
+	$(RM) $(strip $(foreach figure, \
+		$(TEX_FIGURES), \
+		$(shell test "1" != `ls $(basename $(figure)).* | wc -l` && echo $(figure))))
 
 include $(TOOLDIR)/figures.mk
 

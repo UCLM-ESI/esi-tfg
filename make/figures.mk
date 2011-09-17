@@ -39,3 +39,8 @@ PNGPPP?=150
 	unoconv -f html $<
 	mv $*_html_*.jpg $@
 	rm $*.html
+
+#-- gimp -------------------------------------------------------
+
+%.png: %.xcf
+	convert $< $@

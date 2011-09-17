@@ -1,17 +1,18 @@
 
 URL=https://arco.esi.uclm.es/svn/public/doc/logos
 LOGOSDIR=figures/logos
+WGET=wget --no-check-certificate
 
 .PRECIOUS: $(LOGOSDIR)/%.svg
  
 $(LOGOSDIR)/%.svg: | $(LOGOSDIR)
-	$(shell wget $(URL)/$(notdir $@) -O $@)
+	$(shell $(WGET) $(URL)/$(notdir $@) -O $@)
 
 $(LOGOSDIR)/%.png: | $(LOGOSDIR)
-	$(shell wget $(URL)/$(notdir $@) -O $@)
+	$(shell $(WGET) $(URL)/$(notdir $@) -O $@)
 
 $(LOGOSDIR)/%.pdf: | $(LOGOSDIR)
-	$(shell wget $(URL)/$(notdir $@) -O $@)
+	$(shell $(WGET) $(URL)/$(notdir $@) -O $@)
 
 $(LOGOSDIR):
 	@mkdir -p figures/logos
