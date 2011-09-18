@@ -1,11 +1,9 @@
-TOOLDIR=/usr/share/arco-tools
-
 MAIN ?= main.nw
 TEX_MAIN = $(MAIN:.nw=.tex)
 #TARGET = $(MAIN:.nw=.pdf)
 SOURCE = $(MAIN)
 
-include $(TOOLDIR)/latex.mk
+include arco/latex.mk
 
 .PRECIOUS: %.tex
 %.tex: %.nw
@@ -13,4 +11,3 @@ include $(TOOLDIR)/latex.mk
 
 vclean::
 	$(RM) $(TEX_MAIN)
-

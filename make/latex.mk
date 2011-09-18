@@ -40,7 +40,7 @@ vclean:: clean
 		$(TEX_FIGURES), \
 		$(shell test "1" != `ls $(basename $(figure)).* | wc -l` && echo $(figure))))
 
-include $(TOOLDIR)/figures.mk
+include arco/figures.mk
 
 
 ## Local Variables:

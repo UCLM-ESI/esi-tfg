@@ -6,6 +6,7 @@ DESTDIR?=~
 LOGOS=http://arco.esi.uclm.es/svn/public/doc/logos/
 
 BASE=$(DESTDIR)/usr/share/arco-tools
+MK=$(DESTDIR)/usr/include/arco
 LATEXSITE=$(DESTDIR)/usr/share/texmf-texlive/tex/latex
 BIBDIR=$(DESTDIR)/usr/share/texmf-texlive/bibtex/bst/es-bib
 YASNIPPET=$(DESTDIR)/usr/share/emacs/site-lisp/yasnippet/snippets/text-mode
@@ -13,6 +14,8 @@ FIGURES=$(DESTDIR)/usr/share/arco-tools/figures
 EMACS=$(DESTDIR)/usr/share/arco-tools/emacs
 SAMPLES=$(DESTDIR)/usr/share/doc/arco-tools/samples
 DOCDIR=$(DESTDIR)/usr/share/doc
+
+WGET=wget --no-check-certificate -nv
 
 all:
 	sed s/CLASS/book/g tex/arco.cls.tmpl > tex/arco-book.cls
@@ -28,10 +31,16 @@ clean:
 
 install:
 	install -vd $(BASE)
-	install -v -m 444 make/*.mk $(BASE)/
 	install -v -m 555 tex/*.sh  $(BASE)/
 	install -v -m 555 docbook/*.sh $(BASE)/
 #	install -v -m 444 bash/*.sh  $(BASE)/
+
+	install -vd $(MK)
+	install -v -m 444 make/*.mk $(MK)/
+
+	for i in $$(ls make); do \
+	    echo  "\$$(warning Deprecation warning: '$$i' is now at /usr/include/arco. See samples and update your Makefiles)\ninclude arco/$$i" > $(BASE)/$$i; \
+	done
 
 	install -vd $(LATEXSITE)/arco
 	install -v -m 444 tex/*.cls $(LATEXSITE)/arco
@@ -52,20 +61,20 @@ install:
 	install -v -m 755 bin.share/* $(BASE)/
 
 	install -vd $(DESTDIR)/usr/share/arco-tools/figures
-	@wget $(LOGOS)/uclm-A4.pdf -O $(FIGURES)/uclm-A4.pdf --no-check-certificate -nv
-	@wget $(LOGOS)/arco-white.pdf -O $(FIGURES)/arco-white.pdf --no-check-certificate -nv
-	@wget $(LOGOS)/arco-watermark.pdf -O $(FIGURES)/arco-watermark.pdf --no-check-certificate -nv
+	@$(WGET) $(LOGOS)/uclm-A4.pdf        -O $(FIGURES)/uclm-A4.pdf
+	@$(WGET) $(LOGOS)/arco-white.pdf     -O $(FIGURES)/arco-white.pdf
+	@$(WGET) $(LOGOS)/arco-watermark.pdf -O $(FIGURES)/arco-watermark.pdf
 
 	install -vd $(EMACS)
 	install -vm 444 emacs/config/*.cfg.elc $(EMACS)/
 
 	install -vm 444 emacs/config/schemas.xml $(EMACS)/
-	@wget -nv http://www.oasis-open.org/docbook/rng/4.5/docbook.rnc -O $(EMACS)/docbook.rnc
-	@wget -nv http://www.oasis-open.org/docbook/rng/4.5/dbnotnx.rnc -O $(EMACS)/dbnotnx.rnc
-	@wget -nv http://www.oasis-open.org/docbook/rng/4.5/dbpoolx.rnc -O $(EMACS)/dbpoolx.rnc
-	@wget -nv http://www.oasis-open.org/docbook/rng/4.5/htmltblx.rnc -O $(EMACS)/htmltblx.rnc
-	@wget -nv http://www.oasis-open.org/docbook/rng/4.5/calstblx.rnc -O $(EMACS)/calstblx.rnc
-	@wget -nv http://www.oasis-open.org/docbook/rng/4.5/dbhierx.rnc -O $(EMACS)/dbhierx.rnc
+#	@$(WGET) http://www.oasis-open.org/docbook/rng/4.5/docbook.rnc  -O $(EMACS)/docbook.rnc
+#	@$(WGET) http://www.oasis-open.org/docbook/rng/4.5/dbnotnx.rnc  -O $(EMACS)/dbnotnx.rnc
+#	@$(WGET) http://www.oasis-open.org/docbook/rng/4.5/dbpoolx.rnc  -O $(EMACS)/dbpoolx.rnc
+#	@$(WGET) http://www.oasis-open.org/docbook/rng/4.5/htmltblx.rnc -O $(EMACS)/htmltblx.rnc
+#	@$(WGET) http://www.oasis-open.org/docbook/rng/4.5/calstblx.rnc -O $(EMACS)/calstblx.rnc
+#	@$(WGET) http://www.oasis-open.org/docbook/rng/4.5/dbhierx.rnc  -O $(EMACS)/dbhierx.rnc
 
 	install -vd $(EMACS)/template
 	install -vm 444 emacs/template/* $(EMACS)/template/

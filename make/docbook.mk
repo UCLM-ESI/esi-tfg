@@ -33,7 +33,7 @@ vclean:: clean
 		         $(basename $(wildcard $(FIGDIR)/*.png))) \
 		)
 
-include $(TOOLDIR)/figures.mk
+include arco/figures.mk
 
 
 ## Local Variables:

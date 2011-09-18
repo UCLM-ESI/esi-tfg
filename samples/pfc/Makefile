@@ -1,7 +1,7 @@
 # Requiere:
 # - arco-authors (deb http://babel.esi.uclm.es/arco/ unstable main)
 
-include /usr/share/arco-tools/latex.mk
-include /usr/share/arco-tools/logos.mk
+include arco/latex.mk
+include arco/logos.mk
 
 main.tex: figures/logos/emblema_informatica-gray.pdf

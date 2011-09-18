@@ -1,0 +1,8 @@
+# -*- coding:utf-8; tab-width:4; mode:python -*-
+
+make = load('$testdir/make.py')
+
+make.make_and_clean('basic', '$basedir/samples/latex/basic')
+make.make_and_clean('multi', '$basedir/samples/latex/multi')
+make.make_and_clean('arco-report', '$basedir/samples/latex/arco-report')
+make.make_and_clean('arco-pfc', '$basedir/samples/pfc')

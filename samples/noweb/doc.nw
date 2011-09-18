@@ -1,0 +1,65 @@
+% -*- mode: latex -*-
+
+\documentclass[pdftex,graphicx,caption,utf8,a4paper]{article}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{hyperref}
+\usepackage{noweb}
+
+\pagestyle{noweb}
+\noweboptions{smallcode}
+
+\graphicspath{{figures/}}
+
+\begin{document}
+@
+
+\begin{figure}
+  \centerline{%
+    \includegraphics[width=0.15\textwidth]{smile.pdf}}
+  \caption{Smile}
+  \label{fig:smile}
+\end{figure}
+
+
+<<HelloI.cpp>>=
+#include <HelloI.h>
+<<Declarations required to implement the servant>>
+
+void
+UCLM::HelloI::puts(const ::std::string& str,
+                   const Ice::Current& current)
+{
+    <<Implementation of method puts>>
+}
+@
+
+We just need to insert a trivial implementation of the [[puts]]
+method.  We just use the standard C++ [[iostream]]
+operators\footnote{You may find more information at
+  \url{http://en.wikipedia.org/wiki/Iostream}.} to print the string in
+the console.
+
+<<Implementation of method puts>>=
+std::cout << str << std::endl;
+@
+
+%>>>>
+In order to use these operators we need to include the appropriate
+header file:
+
+<<Declarations required to implement the servant>>=
+#include <iostream>
+using namespace std;
+@
+
+We already finished the servant implementation.  Any instance of the
+[[HelloI]] class will be able to be invoked remotely if we first
+register the instance in the communications kernel.
+
+
+\section{Chunks}
+\nowebchunks
+@
+\end{document}
