@@ -1,1 +1,0 @@
-Command("ln -s $basedir/make arco")
