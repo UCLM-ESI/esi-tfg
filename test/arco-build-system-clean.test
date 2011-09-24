@@ -1,4 +1,3 @@
-#!/usr/bin/python
 # -*- mode:python; coding:utf-8; tab-width:4 -*-
 
 import os
@@ -21,4 +20,3 @@ clean.post += Not(FileExists('samples/make/bin/main'))
 
 for d in ['lib', 'include', 'bin']:
     clean.post += DirExists('samples/make/'+d)
-
