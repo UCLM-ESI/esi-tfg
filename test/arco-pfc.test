@@ -1,0 +1,7 @@
+
+make = load('$testdir/make.py')
+
+cls = '$basedir/samples/pfc/arco-pfc.cls'
+Test('cp $basedir/tex/arco-pfc.cls ' + cls,
+     gen = cls)
+make.make_and_clean('arco-pfc', '$basedir/samples/pfc')
