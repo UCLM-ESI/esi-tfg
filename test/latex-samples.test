@@ -2,8 +2,8 @@
 
 make = load('$testdir/make.py')
 
-Test("ln -s $basedir/make arco",
-     gen = 'arco')
+Command('rm $basedir/arco')
+Test("ln -s $basedir/make $basedir/arco")
 
 make.make_and_clean('basic', '$basedir/samples/latex/basic')
 make.make_and_clean('multi', '$basedir/samples/latex/multi')
