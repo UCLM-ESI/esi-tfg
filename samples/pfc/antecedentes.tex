@@ -64,7 +64,7 @@ contradecirle, él sabe mucho de tipografía.
 
 \begin{figure}[!h]
 \begin{center}
-%\includegraphics[width=0.2\textwidth]{}
+\includegraphics[width=0.2\textwidth]{logos/emblema_informatica-gray.pdf}
 \caption{Escudo oficial de informática}
 \label{fig:informatica}
 \end{center}
@@ -82,7 +82,7 @@ general se denominan «cuadros». Si las columnas están bien alineadas, las lí
 verticales estorban más que ayudan (no las pongas). Los cuadros se referencian
 de este modo (ver cuadro~\ref{tab:rpc-semantics}).
 
-\begin{table}[htbp]
+\begin{table}[hp]
   \centering
   {\small
   \input{tables/RPC-semantics.tex}
@@ -102,7 +102,7 @@ pero también pueden ser «no flotantes» (mira la documentación del paquete
 \href{http://www.ctan.org/get/macros/latex/contrib/listings/listings.pdf}{«listings»}).
 
 \begin{listing}[
-  float,
+  float=ht,
   language = C,
   caption  = {«Hola mundo» en C},
   label    = code:hello]
@@ -112,6 +112,19 @@ int main(int argc, char *argv[]) {
 }
 \end{listing}
 
+Puedes modificar el estilo por defecto para tus listados añadiendo un comando
+\texttt{lstset} en tu \texttt{main.tex}. El código LaTeX del listado \ref{code:custom-listings}
+añade un fondo gris claro y una línea en el margen izquierdo.
+
+\begin{listing}[
+  float=h!,
+  caption  = {Personalizando los listados de código},
+  label    = code:custom-listings]
+\lstset{%
+  backgroundcolor = \color{gray95},
+  rulesepcolor    = \color{black},
+}
+\end{listing}
 
 
 
