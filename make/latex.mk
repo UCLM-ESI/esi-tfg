@@ -7,7 +7,7 @@ RUBBER=rubber -m hyperref $(RUBBER_FLAGS) --warn $(RUBBER_WARN)
 MAIN ?= main.tex
 TEX_MAIN ?= $(MAIN)
 TARGET = $(TEX_MAIN:.tex=.pdf)
-SOURCE ?= $(shell $(TOOLDIR)/latex-parts.sh $(TEX_MAIN))
+TEX_SOURCE ?= $(shell $(TOOLDIR)/latex-parts.sh $(TEX_MAIN))
 
 TEX_FIGURES = $(addprefix $(FIGDIR)/, \
 	        $(foreach file, $(SOURCE), \
