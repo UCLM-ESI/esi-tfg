@@ -1,6 +1,6 @@
 
 SUBDIRS ?= $(filter-out $(wildcard .*),\
-							$(foreach d,$(shell find . -maxdepth 1 -type d ),$(notdir $(d))))
+	$(foreach d,$(shell find . -maxdepth 1 -type d ),$(notdir $(d))))
 
 all:       RULE = all
 install:   RULE = install
@@ -13,4 +13,3 @@ all clean install uninstall:: subdirs
 subdirs: $(SUBDIRS)
 $(SUBDIRS):
 	$(MAKE) -C $@ $(RULE)
-

@@ -111,16 +111,16 @@
 \newcommand{\lstfont}{\ttfamily\fontfamily{pcr}}
 
 \lstset{%
+     aboveskip          = 2mm,
+     belowskip          = 2mm,
+     %
      frame              = Ltb,
      framerule          = 0pt,
-     belowskip          = 2mm,
      framextopmargin    = 3pt,
      framexbottommargin = 3pt,
      framexleftmargin   = 0.4cm,
      framesep           = 0pt,
      rulesep            = .4pt,
-%     backgroundcolor    = \color{gray95},
-%     rulesepcolor       = \color{black},
      captionpos         = b,
      floatplacement     = htbp,
      %

@@ -4,7 +4,7 @@ LOGOSDIR=figures/logos
 WGET=wget --no-check-certificate
 
 .PRECIOUS: $(LOGOSDIR)/%.svg
- 
+
 $(LOGOSDIR)/%.svg: | $(LOGOSDIR)
 	$(shell $(WGET) $(URL)/$(notdir $@) -O $@)
 

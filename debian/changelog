@@ -1,5 +1,6 @@
-arco-tools (0.20110724-1) UNRELEASED; urgency=low
+arco-tools (0.20110901-1) unstable; urgency=low
 
+  * --no-check-certificate for wget
   * add-auth-arco-repo is now a new package: arco-archive-keyring
   * pdftitle depends on exiftools instead of pdftk
 

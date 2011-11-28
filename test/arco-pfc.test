@@ -8,4 +8,7 @@ cls = '$basedir/samples/pfc/arco-pfc.cls'
 Test('cp $basedir/tex/arco-pfc.cls ' + cls,
      gen = cls)
 
+Test("ln -s $basedir/make arco",
+     gen = 'arco')
+
 make.make_and_clean('arco-pfc', '$basedir/samples/pfc')
