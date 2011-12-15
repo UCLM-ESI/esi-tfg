@@ -1,3 +1,9 @@
+0.20111215
+==========
+
+* Bug fix in latex.mk. SOURCE -> TEX_SOURCE
+
+
 0.20110901
 ==========
 
@@ -12,6 +18,9 @@
 * more formats in logos.mk
 * error in citation grep fixed (latex.mk)
 
+
+0.20100711
+* New snippet: emacs/yasnippet/text-mode/flyspell-vars.yasnippet
 
 
 .. Local Variables:

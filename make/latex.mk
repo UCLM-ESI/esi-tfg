@@ -2,7 +2,7 @@ TOOLDIR=/usr/share/arco-tools
 FIGDIR=figures
 
 RUBBER_WARN ?= ref
-RUBBER=rubber -m hyperref $(RUBBER_FLAGS) --warn $(RUBBER_WARN)
+RUBBER=rubber $(RUBBER_FLAGS) --texpath ~/.texmf -m hyperref --warn $(RUBBER_WARN)
 
 MAIN ?= main.tex
 TEX_MAIN ?= $(MAIN)
@@ -10,7 +10,7 @@ TARGET = $(TEX_MAIN:.tex=.pdf)
 TEX_SOURCE ?= $(shell $(TOOLDIR)/latex-parts.sh $(TEX_MAIN))
 
 TEX_FIGURES = $(addprefix $(FIGDIR)/, \
-	        $(foreach file, $(SOURCE), \
+	        $(foreach file, $(TEX_SOURCE), \
                   $(shell $(TOOLDIR)/latex-figures.sh $(file))))
 
 all:: $(TARGET)

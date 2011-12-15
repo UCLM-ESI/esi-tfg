@@ -11,10 +11,3 @@ override_dh_auto_build:
 
 	@sed '/#common.functions#/ r $(CURDIR)/debian/common.functions' < $(CURDIR)/debian/postinst.in > $(CURDIR)/debian/arco-authors.postinst
 	cp  $(CURDIR)/debian/arco-authors.postinst $(CURDIR)/debian/arco-pfc.postinst
-
-build-orig-source:
-	mkdir -p arco-tools-$(VERSION)
-	tar --exclude=debian --exclude=\*~ --exclude=\.svn --exclude=arco-tools-$(VERSION) -cf - . \
-		| ( cd arco-tools-$(VERSION) && tar xf - )
-	tar -czf ../tarballs/arco-tools_$(VERSION).orig.tar.gz arco-tools-$(VERSION)
-	$(RM) -r arco-tools-$(VERSION)

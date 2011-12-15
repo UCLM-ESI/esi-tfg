@@ -1,3 +1,9 @@
+arco-tools (0.20111215.1-1) unstable; urgency=low
+
+  * New release
+
+ -- David Villa Alises <David.Villa@uclm.es>  Thu, 15 Dec 2011 18:20:45 +0100
+
 arco-tools (0.20111215-1) unstable; urgency=low
 
   * Added global-zoom.cfg.el to properly handle zoom in noweb docs
