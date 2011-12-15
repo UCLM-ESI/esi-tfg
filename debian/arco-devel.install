@@ -21,6 +21,7 @@ usr/share/arco-tools/emacs/auto-insert.cfg.elc
 usr/share/arco-tools/emacs/docbook.cfg.elc
 usr/share/arco-tools/emacs/flymake.cfg.elc
 usr/share/arco-tools/emacs/flyspell.cfg.elc
+usr/share/arco-tools/emacs/global-zoom.cfg.elc
 usr/share/arco-tools/emacs/highlight-changes.cfg.elc
 usr/share/arco-tools/emacs/hl.cfg.elc
 usr/share/arco-tools/emacs/latex.cfg.elc

@@ -1,3 +1,9 @@
+arco-tools (0.20111215-1) unstable; urgency=low
+
+  * Added global-zoom.cfg.el to properly handle zoom in noweb docs
+
+ -- Francisco Moya <paco@debian.org>  Thu, 15 Dec 2011 13:34:13 +0100
+
 arco-tools (0.20110901-1) unstable; urgency=low
 
   * --no-check-certificate for wget
