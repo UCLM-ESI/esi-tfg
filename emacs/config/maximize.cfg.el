@@ -1,11 +1,11 @@
 ; -*- mode:lisp -*-
 
-;| Maximize the Emacs X window. It provides two bindings:
+;| Maximize the Emacs X window.
 ;|
-;| - F11 toogles fullscreen.
-;| - C-F11 toogles vertical maximization.
-
-
+;| Keystrokes:
+;|
+;| - F11: toogles fullscreen.
+;| - C-F11: toogles vertical maximization.
 
 (defvar old-fullscreen)
 

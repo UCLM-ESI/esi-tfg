@@ -1,5 +1,5 @@
 ===========================
-Modular emacs configuration
+Modular Emacs Configuration
 ===========================
 
 It is a set of configuration "fragments" that you may use independently.
@@ -18,3 +18,10 @@ Them, write down something like that in your ``~/.emacs``::
   (add-to-list 'load-path "/usr/share/arco-tools/emacs")
   (load "tabbar.cfg")
   (load "maximize.cfg")
+
+
+.. Local Variables:
+..  coding: utf-8
+..  mode: flyspell
+..  ispell-local-dictionary: "american"
+.. End:

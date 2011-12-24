@@ -1,11 +1,12 @@
 ; -*- mode:lisp -*-
 
-;| It provides zoom on emacs in a similar way to web browsers or document
-;| suites. In provides next keystrokes:
+;| It provides zoom on emacs in a similar way to web browsers or text processors suites.
 ;|
-;| - C-minus or C-mousewheel-down: decrease font size.
-;| - C-plus or C-mousewheel-up: increase font size.
-;| - C-0 revert font size to default.
+;| Keystrokes:
+;|
+;| - C-<plus> or C-mousewheel-up: increases font size.
+;| - C-<minus> or C-mousewheel-down: decreases font size.
+;| - C-0 reverts font size to default.
 
 
 ; http://www.gnu.org/s/emacs/manual/html_node/elisp/Key-Binding-Commands.html

@@ -5,6 +5,8 @@
 ;|
 ;| - remove trailing spaces at end of lines,
 ;| - assure an empty line at end of buffer
+;|
+;| Keystrokes: None
 
 (custom-set-variables '(whitespace-style (quote (trailing spaces tabs lines newline empty))))
 
