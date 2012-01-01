@@ -15,7 +15,7 @@ clean:     RULE = clean
 vclean:    RULE = vclean
 
 
-all clean install uninstall:: subdirs
+all clean vclean install uninstall:: subdirs
 
 .PHONY: subdirs $(SUBDIRS)
 subdirs: $(SUBDIRS)
