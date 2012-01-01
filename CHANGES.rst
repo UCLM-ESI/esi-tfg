@@ -1,3 +1,9 @@
+0.20120101
+==========
+
+* improvements in subdirs.mk (directories that contain a Makefile)
+
+
 0.20111215
 ==========
 
