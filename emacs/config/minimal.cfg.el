@@ -57,3 +57,11 @@
   '("emacs%@" (:eval (system-name)) ": " (:eval (if (buffer-file-name)
                 (abbreviate-file-name (buffer-file-name))
                   "%b")) " [%*]"))
+
+
+; Automatically create missing parent directories when you 'open' a new file
+; http://atomized.org/2008/12/emacs-create-directory-before-saving/
+(add-hook 'before-save-hook
+  '(lambda ()
+  	 (or (file-exists-p (file-name-directory buffer-file-name))
+  		 (make-directory (file-name-directory buffer-file-name) t))))

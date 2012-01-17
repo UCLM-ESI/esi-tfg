@@ -1,3 +1,9 @@
+0.20120117
+==========
+
+* minimal.cfg: Automatically create missing parent directories when you 'open' a new file
+  http://atomized.org/2008/12/emacs-create-directory-before-saving/
+
 0.20120101
 ==========
 
