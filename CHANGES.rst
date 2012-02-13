@@ -1,3 +1,9 @@
+0.20120213
+==========
+
+* slide.mk -> odp2pdf.mk
+* latex.mk: discover master tex documents
+
 0.20120117
 ==========
 
@@ -9,18 +15,15 @@
 
 * improvements in subdirs.mk (directories that contain a Makefile)
 
-
 0.20111215
 ==========
 
 * Bug fix in latex.mk. SOURCE -> TEX_SOURCE
 
-
 0.20110901
 ==========
 
 * develock removed
-
 
 0.20110617
 ==========
