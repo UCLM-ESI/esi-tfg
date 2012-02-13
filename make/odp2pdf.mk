@@ -4,10 +4,10 @@
 
 IGNORE~=
 
-SRC=$(filter-out $(IGNORE), $(wildcard *.odp))
-PDF1=$(notdir $(patsubst %.odp, %.pdf, $(SRC)))
-PDF3=$(patsubst %.pdf, %.1x3.pdf, $(PDF1))
-PDFM=$(patsubst %.pdf, %.2x4.pdf, $(PDF1))
+ODP=$(filter-out $(IGNORE), $(wildcard *.odp))
+PDF1=$(patsubst %.odp, %.pdf, $(ODP))
+PDF3=$(patsubst %.odp, %.1x3.pdf, $(ODP))
+PDFM=$(patsubst %.odp, %.2x4.pdf, $(ODP))
 
 PDF=$(PDF1) $(PDF3) $(PDFM)
 

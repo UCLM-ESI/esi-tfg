@@ -4,7 +4,7 @@ FIGDIR=figures
 RUBBER_WARN ?= ref
 RUBBER=rubber $(RUBBER_FLAGS) --texpath ~/.texmf -m hyperref --warn $(RUBBER_WARN)
 
-MAIN ?= main.tex
+MAIN ?= $(shell grep -l "^\\\\begin{document}" *.tex)
 TEX_MAIN ?= $(MAIN)
 TARGET = $(TEX_MAIN:.tex=.pdf)
 TEX_SOURCE ?= $(shell $(TOOLDIR)/latex-parts.sh $(TEX_MAIN))
