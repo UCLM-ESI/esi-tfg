@@ -1,10 +1,16 @@
-# requires: unovonv, pdfjam, pdftk
+#!/usr/bin/make
+# -*- mode:makefile -*-
+# ----------------------------------------------------------------------
+# Required pkgs: unovonv, pdfjam, pdftk
+# Optional vars: ODP ODP-IGNORE
+# Provided vars: PDF PDF1 PDF3 PDFM
+# ----------------------------------------------------------------------
 
 .INTERMEDIATE: *.first.pdf *.2x2.pdf
 
-IGNORE~=
+ODP-IGNORE~=
 
-ODP=$(filter-out $(IGNORE), $(wildcard *.odp))
+ODP~=$(filter-out $(IGNORE), $(wildcard *.odp))
 PDF1=$(patsubst %.odp, %.pdf, $(ODP))
 PDF3=$(patsubst %.odp, %.1x3.pdf, $(ODP))
 PDFM=$(patsubst %.odp, %.2x4.pdf, $(ODP))
