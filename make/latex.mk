@@ -6,16 +6,16 @@ RUBBER=rubber $(RUBBER_FLAGS) --texpath ~/.texmf -m hyperref --warn $(RUBBER_WAR
 
 MAIN ?= $(shell grep -l "^\\\\begin{document}" *.tex)
 TEX_MAIN ?= $(MAIN)
-TARGET = $(TEX_MAIN:.tex=.pdf)
+PDF = $(TEX_MAIN:.tex=.pdf)
 TEX_SOURCE ?= $(shell $(TOOLDIR)/latex-parts.sh $(TEX_MAIN))
 
 TEX_FIGURES = $(addprefix $(FIGDIR)/, \
 	        $(foreach file, $(TEX_SOURCE), \
                   $(shell $(TOOLDIR)/latex-figures.sh $(file))))
 
-all:: $(TARGET)
+all:: $(PDF)
 
-$(TARGET): $(TEX_SOURCE) $(TEX_FIGURES)
+$(PDF): $(TEX_SOURCE) $(TEX_FIGURES)
 
 %.pdf: %.tex
 	$(RUBBER) --pdf $<
