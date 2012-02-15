@@ -1,6 +1,0 @@
-#!/bin/bash
-
-epylint disable=68 "$1" 2>/dev/null
-pyflakes "$1"
-pep8 --ignore=E221,E241,E251,E501 --repeat "$1"
-true

@@ -36,8 +36,7 @@ Package: arco-devel
 Replaces: arco-make, arco-debian, arco-bashrc
 Conflicts: arco-make, arco-debian, arco-bashrc
 Architecture: all
-Depends: ${misc:Depends}, yasnippet, devscripts-el, emacs-goodies-el, aexec, auto-complete-el
-Suggests: libnotify-bin
+Depends: ${misc:Depends}, arco-emacs, devscripts-el, aexec
 Description: ARCO devel tools
  Development tools for ARCO staff.
 
@@ -48,9 +47,3 @@ Architecture: all
 Depends: ${misc:Depends}, libimage-exiftool-perl
 Description: ARCO user and staff tools
  Tools for ARCO user and staff.
-
-Package: arco-emacs-python
-Architecture: all
-Depends: ${misc:Depends}, arco-devel, pylint, pep8, pyflakes
-Description: Python emacs support
- Emacs packages and utilities for Python programming

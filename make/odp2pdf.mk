@@ -1,4 +1,3 @@
-#!/usr/bin/make
 # -*- mode:makefile -*-
 # ----------------------------------------------------------------------
 # Required pkgs: unovonv, pdfjam, pdftk
