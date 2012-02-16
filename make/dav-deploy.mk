@@ -5,7 +5,7 @@
 # ----------------------------------------------------------------------
 
 ifndef DAV-URI
-$(error "You must define variable 'DAV' to your target URI")
+$(error "You must define variable 'DAV-URI' to your target URI")
 endif
 
 ifndef DAV-FILES
