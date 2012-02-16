@@ -2,7 +2,6 @@
 # ----------------------------------------------------------------------
 # Required pkgs: unovonv, pdfjam, pdftk
 # Optional vars: ODP ODP-IGNORE
-# Provided vars: PDF PDF1 PDF3 PDFM
 # ----------------------------------------------------------------------
 
 .INTERMEDIATE: *.first.pdf *.2x2.pdf

@@ -27,6 +27,6 @@ dav-copy:
 dav-rm:
 	gvfs-rm $(addprefix $(DAV)/, $(DAV-FILES))
 
-install: all dav-mount dav-copy
+install: dav-mount dav-copy
 
 uninstall: dav-mount dav-rm
