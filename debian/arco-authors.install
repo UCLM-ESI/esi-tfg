@@ -12,6 +12,7 @@ usr/include/arco/logos.mk
 usr/include/arco/docbook.mk
 usr/include/arco/slide.mk
 usr/include/arco/odp2pdf.mk
+usr/include/arco/dav-deploy.mk
 /usr/share/arco-tools/noweb.mk
 /usr/share/arco-tools/latex.mk
 /usr/share/arco-tools/figures.mk

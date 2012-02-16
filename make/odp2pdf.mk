@@ -9,7 +9,7 @@
 
 ODP-IGNORE~=
 
-ODP~=$(filter-out $(IGNORE), $(wildcard *.odp))
+ODP~=$(filter-out $(ODP-IGNORE), $(wildcard *.odp))
 PDF1=$(patsubst %.odp, %.pdf, $(ODP))
 PDF3=$(patsubst %.odp, %.1x3.pdf, $(ODP))
 PDFM=$(patsubst %.odp, %.2x4.pdf, $(ODP))
@@ -19,7 +19,7 @@ PDF=$(PDF1) $(PDF3) $(PDFM)
 all:  $(PDF)
 
 %.pdf: %.odp
-	odt2pdf $<
+	odp2pdf $<
 
 %.1x3.pdf: %.pdf
 	pdfnup --no-landscape --paper a4paper --scale 0.9 --delta "0.8cm 0.8cm" --frame true --offset "-3cm 0" --nup 1x3 $< --outfile $@
