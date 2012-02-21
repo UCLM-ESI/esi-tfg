@@ -13,5 +13,9 @@ E instala con::
 
   # apt-get install arco-pfc
 
+Tienes un ejemplo_ de memoria de proyecto y el resultado_ correspondiente en PDF.
+
 
 .. _arco-pfc.cls:   /arco_group/arco-pfc/src/tip/tex/arco-pfc.cls
+.. _ejemplo:        https://bitbucket.org/arco_group/arco-pfc/src/tip/example
+.. _resultado:      https://fowler.esi.uclm.es/job/arco-pfc/ws/example/main.pdf
