@@ -4,7 +4,7 @@ make = load('$testdir/make.py')
 
 def link_make():
     Command('rm $basedir/arco')
-    Test("ln -s $basedir/make $basedir/arco")
+#    Test("ln -s $basedir/make $basedir/arco")
 
 link_make()
 

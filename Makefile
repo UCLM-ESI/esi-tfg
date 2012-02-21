@@ -10,6 +10,9 @@ DOCDIR=$(DESTDIR)/usr/share/doc
 all:
 
 
+wiki:
+	hg clone ssh://hg@bitbucket.org/arco_group/arco-pfc/wiki
+
 clean:
 	$(RM) $(shell find -name *~)
 
