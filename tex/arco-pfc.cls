@@ -187,6 +187,7 @@
 \def\Url@underscore{\nfss@text{\leavevmode \kern.06em\vbox{\hrule\@width.3em}}}
 \let\urlOld\url
 
+
 %% -- BIBLIOGRAFÍA -------------------------------------------------------------
 \renewcommand{\bibname}{Referencias}
 \bibliographystyle{es-alpha}
@@ -197,7 +198,6 @@
 
 % añadir listados, bibliografia, etc a la tabla de contenido
 \usepackage{tocbibind}
-
 
 
 %% -- FORMATO DE CAPÍTULOS Y SECCIONES -----------------------------------------
@@ -251,7 +251,6 @@
   \cleardoublepage
 }
 
-
 \newcommand{\backchapterformat}{
   \frontchapterformat
 }
@@ -297,7 +296,6 @@
 \addtolength{\footskip}{8pt}
 
 
-
 %% -- Otros paquetes
 \usepackage{relsize}  % tamaños relativos para el texto
 
@@ -325,7 +323,6 @@
 \newcommand{\@homepage}{}
 \newcommand{\homepage}[1]{\renewcommand{\@homepage}{#1}}
 
-%\newcommand{\@logo}{}
 \newcommand{\logo}[1]{\newcommand{\@logo}{#1}}
 \newcommand{\putlogo}{%
   \ifthenelse{\NOT \isundefined{\@logo}}{
@@ -520,6 +517,22 @@
 }%
 
 
+\newcommand{\attributionArcoPFC} {
+  \cleardoublepage
+  \pagestyle{empty}
+  \null\vfill
+  \rule{0pt}{8cm}
+  \begin{singlespacing}
+  \begin{center}
+    Este documento fue editado y tipografiado con \LaTeX{}\\
+    empleado la clase \textbf{arco-pfc} que se puede encontrar en:\\
+    \url{https://bitbucket.org/arco_group/arco-pfc}
+  \end{center}
+  \end{singlespacing}
+  \cleardoublepage
+}
+
+
 %% -- símbolos
 \usepackage{pifont}
 \usepackage{tipa}
@@ -538,10 +551,6 @@
   \setlength{\extrarowheight}{1pt}
 }
 
-
-\newcommand{\pfcInit}{%
-  El comando ``pfcInit'' está obsoleto y ya no es necesario.
-}
 
 %% -- Algunos comandos útiles
 \newcommand{\quoteauthor}[1]{\par\hfill#1\hspace{1em}\mbox{}}
