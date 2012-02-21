@@ -1,2 +1,0 @@
-
-include arco/latex.mk

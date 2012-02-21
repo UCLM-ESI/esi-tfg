@@ -1,9 +1,0 @@
-#!/usr/bin/python
-# -*- mode:python; coding:utf-8; tab-width:4 -*-
-
-import os
-
-ENV = {'ARCO_MK':os.path.abspath('make')}
-
-build = Test('make -nC samples/make/', env=ENV, shell=True)
-

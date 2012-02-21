@@ -4,16 +4,15 @@ This work was packaged for Debian by:
 
 It was downloaded from:
 
-    http://arco.esi.uclm.es
+    https://bitbucket.org/arco_group/arco-pfc
 
 Upstream Author:
 
-    <sysadm@arco.esi.uclm.es>
-
+    David Villa Alises <David.Villa@gmail.com>
 
 Copyright:
 
-    <Copyright (C) 2009 ARCO Research Group>
+    David Villa Alises <David.Villa@gmail.com>
 
 
 License:
@@ -36,6 +35,6 @@ Public License version 3 can be found in `/usr/share/common-licenses/GPL-3'.
 
 The Debian packaging is:
 
-    Copyright (C) 2009 ARCO Research Group <sysadm@arco.esi.uclm.es>
+    Copyright (C) 2012 ARCO Research Group <sysadm@arco.esi.uclm.es>
 
 and is licensed under the GPL version 3, see above.

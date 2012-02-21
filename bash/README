@@ -1,4 +1,0 @@
-Este directorio contiene ficheros bash para incluir en ~/.bashrc
-mediante "source". Es decias: alias, funciones, configuración de entorno, etc.
-
-No debe incluir scripts ejecutables.

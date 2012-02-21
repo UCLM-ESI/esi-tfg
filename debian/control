@@ -1,49 +1,14 @@
-Source: arco-tools
+Source: arco-pfc
 Section: shells
-Priority: extra
-Maintainer: ARCO Research Group <sysadm@arco.esi.uclm.es>
-Uploaders: David Villa Alises <David.Villa@uclm.es>
-Build-Depends: debhelper (>= 7.0.50~), yasnippet, emacs-goodies-el
+Priority: optional
+Maintainer: David Villa Alises <David.Villa@uclm.es>
+Build-Depends: debhelper (>= 7.0.50~)
 Standards-Version: 3.9.2
-Homepage: https://arco.esi.uclm.es/svn/public/prj/arco-tools
-
-Package: arco-tools
-Architecture: all
-Depends: ${misc:Depends}, arco-authors (= ${source:Version}), arco-devel (= ${source:Version}), arco-user (= ${source:Version})
-Description: ARCO tools
- Metapackage for development and administrative tools for ARCO developers, and
- others.
-
-Package: arco-authors
-Replaces: arco-latex
-Recommends: unoconv
-Conflicts: arco-latex, arco-make
-Architecture: all
-Depends: ${misc:Depends}, texlive-binaries, texlive-latex-extra,
- texlive-lang-spanish, texlive-latex-recommended, cm-super, inkscape, dblatex,
- rubber, netpbm, dia, aspell-en
-Description: ARCO authors tools
- LaTeX and DocBook utilities and styles for ARCO authors.
+Homepage: https://bitbucket.org/arco_group/arco-pfc
 
 Package: arco-pfc
 Architecture: all
-Depends:  ${misc:Depends}, arco-authors (= ${source:Version})
-Description: LaTeX class and utilities for PFC typesetting.
+Depends: ${misc:Depends}, arco-authors (>> 0.20120221)
+Description: LaTeX class and utilities for PFC/TFG typesetting.
  This package provides the arco-pfc LaTeX class created specifically to simplify
- PFC typesetting.
-
-Package: arco-devel
-Replaces: arco-make, arco-debian, arco-bashrc
-Conflicts: arco-make, arco-debian, arco-bashrc
-Architecture: all
-Depends: ${misc:Depends}, arco-emacs, devscripts-el, aexec
-Description: ARCO devel tools
- Development tools for ARCO staff.
-
-Package: arco-user
-Replaces: arco-bin
-Conflicts: arco-bin
-Architecture: all
-Depends: ${misc:Depends}, libimage-exiftool-perl
-Description: ARCO user and staff tools
- Tools for ARCO user and staff.
+ PFC/TFG typesetting.
