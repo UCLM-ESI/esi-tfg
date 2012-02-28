@@ -7,10 +7,10 @@ compares con el resultado en PDF.
 
 \section{Estilos de texto}
 
-Debido a su continuo uso, se muestra entre paréntesis la combinación de emacs
-para incluir el comando \LaTeX{} correspondiente.
+Debido a su continuo uso, se muestra entre paréntesis la combinación del modo
+\texttt{auctex} de GNU Emacs para incluir el comando \LaTeX{} correspondiente.
 
-\begin{itemize}[noitemsep]
+\begin{itemize}
 \item Normal.
 \item \textbf{Negrita} (C-c-f-b).
 \item \textit{Itálica} (C-c-f-i).
@@ -22,7 +22,7 @@ para incluir el comando \LaTeX{} correspondiente.
 
 Otros de menos uso:
 
-\begin{itemize}[noitemsep]
+\begin{itemize}
 \item \textsc{Versalita} (C-c-f-c).
 \item \textsf{Serifa}, es decir, sin remates o paloseco (C-c-f-f).
 \item \textrm{Romana} (C-c-f-r).
@@ -63,7 +63,7 @@ contradecirle, él sabe mucho de tipografía.
 
 \begin{figure}[!h]
 \begin{center}
-\includegraphics[width=0.2\textwidth]{logos/emblema_informatica-gray.pdf}
+\includegraphics[width=0.2\textwidth]{/emblema_informatica-gray.pdf}
 \caption{Escudo oficial de informática}
 \label{fig:informatica}
 \end{center}
@@ -149,7 +149,7 @@ subjetivo, mi consejo es que ronde las 100 \textbf{hojas}. Es decir, si el
 documento tiene más de 200 páginas imprímelo a doble cara, si tiene menos
 imprímelo a una.
 
-Por defecto, \arcopfc imprime a una cara (oneside), si quieres imprimir a doble cara,
+Por defecto, \arcopfc{} imprime a una cara (oneside), si quieres imprimir a doble cara,
 escribe en el preámbulo:
 
 \begin{listing}

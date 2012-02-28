@@ -70,7 +70,7 @@
 %% -- GRÁFICOS -----------------------------------------------------------------
 \usepackage{graphicx}
 \usepackage{epsfig}
-\graphicspath{{figures/}}
+\graphicspath{{figures/}{/usr/share/arco-tools/figures/}}
 
 %% -- COLORES ------------------------------------------------------------------
 \usepackage[table]{xcolor}
@@ -323,7 +323,8 @@
 \newcommand{\@homepage}{}
 \newcommand{\homepage}[1]{\renewcommand{\@homepage}{#1}}
 
-\newcommand{\logo}[1]{\newcommand{\@logo}{#1}}
+\newcommand{\@logo}{emblema_informatica-gray.pdf}
+\newcommand{\logo}[1]{\renewcommand{\@logo}{#1}}
 \newcommand{\putlogo}{%
   \ifthenelse{\NOT \isundefined{\@logo}}{
     \includegraphics[width=35mm]{\@logo}\\

@@ -1,3 +1,8 @@
+0.20120228
+==========
+
+* Downloading the emblem in the package building.
+
 0.20120221
 ==========
 
