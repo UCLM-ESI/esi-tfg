@@ -9,4 +9,4 @@ VERSION=$(shell head -n 1 debian/changelog | cut -f2 -d " " | tr -d "()" | cut -
 override_dh_auto_build:
 	dh_auto_build
 
-	@sed '/#common.functions#/ r $(CURDIR)/debian/common.functions' < $(CURDIR)/debian/postinst.in > $(CURDIR)/debian/arco-pfc.postinst
+#	@sed '/#common.functions#/ r $(CURDIR)/debian/common.functions' < $(CURDIR)/debian/postinst.in > $(CURDIR)/debian/arco-pfc.postinst

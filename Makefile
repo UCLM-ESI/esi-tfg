@@ -19,6 +19,7 @@ wiki:
 
 clean:
 	$(RM) $(shell find -name *~)
+	$(MAKE) -C example clean
 
 
 install:

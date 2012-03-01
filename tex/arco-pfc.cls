@@ -2,7 +2,7 @@
 
 % arco-pfc.cls
 %
-% Copyright © 2011 David Villa Alises
+% Copyright © 2011,2012 David Villa Alises
 %
 % This program is free software; you can redistribute it and/or modify
 % it under the terms of the GNU General Public License as published by
@@ -30,20 +30,16 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
-
-% -- no usar ~ para atildar ñ
-% http://www.aq.upm.es/Departamentos/Fisica/agmartin/webpublico/latex/FAQ-CervanTeX/FAQ-CervanTeX-6.html#ss6.7
-\deactivatetilden
+\deactivatetilden  % FAQ-CervanTeX-6.html#ss6.7
 
 %% -- Fundiciones
-\renewcommand{\rmdefault}{ptm}  % times
-\renewcommand{\sfdefault}{lmss} % lmoderm sans sherif
-\renewcommand{\ttdefault}{lmtt} % lmoderm typewriter
+\renewcommand{\rmdefault}{ptm}   % times
+\renewcommand{\sfdefault}{lmss}  % lmoderm sans sherif
+\renewcommand{\ttdefault}{lmtt}  % lmoderm typewriter
 
 \usepackage[htt]{hyphenat}
 \usepackage{atbeginend}
 \usepackage{xifthen}
-
 
 \usepackage{enumitem}
 \setlist{topsep=0pt, itemsep=0pt}
