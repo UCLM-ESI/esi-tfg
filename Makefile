@@ -3,8 +3,8 @@
 
 DESTDIR?=~
 
-BASE=$(DESTDIR)/usr/share/arco-tools
-FIGURES=$(DESTDIR)/usr/share/arco-tools/figures
+BASE=$(DESTDIR)/usr/share/arco
+FIGURES=$(DESTDIR)/usr/share/arco/figures
 LATEXSITE=$(DESTDIR)/usr/share/texmf-texlive/tex/latex
 DOCDIR=$(DESTDIR)/usr/share/doc
 

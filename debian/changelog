@@ -1,3 +1,10 @@
+arco-pfc (0.20120326-1) unstable; urgency=low
+
+  * arco-tools -> arco
+  * Standards-Version: 3.9.3
+
+ -- David Villa Alises <David.Villa@uclm.es>  Mon, 26 Mar 2012 19:46:41 +0200
+
 arco-pfc (0.20120221-1) unstable; urgency=low
 
   * Extracted from arco-tools

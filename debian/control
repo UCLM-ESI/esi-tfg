@@ -3,12 +3,12 @@ Section: shells
 Priority: optional
 Maintainer: David Villa Alises <David.Villa@uclm.es>
 Build-Depends: debhelper (>= 7.0.50~)
-Standards-Version: 3.9.2
+Standards-Version: 3.9.3
 Homepage: https://bitbucket.org/arco_group/arco-pfc
 
 Package: arco-pfc
 Architecture: all
-Depends: ${misc:Depends}, arco-authors (>> 0.20120221)
+Depends: ${misc:Depends}, arco-authors (>> 0.20120325)
 Description: LaTeX class and utilities for PFC/TFG typesetting.
  This package provides the arco-pfc LaTeX class created specifically to simplify
  PFC/TFG typesetting.
