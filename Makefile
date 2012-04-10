@@ -5,7 +5,7 @@ DESTDIR?=~
 
 BASE=$(DESTDIR)/usr/share/arco
 FIGURES=$(DESTDIR)/usr/share/arco/figures
-LATEXSITE=$(DESTDIR)/usr/share/texmf-texlive/tex/latex
+LATEXSITE=$(DESTDIR)/usr/share/texmf/tex/latex/arco
 DOCDIR=$(DESTDIR)/usr/share/doc
 
 LOGOS=http://arco.esi.uclm.es/svn/public/doc/logos/
@@ -25,8 +25,8 @@ clean:
 install:
 	install -vd $(BASE)
 
-	install -vd $(LATEXSITE)/arco
-	install -v -m 444 tex/*.cls $(LATEXSITE)/arco
+	install -vd $(LATEXSITE)
+	install -v -m 444 tex/*.cls $(LATEXSITE)
 
 	install -vd $(DOCDIR)/arco-pfc
 	tar cvfz $(DOCDIR)/arco-pfc/example.tgz example

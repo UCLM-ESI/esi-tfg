@@ -66,7 +66,7 @@
 %% -- GRÁFICOS -----------------------------------------------------------------
 \usepackage{graphicx}
 \usepackage{epsfig}
-\graphicspath{{figures/}{/usr/share/arco-tools/figures/}}
+\graphicspath{{figures/}{/usr/share/arco/figures/}}
 
 %% -- COLORES ------------------------------------------------------------------
 \usepackage[table]{xcolor}

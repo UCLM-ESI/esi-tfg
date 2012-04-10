@@ -16,7 +16,7 @@ E instala con::
 
 Utilizar el paquete debian tiene varias ventajas:
 
-* Automáticamente convierte las figuras al formato que pontas en tus \includegraphics
+* Automáticamente convierte las figuras al formato que pongas en tus \includegraphics
 * Recompila el documento si cambia alguna de las partes (ficheros incluidos con \input).
 * Descarga automáticamente y utiliza el autentico escudo de informática.
 * Incluye un ejemplo de memoria completo, listo para adaptar y usar.
