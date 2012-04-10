@@ -1,0 +1,45 @@
+#!/bin/sh
+# postinst script for arco-tools
+#
+# see: dh_installdeb(1)
+
+set -e
+
+
+#common.functions#
+
+tex_update () 
+{
+    tempfile=$(mktemp -p /tmp texhash.XXXXXXXX)
+    printf "Running texhash. This may take some time... "
+    if texhash > $tempfile 2>&1 ; then
+        rm -f $tempfile
+        echo "done."
+    else
+        exec >&2
+        echo
+        echo "texhash $* failed. Output has been stored in"
+        echo "$tempfile"
+        echo "Please include this file if you report a bug."
+        echo
+        exit 1
+    fi
+}
+
+case "$1" in
+    configure)
+	tex_update
+	;;
+    
+    abort-upgrade|abort-remove|abort-deconfigure)
+	;;
+    
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+	;;
+esac
+
+#DEBHELPER#
+
+exit 0
