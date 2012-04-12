@@ -1,3 +1,9 @@
+arco-pfc (0.20120412-1) unstable; urgency=low
+
+  * New depend: latex-xcolor
+
+ -- David Villa Alises <David.Villa@uclm.es>  Thu, 12 Apr 2012 13:56:15 +0200
+
 arco-pfc (0.20120326-1) unstable; urgency=low
 
   * arco-tools -> arco

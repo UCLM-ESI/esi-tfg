@@ -8,7 +8,7 @@ Homepage: https://bitbucket.org/arco_group/arco-pfc
 
 Package: arco-pfc
 Architecture: all
-Depends: ${misc:Depends}, arco-authors (>> 0.20120325)
+Depends: ${misc:Depends}, arco-authors (>> 0.20120325), latex-xcolor
 Description: LaTeX class and utilities for PFC/TFG typesetting.
  This package provides the arco-pfc LaTeX class created specifically to simplify
  PFC/TFG typesetting.
