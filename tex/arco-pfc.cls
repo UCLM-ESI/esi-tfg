@@ -43,7 +43,10 @@
 
 \usepackage{enumitem}
 \setlist{topsep=0pt, itemsep=0pt}
-
+\newlist{definitionlist}{description}{1}
+\setlist[definitionlist]{
+  style     = nextline,
+}
 
 % Las normas tipográficas que aparecen en los comentarios corresponden al libro:
 % J. Martínez de Sousa. Ortografía y ortotipografía del español actual. Trea, 2008.
@@ -91,6 +94,7 @@
 % cebreado para cuadros
 \newcommand{\myrowcolors}[1]{\rowcolors{#1}{tabrowbg}{}}
 \AfterEnd{tabular}{\rowcolors{1}{}{}}
+\BeforeEnd{document}{\attributionArcoPFC}
 
 
 %% -- LISTADOS DE CÓDIGO -------------------------------------------------------
@@ -522,8 +526,11 @@
   \begin{singlespacing}
   \begin{center}
     Este documento fue editado y tipografiado con \LaTeX{}\\
-    empleado la clase \textbf{arco-pfc} que se puede encontrar en:\\
+    empleando la clase \textbf{arco-pfc} que se puede encontrar en:\\
     \url{https://bitbucket.org/arco_group/arco-pfc}
+
+    \bigskip
+    {\scriptsize [Respeta esta atribución al autor]}
   \end{center}
   \end{singlespacing}
   \cleardoublepage

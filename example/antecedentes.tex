@@ -1,4 +1,5 @@
 \chapter{Antecedentes}
+\label{chap:antecedentes}
 
 Este capítulo incluye unas nociones básicas de \LaTeX{} y algunos consejos
 sencillos de composición para sacar todo el jugo a la clase \arcopfc. Ten
@@ -129,14 +130,25 @@ añade un fondo gris claro y una línea en el margen izquierdo.
 
 \section{Citas y referencias cruzadas}
 
-Una cita~\cite{design_patterns} y una referencia a la segunda sección (véase
-\S\,\ref{sec:uncuadro}).
+Puedes ver aquí una cita~\cite{design_patterns} y una referencia a la segunda sección
+(véase \S\,\ref{sec:uncuadro}). Para hacer referencias debes definir etiquetas en el punto
+que quieras referenciar (normalmente justo debajo). Es útil que los nombres de las
+etiquetas (comando label) tengan los siguientes prefijos (incluyendo los dos puntos ``:''
+del final):
 
-Si estás viendo la versión PDF de este documento puedes pinchar la cita o el
-número de sección. Son hiper-enlaces que llevan al elemento correspondiente. Todos los
-elementos que hacen referencia a otra cosa (figuras, tablas, listados,
-secciones, capítulos, citas, páginas web, etc.) pueden ser «pinchables» gracias al
-paquete \href{http://latex.tugraz.at/_media/docs/hyperref.pdf}{«hyperref»}.
+\begin{description}
+\item[chap:] para los capítulos. Ej: ``\texttt{chap:objetivos}''.
+\item[sec:] para secciones, subsecciones, etc.
+\item[fig:] para las figuras.
+\item[tab:] para las tablas.
+\item[code:] para los listados de código.
+\end{description}
+
+Si estás viendo la versión PDF de este documento puedes pinchar la cita o el número de
+sección. Son hiper-enlaces que llevan al elemento correspondiente. Todos los elementos que
+hacen referencia a otra cosa (figuras, tablas, listados, secciones, capítulos, citas,
+páginas web, etc.) son «pinchables» gracias al paquete
+\href{http://latex.tugraz.at/_media/docs/hyperref.pdf}{\emph{hyperref}}.
 
 Para citar páginas web usa el comando \texttt{url} como en: \url{http://www.uclm.es}
 
@@ -158,7 +170,7 @@ escribe en el preámbulo:
 
 Esto es importante porque a doble cara los márgenes son simétricos y a una cara
 no. Si llevas el PFC a la copistería y pides que te lo impriman de modo
-diferente al generado quedará mal.
+diferente al generado, quedará mal ¡Cuidado!
 
 
 % Local Variables:
