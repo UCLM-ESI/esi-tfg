@@ -471,12 +471,17 @@
     \null \vfill \noindent
     \textbf{\@author} \par
     \smallskip \noindent
-    \@city\ -- \@country \par
-    \medskip \noindent
-    \ifthenelse{\NOT \isundefined{\@email}}{\parbox{4em}{\emph{E-mail:}}   \@email \\}{}
-    \ifthenelse{\NOT \isundefined{\@phone}}{\parbox{4em}{\emph{Teléfono:}} \@phone \\}{}
-    \parbox{4em}{\emph{Web site:}} {\small \url{\@homepage}} \\
-    \bigskip \noindent
+    \@city\ -- \@country
+
+    \vspace{-1cm}
+    \begin{tabbing}
+      \hspace*{1.7cm} \= \\
+      \ifthenelse{\NOT \isundefined{\@email}}   {\emph{E-mail:}   \> \@email \\}{}
+      \ifthenelse{\NOT \isundefined{\@phone}}   {\emph{Teléfono:} \> \@phone \\}{}
+      \ifthenelse{\NOT \isundefined{\@homepage}}{\emph{Web site:} \> \url{\@homepage} \\}{}
+    \end{tabbing}
+    \vspace{-1cm}
+    \noindent
     \copyright\ \number\@publishyear\ \ \@author \par
     \smallskip \noindent
     \begin{minipage}{0.8\textwidth} \raggedright \footnotesize
