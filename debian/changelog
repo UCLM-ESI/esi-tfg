@@ -1,3 +1,15 @@
+arco-pfc (0.20120529-1) unstable; urgency=low
+
+  * New release
+
+ -- David Villa Alises <David.Villa@uclm.es>  Tue, 29 May 2012 11:55:27 +0200
+
+arco-pfc (0.20120527-1) unstable; urgency=low
+
+  * New release
+
+ -- David Villa Alises <David.Villa@uclm.es>  Sun, 27 May 2012 15:08:51 +0200
+
 arco-pfc (0.20120412-1) unstable; urgency=low
 
   * New depend: latex-xcolor

@@ -81,6 +81,14 @@
 \colorlet{tabheadbg}{gray!25}
 \colorlet{tabrowbg} {gray!12.5}
 
+%% -- EPÍGRAFES ----------------------------------------------------------------
+\usepackage[font=footnotesize,
+            labelfont=sc, % --
+            format=hang, indention=-.5cm,
+            width=1\textwidth]{caption}
+
+\setlength{\captionmargin}{0.5cm}
+
 %% --  CUADROS -----------------------------------------------------------------
 \usepackage{booktabs}
 \usepackage{colortbl} % coloreado de cuadros
@@ -95,7 +103,6 @@
 \newcommand{\myrowcolors}[1]{\rowcolors{#1}{tabrowbg}{}}
 \AfterEnd{tabular}{\rowcolors{1}{}{}}
 \BeforeEnd{document}{\attributionArcoPFC}
-
 
 %% -- LISTADOS DE CÓDIGO -------------------------------------------------------
 \usepackage{listings}
