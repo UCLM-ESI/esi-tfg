@@ -82,12 +82,10 @@
 \colorlet{tabrowbg} {gray!12.5}
 
 %% -- EPÍGRAFES ----------------------------------------------------------------
-\usepackage[font=footnotesize,
-            labelfont=sc, % --
-            format=hang, indention=-.5cm,
-            width=1\textwidth]{caption}
-
-\setlength{\captionmargin}{0.5cm}
+% \usepackage[font=footnotesize,
+%             labelfont=sc,
+%             format=hang, indention=-5mm,
+%             width=.9\textwidth]{caption}
 
 %% --  CUADROS -----------------------------------------------------------------
 \usepackage{booktabs}
