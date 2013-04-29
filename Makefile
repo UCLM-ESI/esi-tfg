@@ -3,7 +3,6 @@
 
 DESTDIR?=~
 
-BASE=$(DESTDIR)/usr/share/arco
 LATEXSITE=$(DESTDIR)/usr/share/texmf/tex/latex/arco
 DOCDIR=$(DESTDIR)/usr/share/doc
 
@@ -19,8 +18,6 @@ clean:
 
 
 install:
-	install -vd $(BASE)
-
 	install -vd $(LATEXSITE)
 	install -v -m 444 tex/*.cls $(LATEXSITE)
 

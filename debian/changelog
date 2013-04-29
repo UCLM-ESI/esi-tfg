@@ -1,3 +1,11 @@
+arco-pfc (0.20130429.1-1) unstable; urgency=low
+
+  * New release
+  * Depends on latests arco-authors
+  * New maintainer email
+
+ -- David Villa Alises <David.Villa@gmail.com>  Mon, 29 Apr 2013 18:15:33 +0200
+
 arco-pfc (0.20130429-1) unstable; urgency=low
 
   * New release
