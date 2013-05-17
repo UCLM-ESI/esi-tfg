@@ -1,3 +1,9 @@
+0.20130517
+==========
+
+* La nueva normativa indica solo un vocal, con lo cual el tribunal
+  tiene ahora 3 miembros.
+
 0.20120529
 ==========
 
@@ -11,7 +17,7 @@
 0.20120228
 ==========
 
-* Downloading the emblem in the package building.
+* Descargar el escudo en la construcción del paquete
 
 0.20120221
 ==========
@@ -21,5 +27,5 @@
 .. Local Variables:
 ..  coding: utf-8
 ..  mode: flyspell
-..  ispell-local-dictionary: "american"
+..  ispell-local-dictionary: "castellano8"
 .. End:

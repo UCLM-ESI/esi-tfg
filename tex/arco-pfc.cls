@@ -503,17 +503,17 @@
   \vspace{1.3cm}
   \par
   \textbf{{\large Presidente:}} \\ \par
-  \textbf{{\large Vocal 1:}} \\ \par
-  \textbf{{\large Vocal 2:}} \\ \par
   \textbf{{\large Secretario:}} \\ \par
+  \textbf{{\large Vocal:}} \\ \par
+%  \textbf{{\large Vocal 2:}} \\ \par
   \vspace{2.5cm}
   \noindent\underline{\textbf{{\Large FECHA DE DEFENSA:}}} \par
   \vspace{2.2cm}
   \noindent\underline{\textbf{{\Large CALIFICACIÓN:}}} \par
   \vspace{3.6cm}
-  \textbf{PRESIDENTE \hfil VOCAL 1 \hfil VOCAL 2 \hfil SECRETARIO} \par
+  \textbf{PRESIDENTE \hfil SECRETARIO \hfil VOCAL} \par
   \vspace{3.1cm}
-  Fdo.: \hfil Fdo.: \hfil Fdo.: \hfil Fdo.: \par
+  Fdo.: \hfil Fdo.: \hfil Fdo.: \par
 }
 
 \addto\captionsspanish{\renewcommand{\appendixname}{Anexo}}
