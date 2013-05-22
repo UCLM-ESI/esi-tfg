@@ -165,17 +165,13 @@
 
 
 %% -- HIPER-ENLACES PARA PDF ---------------------------------------------------
-\usepackage[bookmarks,
-            hyperfootnotes = false,
-            % backref,                % debug: refs desde la bibliografía
-            pdfview        = {fitv},
-            colorlinks     = true,
-            urlcolor       = black,
-            linkcolor      = black,
-            citecolor      = black,
-            pagecolor      = black,
-            anchorcolor    = black
-            ]{hyperref}
+\usepackage[%
+    bookmarks,
+    hyperfootnotes = false,
+    pdfview        = {fitv},
+    hidelinks      = true,
+    % backref,       % debug: refs desde la bibliografía
+    ]{hyperref}
 
 \hypersetup{
   pdftitle   = {\@title},
@@ -215,6 +211,20 @@
 }
 
 % doc: \titleformat{ command }[ shape ]{ format }{ label }{ sep }{ before }[ after ]
+
+\titleformat{\section}
+  {\normalfont\fontsize{15.0pt}{1em}\selectfont\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\fontsize{13.5pt}{1em}\selectfont\bfseries}{\thesubsection}{1em}{}
+
+%-- standard
+% \titleformat{\subsubsection}
+%   {\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
+% \titleformat{\paragraph}[runin]
+%   {\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+% \titleformat{\subparagraph}[runin]
+%   {\normalfont\normalsize\bfseries}{\thesubparagraph}{1em}{}
+
 
 \newcommand{\frontchapterformat}{
   \titleformat{\chapter}[display]%
@@ -310,6 +320,7 @@
 \renewcommand{\author}[2]{%
   \renewcommand{\@author}{#1}
   \renewcommand{\@authortitle}{#2}}
+\newcommand{\theauthor}{\@author}
 
 \newcommand{\@advisor}{}
 \newcommand{\@advisortitle}{}
@@ -325,7 +336,6 @@
 \newcommand{\country}[1]{\renewcommand{\@country}{#1}}
 \newcommand{\phone}[1]{\newcommand{\@phone}{#1}}
 \newcommand{\email}[1]{\newcommand{\@email}{#1}}
-\newcommand{\@homepage}{}
 \newcommand{\homepage}[1]{\renewcommand{\@homepage}{#1}}
 
 \newcommand{\@logo}{emblema_informatica-gray.pdf}
@@ -481,9 +491,9 @@
     \vspace{-1cm}
     \begin{tabbing}
       \hspace*{1.7cm} \= \\
-      \ifthenelse{\NOT \isundefined{\@email}}   {\emph{E-mail:}   \> \@email \\}{}
-      \ifthenelse{\NOT \isundefined{\@phone}}   {\emph{Teléfono:} \> \@phone \\}{}
-      \ifthenelse{\NOT \isundefined{\@homepage}}{\emph{Web site:} \> \url{\@homepage} \\}{}
+      \ifthenelse{\NOT \isundefined{\@email}}    {\emph{E-mail:}   \> \@email \\}{}
+      \ifthenelse{\NOT \isundefined{\@phone}}    {\emph{Teléfono:} \> \@phone \\}{}
+      \ifthenelse{\NOT \isundefined{\@homepage}} {\emph{Web site:} \> \url{\@homepage} \\}{}
     \end{tabbing}
     \vspace{-1cm}
     \noindent
@@ -568,6 +578,7 @@
 
 %% -- Algunos comandos útiles
 \newcommand{\quoteauthor}[1]{\par\hfill#1\hspace{1em}\mbox{}}
-
+\newcommand{\FIXME}[1]{\noindent\textcolor{red}{\textbf{FIXME:} #1}}
+\newcommand{\FIXED}[1]{\noindent\textcolor{green}{\textbf{FIXED:} #1}}
 
 %\makeatother

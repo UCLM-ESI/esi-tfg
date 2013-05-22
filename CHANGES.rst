@@ -1,3 +1,9 @@
+0.20130522
+==========
+
+* FIXME y FIXED
+* website no aparece si no se define \homepage
+
 0.20130517
 ==========
 
