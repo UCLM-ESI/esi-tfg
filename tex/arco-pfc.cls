@@ -336,6 +336,7 @@
 \newcommand{\country}[1]{\renewcommand{\@country}{#1}}
 \newcommand{\phone}[1]{\newcommand{\@phone}{#1}}
 \newcommand{\email}[1]{\newcommand{\@email}{#1}}
+\newcommand{\@homepage}{}
 \newcommand{\homepage}[1]{\renewcommand{\@homepage}{#1}}
 
 \newcommand{\@logo}{emblema_informatica-gray.pdf}
