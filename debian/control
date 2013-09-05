@@ -1,14 +1,14 @@
-Source: arco-pfc
+Source: esi-tfg
 Section: shells
 Priority: optional
 Maintainer: David Villa Alises <David.Villa@gmail.com>
 Build-Depends: debhelper (>= 7.0.50~)
 Standards-Version: 3.9.3
-Homepage: https://bitbucket.org/arco_group/arco-pfc
+Homepage: https://bitbucket.org/arco_group/esi-tfg
 
-Package: arco-pfc
+Package: esi-tfg
 Architecture: all
 Depends: ${misc:Depends}, arco-authors (>= 0.20130429-1), latex-xcolor
 Description: LaTeX class and utilities for PFC/TFG typesetting.
- This package provides the arco-pfc LaTeX class created specifically to simplify
- PFC/TFG typesetting.
+ This package provides the esi-tfg LaTeX class created specifically to simplify
+ TFG typesetting.

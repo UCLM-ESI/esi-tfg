@@ -10,7 +10,7 @@ all:
 
 
 wiki:
-	hg clone ssh://hg@bitbucket.org/arco_group/arco-pfc/wiki
+	hg clone ssh://hg@bitbucket.org/arco_group/esi-tfg/wiki
 
 clean:
 	$(RM) $(shell find -name *~)
@@ -21,5 +21,5 @@ install:
 	install -vd $(LATEXSITE)
 	install -v -m 444 tex/*.cls $(LATEXSITE)
 
-	install -vd $(DOCDIR)/arco-pfc
-	tar cvfz $(DOCDIR)/arco-pfc/example.tgz example
+	install -vd $(DOCDIR)/esi-tfg
+	tar cvfz $(DOCDIR)/esi-tfg/example.tgz example

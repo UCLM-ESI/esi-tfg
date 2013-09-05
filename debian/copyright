@@ -1,10 +1,10 @@
 This work was packaged for Debian by:
 
-    ARCO Research Group <sysadm@arco.esi.uclm.es> on Mon, 14 Dec 2009 17:11:56 +0100
+    David Villa Alises <David.Villa@gmail.com> on Fri, 05 Ago 2013 17:11:56 +0100
 
 It was downloaded from:
 
-    https://bitbucket.org/arco_group/arco-pfc
+    https://bitbucket.org/arco_group/esi-tfg
 
 Upstream Author:
 
@@ -35,6 +35,6 @@ Public License version 3 can be found in `/usr/share/common-licenses/GPL-3'.
 
 The Debian packaging is:
 
-    Copyright (C) 2012 ARCO Research Group <sysadm@arco.esi.uclm.es>
+    Copyright (C) 2013 David Villa Alises <David.Villa@gmail.com>
 
 and is licensed under the GPL version 3, see above.

@@ -2,4 +2,4 @@
 
 make = load('$testdir/make.py')
 
-make.make_and_clean('arco-pfc', '$basedir/example')
+make.make_and_clean('esi-tfg', '$basedir/example')

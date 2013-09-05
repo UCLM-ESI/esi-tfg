@@ -1,8 +1,8 @@
 % -*- coding: utf-8 -*-
 
-% arco-pfc.cls
+% esi-tfg.cls
 %
-% Copyright © 2011,2012 David Villa Alises
+% Copyright © 2013 David Villa Alises
 %
 % This program is free software; you can redistribute it and/or modify
 % it under the terms of the GNU General Public License as published by
@@ -19,7 +19,7 @@
 % Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{arco-pfc}[2011/05/16 Arco modified book class]
+\ProvidesClass{esi-tfg}[2013/08/15 TFG de ESI]
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \PassOptionsToClass{a4paper, 12pt, oneside, openright}{book}
 \ProcessOptions\relax
@@ -547,8 +547,8 @@
   \begin{singlespacing}
   \begin{center}
     Este documento fue editado y tipografiado con \LaTeX{}\\
-    empleando la clase \textbf{arco-pfc} que se puede encontrar en:\\
-    \url{https://bitbucket.org/arco_group/arco-pfc}
+    empleando la clase \textbf{esi-tfg} que se puede encontrar en:\\
+    \url{https://bitbucket.org/arco_group/esi-tfg}
 
     \bigskip
     {\scriptsize [Respeta esta atribución al autor]}
