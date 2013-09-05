@@ -1,7 +1,7 @@
 esi-tfg
 ========
 
-esi-tfg es una clase LaTeX para escribir cómodamente el PFC. Corresponde con la
+esi-tfg es una clase LaTeX para escribir cómodamente el TFG. Corresponde con la
 especificación de formato de la Escuela Superior de Informática de Ciudad Real, pero es
 sencillo adaptarla si estudias en otro sitio.
 

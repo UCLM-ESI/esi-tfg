@@ -100,7 +100,7 @@
 % cebreado para cuadros
 \newcommand{\myrowcolors}[1]{\rowcolors{#1}{tabrowbg}{}}
 \AfterEnd{tabular}{\rowcolors{1}{}{}}
-\BeforeEnd{document}{\attributionArcoPFC}
+\BeforeEnd{document}{\attributionArco}
 
 %% -- LISTADOS DE CÓDIGO -------------------------------------------------------
 \usepackage{listings}
@@ -539,7 +539,7 @@
 }%
 
 
-\newcommand{\attributionArcoPFC} {
+\newcommand{\attributionArco} {
   \cleardoublepage
   \pagestyle{empty}
   \null\vfill
