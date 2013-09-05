@@ -7,7 +7,7 @@ sencillo adaptarla si estudias en otro sitio.
 
 La normativa actual de la ESI de CR se puede encontrar en:
 
-http://webpub.esi.uclm.es/archivos/89/NormativaPFC2007
+http://webpub.esi.uclm.es/archivos/216/NormativaTFG
 
 Puedes utilizar la clase **esi-tfg** descargando el fichero esi-tfg.cls_, pero es mucho
 más útil y práctico instalar el paquete debian (también válido para ubuntu y otros

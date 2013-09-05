@@ -422,7 +422,7 @@
     \bigskip
     {\Large \textbf{EN INFORMÁTICA}} \\
     \vspace{30mm}
-    {\Large \textbf{PROYECTO FIN DE CARRERA}} \\
+    {\Large \textbf{TRABAJO FIN DE GRADO}} \\
     \vspace{14mm}
 
     \begin{doublespace}
@@ -447,7 +447,7 @@
     \bigskip
     {\Large Departamento de Tecnologías y Sistemas de Información}\\
     \vspace{45mm}
-    {\Large \textbf{PROYECTO FIN DE CARRERA}} \\
+    {\Large \textbf{TRABAJO FIN DE GRADO}} \\
     \bigskip
 
     \begin{doublespace}
