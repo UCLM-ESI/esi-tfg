@@ -1,1 +1,0 @@
-../tex/arco-pfc.cls
