@@ -339,7 +339,7 @@
 \newcommand{\@homepage}{}
 \newcommand{\homepage}[1]{\renewcommand{\@homepage}{#1}}
 
-\newcommand{\@logo}{emblema_informatica-gray.pdf}
+\newcommand{\@logo}{informatica.pdf}
 \newcommand{\logo}[1]{\renewcommand{\@logo}{#1}}
 \newcommand{\putlogo}{%
   \ifthenelse{\NOT \isundefined{\@logo}}{
@@ -514,15 +514,15 @@
   \vspace{1.3cm}
   \par
   \textbf{{\large Presidente:}} \\ \par
-  \textbf{{\large Secretario:}} \\ \par
   \textbf{{\large Vocal:}} \\ \par
+  \textbf{{\large Secretario:}} \\ \par
 %  \textbf{{\large Vocal 2:}} \\ \par
   \vspace{2.5cm}
   \noindent\underline{\textbf{{\Large FECHA DE DEFENSA:}}} \par
   \vspace{2.2cm}
   \noindent\underline{\textbf{{\Large CALIFICACIÓN:}}} \par
   \vspace{3.6cm}
-  \textbf{PRESIDENTE \hfil SECRETARIO \hfil VOCAL} \par
+  \textbf{PRESIDENTE \hfil\hspace{0.5cm} VOCAL \hfil\hspace{1.2cm} SECRETARIO} \par
   \vspace{3.1cm}
   Fdo.: \hfil Fdo.: \hfil Fdo.: \par
 }

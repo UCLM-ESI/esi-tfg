@@ -1,1 +1,0 @@
-../tex/esi-tfg.cls
