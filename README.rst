@@ -47,16 +47,16 @@ Ejemplos
 
 Hay ejemplos disponibles que pueden servir como punto de partida:
 
-* Fuente del anteproyecto_ y el resultado en `PDF`__, y
+* Fuente del anteproyecto_ y el resultado en `PDF`__ , y
 * Fuente de la memoria de TFG_ y resultado en `PDF`__.
 
-.. _texlive         http://www.tug.org/texlive/
+.. _texlive:        http://www.tug.org/texlive/
 .. _esi-tfg.cls:    /arco_group/esi-tfg/src/tip/tex/esi-tfg.cls
 .. _pre-tfg.cls:    /arco_group/esi-tfg/src/tip/tex/pre-tfg.cls
 .. _TFG:            https://bitbucket.org/arco_group/esi-tfg/src/tip/examples/tfg
 .. _anteproyecto:   https://bitbucket.org/arco_group/esi-tfg/src/tip/examples/anteproyecto
-.. __ http://fowler.esi.uclm.es/buildbot/esi-tfg/anteproyecto.pdf
-.. __ http://fowler.esi.uclm.es/buildbot/esi-tfg/tfg.pdf
+.. __: 		    http://fowler.esi.uclm.es/buildbot/esi-tfg/anteproyecto.pdf
+.. __: 		    http://fowler.esi.uclm.es/buildbot/esi-tfg/tfg.pdf
 
 .. Local Variables:
 .. fill-column: 90
