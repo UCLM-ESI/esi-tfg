@@ -42,7 +42,8 @@ En \LaTeX{} hay tres tipos básicos de viñetas:
 
 
 Es posible hacer viñetas (como la siguiente) cambiando márgenes u otras
-propiedades gracias al paquete \href{http://mirror.ctan.org/macros/latex/contrib/enumitem/enumitem.pdf}{\emph{enumitem}}
+propiedades gracias al paquete
+\href{http://mirror.ctan.org/macros/latex/contrib/enumitem/enumitem.pdf}{\emph{enumitem}}
 (ya incluido en \esitfg).
 
 \begin{itemize}[noitemsep, label=$\triangleright$]
@@ -57,7 +58,7 @@ las viñetas (individual o globalmente) o crear nuevas.
 
 \section{Figuras}
 
-Las figuras se referencian así (ver figura~\ref{fig:informatica}). Recuerda que
+Las figuras se referencian así (ver Figura~\ref{fig:informatica}). Recuerda que
 no tienen porqué aparecer en el lugar donde se ponen (mira un libro de
 verdad). \LaTeX{} las colocará donde mejor queden, No te empeñes en
 contradecirle, él sabe mucho de tipografía.
@@ -77,10 +78,11 @@ Por cierto, los títulos de tablas, figuras y otro elementos flotantes (los
 \section{Cuadros}
 \label{sec:uncuadro}
 
-Se denominan «tablas» cuando contienen datos con relaciones numéricas. En
-general se denominan «cuadros». Si las columnas están bien alineadas, las líneas
-verticales estorban más que ayudan (no las pongas). Los cuadros se referencian
-de este modo (ver cuadro~\ref{tab:rpc-semantics}).
+Se denominan «tablas» cuando contienen datos con relaciones numéricas. El
+término genérico (que debe usarse cuando en los demás casos) es «cuadro». Si las
+columnas están bien alineadas, las líneas verticales estorban más que ayudan (no
+las pongas). Los cuadros se referencian de este modo (ver
+Cuadro~\ref{tab:rpc-semantics}).
 
 \begin{table}[hp]
   \centering
@@ -97,8 +99,9 @@ de este modo (ver cuadro~\ref{tab:rpc-semantics}).
 \section{Listados de código}
 \label{sec:listado}
 
-Puedes referenciar un listado con~\ref{code:hello}. Éste es un listado flotante,
-pero también pueden ser «no flotantes» (mira la documentación del paquete
+Puedes referenciar un listado así (ver Listado~\ref{code:hello}). Éste es un
+listado flotante, pero también pueden ser «no flotantes» quitando el parámetro
+\texttt{float} (mira el fuente de este documento o la referencia del paquete
 \href{http://www.ctan.org/get/macros/latex/contrib/listings/listings.pdf}{«listings»}).
 
 \begin{listing}[
@@ -113,8 +116,9 @@ int main(int argc, char *argv[]) {
 \end{listing}
 
 Puedes modificar el estilo por defecto para tus listados añadiendo un comando
-\texttt{lstset} en tu \texttt{main.tex}. El código LaTeX del listado \ref{code:custom-listings}
-añade un fondo gris claro y una línea en el margen izquierdo.
+\texcmd{lstset} en tu \texttt{main.tex}. El código LaTeX del listado
+\ref{code:custom-listings} añade un fondo gris claro y una línea en el margen
+izquierdo.
 
 \begin{listing}[
   float=h!,
@@ -155,11 +159,11 @@ Para citar páginas web usa el comando \texttt{url} como en: \url{http://www.ucl
 \section{Páginas}
 \label{sec:paginas}
 
-La normativa dice que el documento debería ser impreso a una cara, pero si el
-número de páginas es alto puede imprimirse a dos caras. Como eso es bastante
-subjetivo, mi consejo es que ronde las 100 \textbf{hojas}. Es decir, si el
-documento tiene más de 200 páginas imprímelo a doble cara, si tiene menos
-imprímelo a una.
+La normativa aconseja imprimir el documento a doble cara, pero si el número de
+páginas es bajo puede imprimirse a una cara. Como eso es bastante subjetivo, mi
+consejo es que ronde las 100 \textbf{hojas}. Una hoja impresa a doble cara
+contiene 2 páginas, a una cara contiene una. Es decir, si el documento tiene más
+de 200 páginas imprímelo a doble cara, si tiene menos imprímelo a una.
 
 Por defecto, \esitfg{} imprime a una cara (oneside), si quieres imprimir a doble cara,
 escribe en el preámbulo:
@@ -169,5 +173,16 @@ escribe en el preámbulo:
 \end{listing}
 
 Esto es importante porque a doble cara los márgenes son simétricos y a una cara
-no. Si llevas el PFC a la copistería y pides que te lo impriman de modo
+no. Si llevas el TFG a la copistería y pides que te lo impriman de modo
 diferente al generado, quedará mal ¡Cuidado!
+
+Tal como indica la normativa, los capítulos siempre empiezan en la página
+derecha, la impar cuando se usa doble cara.
+
+
+% Local Variables:
+%  coding: utf-8
+%  mode: latex
+%  mode: flyspell
+%  ispell-local-dictionary: "castellano8"
+% End:

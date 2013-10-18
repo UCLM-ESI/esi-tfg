@@ -45,7 +45,7 @@
 \setlist{topsep=0pt, itemsep=0pt}
 \newlist{definitionlist}{description}{1}
 \setlist[definitionlist]{
-  style     = nextline,
+  style = nextline,
 }
 
 % Las normas tipográficas que aparecen en los comentarios corresponden al libro:
@@ -100,6 +100,7 @@
 % cebreado para cuadros
 \newcommand{\myrowcolors}[1]{\rowcolors{#1}{tabrowbg}{}}
 \AfterEnd{tabular}{\rowcolors{1}{}{}}
+\AfterBegin{document}{\renewcommand\bibname{Referencias}}
 \BeforeEnd{document}{\attributionArco}
 
 %% -- LISTADOS DE CÓDIGO -------------------------------------------------------
@@ -170,13 +171,13 @@
     hyperfootnotes = false,
     pdfview        = {fitv},
     hidelinks      = true,
-    % backref,       % debug: refs desde la bibliografía
+    % backref, % debug: refs desde la bibliografía
     ]{hyperref}
 
 \hypersetup{
   pdftitle   = {\@title},
   pdfauthor  = {\@author},
-  pdfsubject = {Proyecto Fin de Carrera},
+  pdfsubject = {Trabajo Fin de Grado},
 }
 
 % -- urls
@@ -190,7 +191,6 @@
 
 
 %% -- BIBLIOGRAFÍA -------------------------------------------------------------
-\renewcommand{\bibname}{Referencias}
 \bibliographystyle{es-alpha}
 
 \newcommand{\bibfont}{\small}      % Bibliography's font size
@@ -213,7 +213,7 @@
 % doc: \titleformat{ command }[ shape ]{ format }{ label }{ sep }{ before }[ after ]
 
 \titleformat{\section}
-  {\normalfont\fontsize{15.0pt}{1em}\selectfont\bfseries}{\thesection}{1em}{}
+  {\normalfont\fontsize{15.0pt}{1em}\selectfont\bfseries}{\thesection}{.7em}{}
 \titleformat{\subsection}
   {\normalfont\fontsize{13.5pt}{1em}\selectfont\bfseries}{\thesubsection}{1em}{}
 
@@ -240,7 +240,7 @@
 \renewcommand{\frontmatter}{
   \frontmatterorig
   \singlespacing
-  \pagestyle{fancy}
+  \pagestyle{main}
   \frontchapterformat
   \renewcommand{\chaptermark}[1]{\markboth{\uppercase{##1}}{}}
 }
@@ -260,7 +260,7 @@
   \cleardoublepage
   \mainmatterorig
   \mainchapterformat
-  \pagestyle{fancy}
+  \pagestyle{main}
   \renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ \textsc{##1}}{}}
   \onehalfspacing
   \cleardoublepage
@@ -285,28 +285,55 @@
 
 
 %% -- ESTILO DE PÁGINA, ENCABEZADOS Y PIES -------------------------------------
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-
-% para las páginas de título
-\fancypagestyle{plain}{%
-  \fancyhf{}%
-  \renewcommand{\headrulewidth}{0pt}
-  \fancyfoot[C]{\thepage}
+\newcommand{\UCLMhead}{
+  \setlength{\unitlength}{1cm}
+  \begin{picture}(0,0)
+    \put(-1.3,-1.42){
+      \includegraphics[height=3.5cm]{uclm-A4.pdf}}
+  \end{picture}
 }
 
-\fancyhf{}
-\headheight=13pt
-\fancyhead[EL,OR]{\thepage}
-\fancyhead[ER,OL]{\leftmark}
-\renewcommand{\headrulewidth}{0.4pt}
-\renewcommand{\chaptermark}[1]{%
-  \markboth{\thechapter.\ \textsc{#1}}{}%
+\newcommand{\ESIhead}{
+  \setlength{\unitlength}{1cm}
+  \begin{picture}(0,0)
+    \put(-4,-1.5){
+      \includegraphics[height=1.6cm]{esi.pdf}}
+  \end{picture}
 }
 
-\newlength{\myoffset}
-\myoffset=16pt
-\fancyhfoffset[EL,OR]{\myoffset}
+\newpagestyle{firstpage}[\small\sffamily]{
+  \sethead{\UCLMhead{}} %
+          {} %
+          {\ESIhead{}}
+}
+
+\newpagestyle{main}[\small\sffamily]{
+  \sethead{}{}{}
+  \setfoot{}{\thepage{}}{}
+}
+
+% \usepackage{fancyhdr}
+% \pagestyle{fancy}
+%
+% % para las páginas de título
+% \fancypagestyle{plain}{%
+%   \fancyhf{}%
+%   \renewcommand{\headrulewidth}{0pt}
+%   \fancyfoot[C]{\thepage}
+% }
+%
+% \fancyhf{}
+% \headheight=13pt
+% \fancyhead[EL,OR]{\thepage}
+% \fancyhead[ER,OL]{\leftmark}
+% \renewcommand{\headrulewidth}{0.4pt}
+% \renewcommand{\chaptermark}[1]{%
+%   \markboth{\thechapter.\ \textsc{#1}}{}%
+% }
+
+% \newlength{\myoffset}
+% \myoffset=16pt
+% \fancyhfoffset[EL,OR]{\myoffset}
 
 \addtolength{\footskip}{8pt}
 
@@ -316,17 +343,16 @@
 
 
 %% -- VARIABLES DEL PAQUETE ----------------------------------------------------
+\usepackage{etoolbox}
+
 \newcommand{\@authortitle}{}
 \renewcommand{\author}[2]{%
   \renewcommand{\@author}{#1}
   \renewcommand{\@authortitle}{#2}}
 \newcommand{\theauthor}{\@author}
 
-\newcommand{\@advisor}{}
-\newcommand{\@advisortitle}{}
-\newcommand{\advisor}[2]{%
-  \renewcommand{\@advisor}{#1}
-  \renewcommand{\@advisortitle}{#2}}
+\newcommand{\@putAuthor}{
+  Autor: \@author\par}
 
 \newcommand{\@address}{}
 \newcommand{\address}[1]{\renewcommand{\@address}{#1}}
@@ -339,24 +365,37 @@
 \newcommand{\@homepage}{}
 \newcommand{\homepage}[1]{\renewcommand{\@homepage}{#1}}
 
-\newcommand{\@logo}{informatica.pdf}
-\newcommand{\logo}[1]{\renewcommand{\@logo}{#1}}
-\newcommand{\putlogo}{%
-  \ifthenelse{\NOT \isundefined{\@logo}}{
-    \includegraphics[width=35mm]{\@logo}\\
-  }{
-    \vspace*{2cm}
-    NO SE HA DEFINIDO UN LOGO\\
-    Utiliza  \texttt{$\backslash$logo}\\
-    \vspace{2cm}
-  }
-}
+\newcommand{\@intensification}{}
+\newcommand{\intensification}[1]{%
+  \renewcommand{\@intensification}{#1}}
 
-\newcommand{\@publishmonth}{}
-\newcommand{\@publishyear}{\year}
-\newcommand{\publishdate}[2]{%
-  \renewcommand{\@publishyear}{#1}
-  \renewcommand{\@publishmonth}{#2}}
+\newcommand{\@advisor}{}
+\newcommand{\@advisortitle}{}
+\newcommand{\advisor}[2]{%
+  \renewcommand{\@advisor}{#1}
+  \renewcommand{\@advisortitle}{#2}}
+
+\newcommand{\@advisorFirst}{}
+\newcommand{\advisorFirst}[1]{%
+  \renewcommand{\@advisorFirst}{#1}}
+\newcommand{\@putAdvisorFirst}{Director: \@advisorFirst\par}
+
+\newcommand{\@advisorSecond}{}
+\newcommand{\advisorSecond}[1]{%
+  \renewcommand{\@advisorSecond}{#1}}
+\newcommand{\@putAdvisorSecond}{
+  \ifdefempty{\@advisorSecond}{}{
+  Director: \@advisorSecond\par}}
+
+\newcommand{\@advisorDepartment}{}
+\newcommand{\advisorDepartment}[1]{\renewcommand{\@advisorDepartment}{#1}}
+
+\newcommand{\@docmonth}{}
+\newcommand{\@docyear}{}
+\newcommand{\docdate}[2]{%
+  \renewcommand{\@docyear}{#1}
+  \renewcommand{\@docmonth}{#2}}
+
 
 \newcommand{\@license}{%
   \begin{minipage}{1.1\textwidth}
@@ -394,80 +433,95 @@
 %% -- PÁGINAS ESPECIALES
 
 % - portadilla
-% Sólo aparece el título de la obra a la misma altura,
-% fuente y estilo que en la portada pero en un tamaño 2/3 el de
-% ésta. Opcionalmente puede aparecer el autor.
+% Sólo aparece el título de la obra a la misma altura, fuente y estilo
+% que en la portada pero en un tamaño 2/3 el de ésta. Opcionalmente
+% puede aparecer el autor.
 \newcommand{\pretitle}{%
   \thispagestyle{empty}
+  \vspace*{\stretch{8}}%
   \begin{center}%
-    \vspace*{\stretch{3.2}}%
     {\large \textsc{\@title}}
-     \par
-    \vspace*{\stretch{6.8}}%
+    \par
   \end{center}%
+  \vspace*{\stretch{2.3}}%
   \cleardoublepage
 }
 
-
 \newcommand{\frontpage}{%
-  \pagestyle{empty}
   \begin{center}
-    \putlogo
-    \vspace{25mm}
-    {\Large \textbf{UNIVERSIDAD DE CASTILLA-LA MANCHA}} \\
-    \bigskip
-    {\Large \textbf{ESCUELA SUPERIOR DE INFORMÁTICA}} \\
-    \vspace{25mm}
-    {\Large \textbf{INGENIERÍA}} \\
-    \bigskip
-    {\Large \textbf{EN INFORMÁTICA}} \\
-    \vspace{30mm}
-    {\Large \textbf{TRABAJO FIN DE GRADO}} \\
-    \vspace{14mm}
+    \thispagestyle{firstpage}
+    \Large \bfseries
+    \setstretch{1.3}
 
-    \begin{doublespace}
-      {\Large \@title}
-    \end{doublespace}
+    \vspace*{2cm}
+    \includegraphics[width=3cm]{informatica.pdf}
 
-    \vspace{12mm}
-    {\large \@author}\\
-    \vfill
-    \hfill
-    {\large \textbf{\@publishmonth, \@publishyear}}
+    \vspace{2cm}
+    UNIVERSIDAD DE CASTILLA-LA MANCHA
+
+    ESCUELA SUPERIOR DE INFORMÁTICA
+
+    \vspace*{\stretch{7}}
+    GRADO EN INGENIERÍA INFORMÁTICA
+
+    \vspace*{\stretch{4}}
+    TRABAJO FIN DE GRADO
+
+    \vspace*{\stretch{4}}
+    {\LARGE \@title}
+
+    \vspace*{\stretch{2}}
+    {\large \@author}
+
+    \vspace*{\stretch{4}}
   \end{center}
-
-  \cleardoublepage
-
-  \begin{center}
-    \putlogo
-    \vspace{15mm}
-    {\Large \textbf{UNIVERSIDAD DE CASTILLA-LA MANCHA}} \\
-    \bigskip
-    {\Large \textbf{ESCUELA SUPERIOR DE INFORMÁTICA}}\\
-    \bigskip
-    {\Large Departamento de Tecnologías y Sistemas de Información}\\
-    \vspace{45mm}
-    {\Large \textbf{TRABAJO FIN DE GRADO}} \\
-    \bigskip
-
-    \begin{doublespace}
-      {\Large \@title}\\
-    \end{doublespace}
-  \end{center}
-
-  \vspace{25mm}
-
-  \begin{onehalfspace}
-  \begin{flushleft}
-    {\large Autor:\hspace{5mm} \@authortitle\,\@author}\\
-    {\large Director: \@advisortitle\,\@advisor}\\
-  \end{flushleft}
-  \end{onehalfspace}
 
   \vfill
   \hfill
-  {\large \textbf{\@publishmonth, \@publishyear}}
+  {\large \@docmonth, \@docyear}
+  %
   \cleardoublepage
+  %
+  \thispagestyle{firstpage}
+  \begin{center}
+    \Large \bfseries
+    \setstretch{1.3}
+
+    \vspace*{2cm}
+    \includegraphics[width=3cm]{informatica.pdf}
+
+    \vspace{2cm}
+    UNIVERSIDAD DE CASTILLA-LA MANCHA
+
+    ESCUELA SUPERIOR DE INFORMÁTICA
+
+    \@advisorDepartment
+
+    \vspace*{\stretch{4}}
+    \begin{spacing}{0.9}
+      {\normalsize TECNOLOGÍA ESPECÍFICA DE\\\MakeUppercase{\@intensification}}
+    \end{spacing}
+
+    \vspace*{\stretch{4}}
+    TRABAJO FIN DE GRADO
+
+    \vspace*{\stretch{6}}
+    {\LARGE \@title}
+  \end{center}
+
+  \vspace*{\stretch{7}}
+
+  {\large
+    \@putAuthor
+    \@putAdvisorFirst
+    \@putAdvisorSecond
+  }
+
+  \vspace*{\stretch{4}}
+
+  \vfill
+  \hfill
+  {\large \@docmonth, \@docyear}
 }
 
 \newcommand{\dedication}[1]{%
@@ -492,13 +546,13 @@
     \vspace{-1cm}
     \begin{tabbing}
       \hspace*{1.7cm} \= \\
-      \ifthenelse{\NOT \isundefined{\@email}}    {\emph{E-mail:}   \> \@email \\}{}
-      \ifthenelse{\NOT \isundefined{\@phone}}    {\emph{Teléfono:} \> \@phone \\}{}
-      \ifthenelse{\NOT \isundefined{\@homepage}} {\emph{Web site:} \> \url{\@homepage} \\}{}
+      \ifdefempty{\@email}   {}{\emph{E-mail:}   \> \@email \\}
+      \ifdefempty{\@phone}   {}{\emph{Teléfono:} \> \@phone \\}
+      \ifdefempty{\@homepage}{}{\emph{Web site:} \> \url{\@homepage} \\}
     \end{tabbing}
     \vspace{-1cm}
     \noindent
-    \copyright\ \number\@publishyear\ \ \@author \par
+    \copyright\ \number\@docyear\ \ \@author \par
     \smallskip \noindent
     \begin{minipage}{0.8\textwidth} \raggedright \footnotesize
       \@license
@@ -531,7 +585,7 @@
 
 \newcommand{\appendixtitle} {
   \cleardoublepage
-  \thispagestyle{empty}%
+%  \thispagestyle{empty}%
   \vspace*{5cm}%
   \begin{center}%
     \sffamily\scshape\Large\scalebox{3}{ANEXOS}%
@@ -541,7 +595,7 @@
 
 \newcommand{\attributionArco} {
   \cleardoublepage
-  \pagestyle{empty}
+%  \pagestyle{empty}
   \null\vfill
   \rule{0pt}{8cm}
   \begin{singlespacing}

@@ -1,13 +1,17 @@
 esi-tfg
-========
+=======
 
-esi-tfg es una clase LaTeX para escribir cómodamente el TFG. Corresponde con la
-especificación de formato de la Escuela Superior de Informática de Ciudad Real, pero es
-sencillo adaptarla si estudias en otro sitio.
+esi-tfg es una clase LaTeX para escribir cómodamente la memoria del TFG (Trabajo Fin de
+Grado). Corresponde con la especificación de formato de la Escuela Superior de Informática
+de Ciudad Real, pero es sencillo adaptarla si estudias en otro sitio.
 
 La normativa actual de la ESI de CR se puede encontrar en:
 
 http://webpub.esi.uclm.es/archivos/216/NormativaTFG
+
+Esta clase LaTeX asume que dispones del paquete texlive_, que es el que se distribuye por
+defecto en la mayoría de las distribuciones GNU/Linux, y que también está disponible para
+Windows y Mac OSX.
 
 Puedes utilizar la clase **esi-tfg** descargando el fichero esi-tfg.cls_, pero es mucho
 más útil y práctico instalar el paquete debian (también válido para ubuntu y otros
@@ -21,20 +25,36 @@ E instala con::
 
   # apt-get install esi-tfg
 
-Utilizar el paquete debian tiene varias ventajas:
+Utilizar el paquete debian tiene varias ventajas muy interesantes:
 
-* Automáticamente convierte las figuras al formato que pongas en tus \includegraphics
+* Convierte automáticamente las figuras al formato que pongas en tus \includegraphics
 * Recompila el documento si cambia alguna de las partes (ficheros incluidos con \input).
-* Automáticamente descarga y utiliza el auténtico escudo de informática.
+* Incluye las figuras necesarias (escudo de informática y de la ESI) en formato escalable
+  (no se pixela).
 * Incluye un ejemplo completo del documento, listo para adaptar y usar.
 
 
-Ejemplo
+pre-tfg
 -------
 
-Tienes un ejemplo_ de memoria de proyecto y el resultado_ correspondiente en PDF.
+También se incluye la clase pre-tfg.cls_ para preparar el anteproyecto también conforme a
+la normativa.
 
 
-.. _esi-tfg.cls:   /arco_group/esi-tfg/src/tip/tex/esi-tfg.cls
-.. _ejemplo:        https://bitbucket.org/arco_group/esi-tfg/src/tip/example
+Ejemplos
+--------
+
+Hay ejemplos disponibles que pueden servir como punto de partida, tanto para el
+anteproyecto_ como para el TFG_.
+
+.. _texlive         http://www.tug.org/texlive/
+.. _esi-tfg.cls:    /arco_group/esi-tfg/src/tip/tex/esi-tfg.cls
+.. _pre-tfg.cls:    /arco_group/esi-tfg/src/tip/tex/pre-tfg.cls
+.. _TFG:            https://bitbucket.org/arco_group/esi-tfg/src/tip/examples/tfg
+.. _anteproyecto:   https://bitbucket.org/arco_group/esi-tfg/src/tip/examples/anteproyecto
 .. _resultado:      http://arco.esi.uclm.es/~david.villa/esi-tfg/main.pdf
+..
+
+.. Local Variables:
+.. fill-column: 90
+.. End:
