@@ -6,19 +6,23 @@ DESTDIR?=~
 LATEXSITE=$(DESTDIR)/usr/share/texmf/tex/latex/arco
 DOCDIR=$(DESTDIR)/usr/share/doc
 
+.PHONY: examples test
+
 all:
 
 
 wiki:
 	hg clone ssh://hg@bitbucket.org/arco_group/esi-tfg/wiki
 
-tests:
+test:
 	atheist -i2  test
+
+examples:
+	$(MAKE) -C examples
 
 clean:
 	$(RM) $(shell find -name *~)
-	$(MAKE) -C examples/tfg clean
-	$(MAKE) -C examples/anteproyecto clean
+	$(MAKE) -C examples clean
 
 
 install:
