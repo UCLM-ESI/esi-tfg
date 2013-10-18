@@ -30,9 +30,8 @@ Utilizar el paquete debian tiene varias ventajas muy interesantes:
 
 * Convierte automáticamente las figuras al formato que pongas en tus \includegraphics
 * Recompila el documento si cambia alguna de las partes (ficheros incluidos con \input).
-* Incluye las figuras necesarias (escudo de informática y de la ESI) en formato escalable
-  (no se pixela).
-* Incluye y utiliza el `auténtico escudo de informática`__.
+* Incluye las figuras necesarias (el `auténtico escudo de informática`__ y de la ESI) en
+  formato escalable (no se pixela).
 * Incluye un ejemplo completo del documento, listo para adaptar y usar.
 
 __ escudo_
