@@ -432,22 +432,7 @@
 
 %% -- PÁGINAS ESPECIALES
 
-% - portadilla
-% Sólo aparece el título de la obra a la misma altura, fuente y estilo
-% que en la portada pero en un tamaño 2/3 el de ésta. Opcionalmente
-% puede aparecer el autor.
-\newcommand{\pretitle}{%
-  \thispagestyle{empty}
-  \vspace*{\stretch{8}}%
-  \begin{center}%
-    {\large \textsc{\@title}}
-    \par
-  \end{center}%
-  \vspace*{\stretch{2.3}}%
-  \cleardoublepage
-}
-
-\newcommand{\frontpage}{%
+\newcommand{\cover}{%
   \begin{center}
     \thispagestyle{firstpage}
     \Large \bfseries
@@ -479,9 +464,25 @@
   \vfill
   \hfill
   {\large \@docmonth, \@docyear}
-  %
   \cleardoublepage
-  %
+}
+
+% - portadilla
+% Sólo aparece el título de la obra a la misma altura, fuente y estilo
+% que en la portada pero en un tamaño 2/3 el de ésta. Opcionalmente
+% puede aparecer el autor.
+\newcommand{\bastardtitle}{%
+  \thispagestyle{empty}
+  \vspace*{\stretch{8}}%
+  \begin{center}%
+    {\large \textsc{\@title}}
+    \par
+  \end{center}%
+  \vspace*{\stretch{2.3}}%
+  \cleardoublepage
+}
+
+\newcommand{\frontpage}{%
   \thispagestyle{firstpage}
   \begin{center}
     \Large \bfseries
@@ -522,6 +523,7 @@
   \vfill
   \hfill
   {\large \@docmonth, \@docyear}
+  \cleardoublepage
 }
 
 \newcommand{\dedication}[1]{%
