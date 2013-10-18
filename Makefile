@@ -12,6 +12,9 @@ all:
 wiki:
 	hg clone ssh://hg@bitbucket.org/arco_group/esi-tfg/wiki
 
+tests:
+	atheist -i2  test
+
 clean:
 	$(RM) $(shell find -name *~)
 	$(MAKE) -C examples/tfg clean
