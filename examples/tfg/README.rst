@@ -1,7 +1,7 @@
-Este directorio contiene un ejemplo «mínimo» de memoria de Proyecto de Fin de
-Carrera según las normas de la Escuela Superior de Informática de Ciudad
-Real. Puede que no cumpla alguna de dichas normas, pero lo iremos
-perfeccionando.
+Este directorio contiene un ejemplo «mínimo» de memoria de Trabajo Fin
+de Grado según las normas de la Escuela Superior de Informática de
+Ciudad Real. Puede que no cumpla alguna de dichas normas, pero lo
+iremos perfeccionando.
 
 http://webpub.esi.uclm.es/archivos/216/NormativaTFG
 
