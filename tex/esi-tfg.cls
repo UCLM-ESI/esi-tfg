@@ -289,7 +289,7 @@
   \setlength{\unitlength}{1cm}
   \begin{picture}(0,0)
     \put(-1.3,-1.42){
-      \includegraphics[height=3.5cm]{uclm-A4.pdf}}
+      \includegraphics[height=3cm]{uclm-A4.pdf}}
   \end{picture}
 }
 
@@ -434,22 +434,24 @@
 
 \newcommand{\cover}{%
   \begin{center}
+    \fontsize{60}{22}\selectfont
     \thispagestyle{firstpage}
     \Large \bfseries
     \setstretch{1.3}
 
     \vspace*{2cm}
-    \includegraphics[width=3cm]{informatica.pdf}
+    \includegraphics[width=2.7cm]{informatica.pdf}
 
     \vspace{2cm}
-    UNIVERSIDAD DE CASTILLA-LA MANCHA
 
+    UNIVERSIDAD DE CASTILLA-LA MANCHA
+    \vspace{-1mm}
     ESCUELA SUPERIOR DE INFORMÁTICA
 
-    \vspace*{\stretch{7}}
+    \vspace*{\stretch{6}}
     GRADO EN INGENIERÍA INFORMÁTICA
 
-    \vspace*{\stretch{4}}
+    \vspace*{\stretch{6}}
     TRABAJO FIN DE GRADO
 
     \vspace*{\stretch{4}}
@@ -464,6 +466,7 @@
   \vfill
   \hfill
   {\large \@docmonth, \@docyear}
+  \vspace{\stretch{1}}
   \cleardoublepage
 }
 
@@ -492,6 +495,7 @@
     \includegraphics[width=3cm]{informatica.pdf}
 
     \vspace{2cm}
+
     UNIVERSIDAD DE CASTILLA-LA MANCHA
 
     ESCUELA SUPERIOR DE INFORMÁTICA
