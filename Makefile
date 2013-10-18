@@ -14,7 +14,8 @@ wiki:
 
 clean:
 	$(RM) $(shell find -name *~)
-	$(MAKE) -C example clean
+	$(MAKE) -C examples/tfg clean
+	$(MAKE) -C examples/anteproyecto clean
 
 
 install:
