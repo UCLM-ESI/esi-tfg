@@ -15,7 +15,7 @@ wiki:
 	hg clone ssh://hg@bitbucket.org/arco_group/esi-tfg/wiki
 
 test:
-	atheist -i2  test
+	atheist -f -i2  test
 
 examples:
 	$(MAKE) -C examples
@@ -30,4 +30,4 @@ install:
 	install -v -m 444 tex/*.cls $(LATEXSITE)
 
 	install -vd $(DOCDIR)/esi-tfg
-	tar cvfz $(DOCDIR)/esi-tfg/example.tgz example
+	tar cvfz $(DOCDIR)/esi-tfg/examples.tgz examples

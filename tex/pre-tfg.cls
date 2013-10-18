@@ -97,7 +97,7 @@
 
 %--- lists ---
 \usepackage{enumitem}
-\setlist[itemize,1]{label=-, itemsep=-2mm, topsep=-8mm}
+\setlist[itemize,1]{label=-, itemsep=-2mm, partopsep=-6mm}
 
 
 %--- table settings ---
@@ -211,7 +211,7 @@
     \add_frontpage_content
     \vfil\null
   \end{titlepage}
-  \parskip = 5mm
+  \parskip = 3mm
 }
 
 \makeatother

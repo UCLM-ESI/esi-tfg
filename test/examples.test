@@ -3,4 +3,4 @@
 make = load('$testdir/make.py')
 
 make.make_and_clean('tfg', '$basedir/examples/tfg')
-make.make_and_clean('examples', '$basedir/examples/anteproyecto')
+make.make_and_clean('anteproyecto', '$basedir/examples/anteproyecto')

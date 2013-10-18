@@ -1,3 +1,10 @@
+esi-tfg (0.20131018-1) unstable; urgency=low
+
+  * New release
+  * Included pre-tfg class
+
+ -- David Villa Alises <David.Villa@gmail.com>  Fri, 18 Oct 2013 11:38:15 +0200
+
 esi-tfg (0.20130905-1) unstable; urgency=low
 
   * esi-tfg latex class
