@@ -180,7 +180,7 @@
 
     GRADO EN INGENIERÍA INFORMÁTICA
 
-    {\normalsize TECNOLOGÍA ESPECÍFICA DE \@intensification
+    {\normalsize TECNOLOGÍA ESPECÍFICA DE \MakeUppercase{\@intensification}
       \helpfootnote{INGENIERÍA DEL SOFTWARE o INGENIERÍA DE COMPUTADORES o COMPUTACIÓN o
         TECNOLOGÍAS DE LA INFORMACIÓN (esta última está también asociada a los TFG del
         \textbf{curso} de \textbf{adaptación})}}
