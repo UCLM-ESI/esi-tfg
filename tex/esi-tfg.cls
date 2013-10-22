@@ -312,28 +312,6 @@
   \setfoot{}{\thepage{}}{}
 }
 
-% \usepackage{fancyhdr}
-% \pagestyle{fancy}
-%
-% % para las páginas de título
-% \fancypagestyle{plain}{%
-%   \fancyhf{}%
-%   \renewcommand{\headrulewidth}{0pt}
-%   \fancyfoot[C]{\thepage}
-% }
-%
-% \fancyhf{}
-% \headheight=13pt
-% \fancyhead[EL,OR]{\thepage}
-% \fancyhead[ER,OL]{\leftmark}
-% \renewcommand{\headrulewidth}{0.4pt}
-% \renewcommand{\chaptermark}[1]{%
-%   \markboth{\thechapter.\ \textsc{#1}}{}%
-% }
-
-% \newlength{\myoffset}
-% \myoffset=16pt
-% \fancyhfoffset[EL,OR]{\myoffset}
 
 \addtolength{\footskip}{8pt}
 
