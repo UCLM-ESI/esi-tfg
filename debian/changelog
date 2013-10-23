@@ -1,3 +1,16 @@
+esi-tfg (0.20131022.1-1) unstable; urgency=low
+
+  * New release
+  * More depends
+
+ -- David Villa Alises <David.Villa@gmail.com>  Tue, 22 Oct 2013 13:38:12 +0200
+
+esi-tfg (0.20131022-1) unstable; urgency=low
+
+  * New release
+
+ -- David Villa Alises <David.Villa@gmail.com>  Tue, 22 Oct 2013 13:33:48 +0200
+
 esi-tfg (0.20131018-1) unstable; urgency=low
 
   * New release
