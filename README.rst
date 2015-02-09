@@ -9,6 +9,7 @@ La normativa actual de la ESI de CR se puede encontrar en:
 
 * http://webpub.esi.uclm.es/archivos/216/NormativaTFG
 * http://webpub.esi.uclm.es/paginas/formacion-grado-en-ing-informatica-1
+* http://webpub.esi.uclm.es/archivos/336/Normativa-TFGs
 
 Esta clase LaTeX asume que dispones del paquete texlive_, que es el que se distribuye por
 defecto en la mayoría de las distribuciones GNU/Linux, y que también está disponible para
