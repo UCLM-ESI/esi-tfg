@@ -105,6 +105,7 @@
 
 %% -- LISTADOS DE CÓDIGO -------------------------------------------------------
 \usepackage{listings}
+\usepackage[scaled=.73]{beramono}
 \renewcommand{\lstlistlistingname}{Índice de listados}
 \renewcommand{\lstlistingname}{Listado}
 
@@ -114,7 +115,8 @@
   \tocfile{\lstlistlistingname}{lol}
   \endgroup}
 
-\newcommand{\lstfont}{\ttfamily\fontfamily{pcr}}
+% \newcommand{\lstfont}{\ttfamily\fontfamily{pcr}}
+\newcommand{\lstfont}{\ttfamily}
 
 \lstset{%
      aboveskip          = 2mm,
@@ -147,6 +149,17 @@
 \lstnewenvironment{listing}[1][]
    {\pagebreak[3]\singlespacing\lstset{#1}}%
    {\pagebreak[3]}
+
+\lstdefinestyle{consoleStyle}{
+  basicstyle=\scriptsize\bf\lstfont,
+  backgroundcolor=\color{gray75},
+  numbers=none,
+}
+
+\lstnewenvironment{console}[1][]
+   {\pagebreak[0]\lstset{style=consoleStyle,#1}}
+   {\pagebreak[0]}
+
 
 
 %% -- ACRÓNIMOS Y GLOSARIO -----------------------------------------------------

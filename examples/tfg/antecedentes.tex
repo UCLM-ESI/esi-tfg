@@ -79,10 +79,10 @@ Por cierto, los títulos de tablas, figuras y otro elementos flotantes (los
 \label{sec:uncuadro}
 
 Se denominan «tablas» cuando contienen datos con relaciones numéricas. El
-término genérico (que debe usarse cuando en los demás casos) es «cuadro». Si las
-columnas están bien alineadas, las líneas verticales estorban más que ayudan (no
-las pongas). Los cuadros se referencian de este modo (ver
-Cuadro~\ref{tab:rpc-semantics}).
+término genérico (que debe usarse cuando en los demás casos) es
+«cuadro»~\cite{sousa}. Si las columnas están bien alineadas, las líneas
+verticales estorban más que ayudan (no las pongas). Los cuadros se referencian
+de este modo (ver Cuadro~\ref{tab:rpc-semantics}).
 
 \begin{table}[hp]
   \centering
@@ -115,8 +115,22 @@ int main(int argc, char *argv[]) {
 }
 \end{listing}
 
+\noindent
+Puedes incluir un fichero de código fuente (o un fragmento) con \texttt{lstinputlisting}:
+
+\lstinputlisting[language=C, firstline=3, texcl]{code/hello.c}
+
+\noindent
+Y también existe un comando \texttt{console} para representar ejecución de
+comandos:
+
+\begin{console}
+$ uname --operating-system
+GNU/Linux
+\end{console} %$
+
 Puedes modificar el estilo por defecto para tus listados añadiendo un comando
-\texcmd{lstset} en tu \texttt{main.tex}. El código LaTeX del listado
+\texcmd{lstset} en tu \texttt{custom.sty}. El código \LaTeX{} del listado
 \ref{code:custom-listings} añade un fondo gris claro y una línea en el margen
 izquierdo.
 
@@ -129,6 +143,10 @@ izquierdo.
   rulesepcolor    = \color{black},
 }
 \end{listing}
+
+En cualquier caso, si lo necesitas siempre es mejor que redefinas los comandos y entornos
+existentes o crees entornos nuevos, en lugar de añadir los mismos cambios en
+muchas partes del documento.
 
 
 
