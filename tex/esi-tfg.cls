@@ -2,7 +2,7 @@
 
 % esi-tfg.cls
 %
-% Copyright © 2013 David Villa Alises
+% Copyright © 2013-2014 David Villa Alises
 %
 % This program is free software; you can redistribute it and/or modify
 % it under the terms of the GNU General Public License as published by
@@ -589,6 +589,8 @@
   \end{center}%
 }%
 
+\def\versiondate{\leavevmode\hbox{0.\the\year\twodigits\month\twodigits\day}}
+\def\twodigits#1{\ifnum#1<10 0\fi\the#1}
 
 \newcommand{\attributionArco} {
   \cleardoublepage
@@ -598,11 +600,11 @@
   \begin{singlespacing}
   \begin{center}
     Este documento fue editado y tipografiado con \LaTeX{}\\
-    empleando la clase \textbf{esi-tfg} que se puede encontrar en:\\
+    empleando la clase \textbf{esi-tfg} {\small (versión \versiondate)} que se puede encontrar en:\\
     \url{https://bitbucket.org/arco_group/esi-tfg}
 
     \bigskip
-    {\scriptsize [Respeta esta atribución al autor]}
+    {\scriptsize [respeta esta atribución al autor]}
   \end{center}
   \end{singlespacing}
   \cleardoublepage
