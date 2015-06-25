@@ -426,7 +426,7 @@
 \newcommand{\cover}{%
   \begin{center}
     \fontsize{60}{22}\selectfont
-    \thispagestyle{firstpage}
+    \thispagestyle{empty}
     \Large \bfseries
     \setstretch{1.3}
 
