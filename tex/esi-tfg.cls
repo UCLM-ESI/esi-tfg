@@ -599,8 +599,8 @@
   \rule{0pt}{8cm}
   \begin{singlespacing}
   \begin{center}
-    Este documento fue editado y tipografiado con \LaTeX{}\\
-    empleando la clase \textbf{esi-tfg} {\small (versión \versiondate)} que se puede encontrar en:\\
+    Este documento fue editado y tipografiado con \LaTeX{} empleando\\
+    la clase \textbf{esi-tfg} {\small (versión \versiondate)} que se puede encontrar en:\\
     \url{https://bitbucket.org/arco_group/esi-tfg}
 
     \bigskip
