@@ -58,6 +58,11 @@ pre-tfg
 También se incluye la clase pre-tfg.cls_ para preparar el anteproyecto, conforme a
 la normativa.
 
+tfm
+---
+
+También se incluye la clase esi-tfm.cls_ para preparar el documento relativo al Trabajo Fin de Máster, conforme a la normativa existente.
+
 
 Ejemplos
 --------
@@ -66,12 +71,15 @@ Hay ejemplos disponibles que pueden servir como punto de partida:
 
 * Fuente del anteproyecto_ y el resultado en `PDF`__ , y
 * Fuente de la memoria de TFG_ y resultado en `PDF`__.
+* Fuente de la memoria de TFM_ y resultado en `PDF`__.
 
 .. _texlive:        http://www.tug.org/texlive/
 .. _esi-tfg.cls:    /arco_group/esi-tfg/src/tip/tex/esi-tfg.cls
 .. _pre-tfg.cls:    /arco_group/esi-tfg/src/tip/tex/pre-tfg.cls
+.. _esi-tfmg.cls:    /arco_group/esi-tfg/src/tip/tex/esi-tfm.cls
 .. _TFG:            https://bitbucket.org/arco_group/esi-tfg/src/tip/examples/tfg
 .. _anteproyecto:   https://bitbucket.org/arco_group/esi-tfg/src/tip/examples/anteproyecto
+.. _TFM:            https://bitbucket.org/arco_group/esi-tfg/src/tip/examples/tfm
 .. __: 		    http://fowler.esi.uclm.es/buildbot/esi-tfg/anteproyecto.pdf
 .. __: 		    http://fowler.esi.uclm.es/buildbot/esi-tfg/tfg.pdf
 
