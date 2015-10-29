@@ -69,8 +69,8 @@ Ejemplos
 
 Hay ejemplos disponibles que pueden servir como punto de partida:
 
-* Fuente del anteproyecto_ y el resultado en `PDF`__ , y
-* Fuente de la memoria de TFG_ y resultado en `PDF`__.
+* Fuente del anteproyecto_ y el resultado en `PDF`__ , 
+* Fuente de la memoria de TFG_ y resultado en `PDF`__ , y
 * Fuente de la memoria de TFM_ y resultado en `PDF`__.
 
 .. _texlive:        http://www.tug.org/texlive/
@@ -82,6 +82,7 @@ Hay ejemplos disponibles que pueden servir como punto de partida:
 .. _TFM:            https://bitbucket.org/arco_group/esi-tfg/src/tip/examples/tfm
 .. __: 		    http://fowler.esi.uclm.es/buildbot/esi-tfg/anteproyecto.pdf
 .. __: 		    http://fowler.esi.uclm.es/buildbot/esi-tfg/tfg.pdf
+.. __: 		    http://fowler.esi.uclm.es/buildbot/esi-tfg/tfm.pdf
 
 .. Local Variables:
 .. fill-column: 90
