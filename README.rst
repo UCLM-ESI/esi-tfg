@@ -76,7 +76,7 @@ Hay ejemplos disponibles que pueden servir como punto de partida:
 .. _texlive:        http://www.tug.org/texlive/
 .. _esi-tfg.cls:    /arco_group/esi-tfg/src/tip/tex/esi-tfg.cls
 .. _pre-tfg.cls:    /arco_group/esi-tfg/src/tip/tex/pre-tfg.cls
-.. _esi-tfmg.cls:   /arco_group/esi-tfg/src/tip/tex/esi-tfm.cls
+.. _esi-tfm.cls:    /arco_group/esi-tfg/src/tip/tex/esi-tfm.cls
 .. _TFG:            https://bitbucket.org/arco_group/esi-tfg/src/tip/examples/tfg
 .. _anteproyecto:   https://bitbucket.org/arco_group/esi-tfg/src/tip/examples/anteproyecto
 .. _TFM:            https://bitbucket.org/arco_group/esi-tfg/src/tip/examples/tfm
