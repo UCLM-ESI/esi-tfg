@@ -9,13 +9,15 @@ Homepage: https://bitbucket.org/arco_group/esi-tfg
 Package: esi-tfg
 Architecture: all
 Depends: ${misc:Depends},
-	 arco-authors (>= 0.20130429-1),
+	 arco-authors (>= 0.20151112-1),
 	 latex-xcolor,
 	 texlive-latex-extra,
 	 texlive-lang-spanish,
 	 texlive-latex-recommended,
 	 texlive-fonts-extra,
 	 cm-super
-Description: a LaTeX class and utilities for TFG typesetting
- This package provides the esi-tfg LaTeX class created specifically to simplify
- TFG typesetting.
+Description: Clases LaTeX y utilidades para escribir las memorías de TFG y TFM
+ Este paquete proporciona clases LaTeX especialmente creadas para simplificar
+ la edición y  tipografiado de las memorias del TFG y TFM de acuerdo con las
+ normas de formato  especificadas por la the Escuela Superior de Informátcia
+ de Ciudad Real

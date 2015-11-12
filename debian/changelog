@@ -1,3 +1,16 @@
+esi-tfg (0.20151112-1) unstable; urgency=low
+
+  * New release
+
+ -- David Villa Alises <David.Villa@gmail.com>  Thu, 12 Nov 2015 18:57:29 +0100
+
+esi-tfg (0.20151029-1) unstable; urgency=low
+
+  * New release
+  * New class for TFM
+
+ -- David Villa Alises <David.Villa@gmail.com>  Thu, 29 Oct 2015 11:10:20 +0100
+
 esi-tfg (0.20150802-1) unstable; urgency=low
 
   * New release

@@ -302,7 +302,7 @@
   \setlength{\unitlength}{1cm}
   \begin{picture}(0,0)
     \put(-1.3,-1.42){
-      \includegraphics[height=3cm]{uclm-A4.pdf}}
+      \includegraphics[height=3cm]{uclm_logomarca_1.pdf}}
   \end{picture}
 }
 
@@ -435,7 +435,7 @@
     \setstretch{1.3}
 
     \vspace*{2cm}
-    \includegraphics[width=2.7cm]{informatica.pdf}
+    \includegraphics[width=2.7cm]{informatica_gray.pdf}
 
     \vspace{2cm}
 
@@ -487,7 +487,7 @@
     \setstretch{1.3}
 
     \vspace*{2cm}
-    \includegraphics[width=3cm]{informatica.pdf}
+    \includegraphics[width=3cm]{informatica_gray.pdf}
 
     \vspace{2cm}
 
@@ -532,7 +532,7 @@
     \setstretch{1.3}
 
     \vspace*{2cm}
-    \includegraphics[width=3cm]{informatica.pdf}
+    \includegraphics[width=3cm]{informatica_gray.pdf}
 
     \vspace{2cm}
 

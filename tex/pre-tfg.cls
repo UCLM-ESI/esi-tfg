@@ -71,8 +71,8 @@
 \newcommand{\UCLMhead}{
   \setlength{\unitlength}{1cm}
   \begin{picture}(0,0)
-    \put(-1.3,-1.42){
-      \includegraphics[height=2.8cm]{uclm.pdf}}
+    \put(-1.3,-2.00){
+      \includegraphics[height=2.8cm]{uclm_logo.pdf}}
   \end{picture}
 }
 
@@ -163,7 +163,7 @@
     \setstretch{1.3}
 
     \vspace*{\stretch{7}}
-    \includegraphics[width=3cm]{informatica.pdf}
+    \includegraphics[width=3cm]{informatica_gray.pdf}
 
     \vspace*{\stretch{5}}
     UNIVERSIDAD DE CASTILLA-LA MANCHA
