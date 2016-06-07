@@ -18,7 +18,7 @@ Windows y Mac OSX.
 Puedes utilizar la clase **esi-tfg** descargando el fichero esi-tfg.cls_, pero es altamente recomendado** instalar el paquete debian** (también válido para ubuntu y otros
 derivados de debian). Para descargar el paquete, añade el repo ejecutando (como root)::
 
-  # echo "deb http://babel.esi.uclm.es/arco sid main" > /etc/apt/sources.list.d/babel.list
+  # echo "deb http://pike.esi.uclm.es/arco sid main" > /etc/apt/sources.list.d/pike.list
   # apt-get update
   # apt-get install arco-archive-keyring
 
@@ -69,7 +69,7 @@ Ejemplos
 
 Hay ejemplos disponibles que pueden servir como punto de partida:
 
-* Fuente del anteproyecto_ y el resultado en `PDF`__ , 
+* Fuente del anteproyecto_ y el resultado en `PDF`__ ,
 * Fuente de la memoria de TFG_ y resultado en `PDF`__ , y
 * Fuente de la memoria de TFM_ y resultado en `PDF`__.
 
