@@ -14,7 +14,7 @@ Esta clase LaTeX asume que dispones del paquete texlive_, que es el que se distr
 defecto en la mayoría de las distribuciones GNU/Linux, y que también está disponible para
 Windows y Mac OSX.
 
-Puedes utilizar la clase **esi-tfg** descargando el fichero esi-tfg.cls_, pero es altamente recomendado** instalar el paquete debian** (también válido para ubuntu y otros
+Puedes utilizar la clase **esi-tfg** descargando el fichero esi-tfg.cls_, pero es altamente recomendado **instalar el paquete debian** (también válido para ubuntu y otros
 derivados de debian). Para descargar el paquete, añade el repo ejecutando (como root)::
 
   # echo "deb http://pike.esi.uclm.es/arco sid main" > /etc/apt/sources.list.d/pike.list
