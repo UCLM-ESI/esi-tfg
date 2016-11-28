@@ -55,8 +55,7 @@ Si optas por no usar el paquete debian, tendrás que instalar los siguientes paq
 pre-tfg
 -------
 
-También se incluye la clase pre-tfg.cls_ para preparar el anteproyecto, conforme a
-la normativa.
+Es la clase pre-tfg.cls_ para preparar el anteproyecto, conforme a la normativa.
 
 tfm
 ---
