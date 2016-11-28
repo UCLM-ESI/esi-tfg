@@ -27,6 +27,7 @@ E instala con::
 
 Utilizar el paquete debian tiene varias ventajas muy interesantes:
 
+* Instala todas las dependencias necesarias, con las versiones correctas.
 * Convierte automáticamente las figuras al formato que pongas en tus ``\includegraphics``
 * Recompila el documento si cambia alguna de las partes (ficheros incluidos con ``\input``).
 * Incluye las figuras necesarias (el `auténtico escudo de informática`__ y de la ESI) en
