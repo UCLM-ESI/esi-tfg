@@ -37,7 +37,7 @@ Utilizar el paquete debian tiene varias ventajas muy interesantes:
 __ escudo_
 .. _escudo:         http://crysol.org/emblema-informatica
 
-Si optas por no usar el paquete debian, tendrás que instalar los siguientes paquetes:
+Si optas por **NO USAR** el paquete debian, tendrás que instalar los siguientes paquetes:
 
 * latex-xcolor
 * texlive-latex-extra
@@ -51,6 +51,8 @@ Si optas por no usar el paquete debian, tendrás que instalar los siguientes paq
 * rubber
 * netpbm
 * aspell-en
+
+y descargar el fichero atbeginend.sty antes mencionado.
 
 pre-tfg
 -------
