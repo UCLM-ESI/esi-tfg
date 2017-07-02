@@ -3,7 +3,7 @@ Section: shells
 Priority: optional
 Maintainer: David Villa Alises <David.Villa@gmail.com>
 Build-Depends: debhelper (>= 7.0.50~)
-Standards-Version: 3.9.8
+Standards-Version: 4.0.0
 Homepage: https://bitbucket.org/arco_group/esi-tfg
 
 Package: esi-tfg
