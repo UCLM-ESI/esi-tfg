@@ -2,7 +2,7 @@
 
 % esi-tfg.cls
 %
-% Copyright © 2013-2014 David Villa Alises
+% Copyright © 2013-2017 David Villa Alises
 %
 % This program is free software; you can redistribute it and/or modify
 % it under the terms of the GNU General Public License as published by
@@ -215,7 +215,7 @@
 
 
 %% -- FORMATO DE CAPÍTULOS Y SECCIONES -----------------------------------------
-\usepackage[rigidchapters, clearempty]{titlesec}
+\usepackage[rigidchapters, clearempty, pagestyles]{titlesec}
 % - rigidchapters: Todos los títulos de capítulo tienen la misma altura
 % - clearempty: Elimina encabezados y pies de páginas (izquierdas) vacías.
 
@@ -230,7 +230,7 @@
 \titleformat{\subsection}
   {\normalfont\fontsize{13.5pt}{1em}\selectfont\bfseries}{\thesubsection}{1em}{}
 
-%-- standard
+%-- standard definitions
 % \titleformat{\subsubsection}
 %   {\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
 % \titleformat{\paragraph}[runin]
@@ -253,9 +253,8 @@
 \renewcommand{\frontmatter}{
   \frontmatterorig
   \singlespacing
-  \pagestyle{main}
+  \pagestyle{mainstyle}
   \frontchapterformat
-  \renewcommand{\chaptermark}[1]{\markboth{\uppercase{##1}}{}}
 }
 
 \newcommand{\mainchapterformat}{
@@ -272,10 +271,9 @@
 \renewcommand{\mainmatter}{
   \cleardoublepage
   \mainmatterorig
-  \mainchapterformat
-  \pagestyle{main}
-  \renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ \textsc{##1}}{}}
   \onehalfspacing
+  \pagestyle{mainstyle}
+  \mainchapterformat
   \cleardoublepage
 }
 
@@ -286,6 +284,7 @@
 \let\backmatterorig\backmatter
 \renewcommand{\backmatter}{
   \backmatterorig
+  \pagestyle{backstyle}
   \backchapterformat
   \cleardoublepage
 }
@@ -320,11 +319,15 @@
           {\ESIhead{}}
 }
 
-\newpagestyle{main}[\small\sffamily]{
-  \sethead{}{}{}
+\newpagestyle{mainstyle}[\small\sffamily]{
+  \sethead[\thechapter.\ \textsc{\chaptertitle}][][]{}{}{\textsc{\sectiontitle}}
   \setfoot{}{\thepage{}}{}
 }
 
+\newpagestyle{backstyle}{
+  \sethead{}{}{}
+  \setfoot{}{\thepage{}}{}
+}
 
 \addtolength{\footskip}{8pt}
 
@@ -430,19 +433,24 @@
     \Large \bfseries
     \setstretch{1.3}
 
-    \vspace*{2cm}
+    \vspace*{\stretch{8}}
     \includegraphics[width=2.7cm]{informatica_gray.pdf}
 
-    \vspace{2cm}
+    \vspace*{\stretch{6}}
 
     UNIVERSIDAD DE CASTILLA-LA MANCHA
-    \vspace{-1mm}
+    \vspace*{\stretch{1}}
     ESCUELA SUPERIOR DE INFORMÁTICA
 
-    \vspace*{\stretch{6}}
+    \vspace*{\stretch{2}}
     GRADO EN INGENIERÍA INFORMÁTICA
 
-    \vspace*{\stretch{6}}
+    \vspace*{\stretch{2}}
+    \begin{spacing}{0.9}
+      {\normalsize TECNOLOGÍA ESPECÍFICA DE\\\MakeUppercase{\@intensification}}
+    \end{spacing}
+
+    \vspace*{\stretch{3}}
     TRABAJO FIN DE GRADO
 
     \vspace*{\stretch{4}}
