@@ -21,7 +21,7 @@ Vagrant.configure("2") do |config|
     debian.vm.provision "shell", inline: $bootstrap
   end
 
-  config.vm.define "zesty64" do |ubuntu|
+  config.vm.define "zesty" do |ubuntu|
     ubuntu.vm.box = "ubuntu/zesty64"
     ubuntu.vm.provision "shell", inline: $bootstrap
   end
