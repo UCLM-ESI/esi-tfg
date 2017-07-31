@@ -1,3 +1,10 @@
+esi-tfg (0.20170731-1) unstable; urgency=low
+
+  * New release
+  * debian/control: Removed latex-xcolor depend
+
+ -- David Villa Alises <David.Villa@gmail.com>  Mon, 31 Jul 2017 18:10:56 +0200
+
 esi-tfg (0.20170702.1-1) unstable; urgency=low
 
   * New release

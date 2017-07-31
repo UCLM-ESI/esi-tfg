@@ -10,7 +10,6 @@ Package: esi-tfg
 Architecture: all
 Depends: ${misc:Depends},
 	 arco-authors (>= 0.20151112-1),
-	 latex-xcolor,
 	 texlive-latex-extra,
 	 texlive-lang-spanish,
 	 texlive-latex-recommended,
