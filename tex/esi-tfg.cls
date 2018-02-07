@@ -278,12 +278,12 @@
 }
 
 \newcommand{\backchapterformat}{
-  \frontchapterformat
+  \mainchapterformat
 }
 
 \let\backmatterorig\backmatter
 \renewcommand{\backmatter}{
-  \backmatterorig
+  % \backmatterorig
   \pagestyle{backstyle}
   \backchapterformat
   \cleardoublepage
@@ -590,7 +590,7 @@
 
 \newcommand{\appendixtitle} {
   \cleardoublepage
-%  \thispagestyle{empty}%
+  \thispagestyle{backstyle}
   \vspace*{5cm}%
   \begin{center}%
     \sffamily\scshape\Large\scalebox{3}{ANEXOS}%
