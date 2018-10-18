@@ -644,7 +644,8 @@
 }%
 
 % http://tex.stackexchange.com/a/237251/27822
-\def\versiondate{\leavevmode\hbox{0.\the\year\twodigits\month\twodigits\day}}
+%\def\versiondate{\leavevmode\hbox{0.\the\year\twodigits\month\twodigits\day}}
+\def\versiondate{0.20181017}
 \def\twodigits#1{\ifnum#1<10 0\fi\the#1}
 
 \newcommand{\attributionArco} {
