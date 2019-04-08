@@ -11,7 +11,7 @@ Crear un proyecto en overleaf y subir el .zip que creáis oportuno y a partir de
 Dependencias
 ============
 En principio ninguna puesto que la idea es no tener que instalar nada.
-Si encontráis algún problema contactad conmigo usando Roberto (dot) Plaza (at) alu (dot) uclm (dot) es, intentaré resolverlo a mayor brevedad.
+Si encontráis algún problema lo más probable es que modificando esi-tfm.cls o esi-tfg.cls y cambiando algún logo de escala de grises a color se solucione.
 
 Disclaimer:
 -----------
