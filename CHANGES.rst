@@ -35,6 +35,11 @@
 
 * Migrated form arco-tools
 
+0.20190408
+==========
+
+* Añadida una excepción en el README raíz; línea 21 y añadidos dos proyectos tfg.zip y tfm.zip para overleaf.
+
 .. Local Variables:
 ..  coding: utf-8
 ..  mode: flyspell

@@ -1,0 +1,10 @@
+syntax: glob
+
+*.aux
+*.bbl
+*.blg
+*.lof
+*.log
+*.lol
+*.out
+*.toc
