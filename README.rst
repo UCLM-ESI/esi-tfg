@@ -17,16 +17,9 @@ Windows y Mac OSX.
 Puedes utilizar la clase **esi-tfg** descargando el fichero esi-tfg.cls_, pero es altamente recomendado **instalar el paquete debian** (también válido para ubuntu y otros
 derivados de debian). Para descargar el paquete, añade el repo ejecutando (como root)::
 
-  # echo "deb http://pike.esi.uclm.es/arco sid main" > /etc/apt/sources.list.d/pike.list
-  
-Si este paso falla usad en su defecto::
-
-  # echo "deb [trusted=yes] http://pike.esi.uclm.es/arco sid main" > /etc/apt/sources.list
-
-Ejecuta la preinstalación::
-
-  # apt-get update
-  # apt-get install arco-archive-keyring
+  $ sudo echo "deb http://pike.esi.uclm.es/arco sid main" > /etc/apt/sources.list.d/pike.list
+  $ sudo apt-key adv --fetch-keys http://pike.esi.uclm.es/arco/key.asc
+  $ sudo pt-get update
 
 E instala con::
 
@@ -42,7 +35,7 @@ Utilizar el paquete debian tiene varias ventajas muy interesantes:
 * Incluye un ejemplo completo del documento, listo para adaptar y usar.
 
 __ escudo_
-.. _escudo:         http://crysol.org/emblema-informatica
+.. _escudo:         http://crysol.github.io/2009-03-10/el-autntico-emblema-de-informtica.html
 
 Si optas por **NO USAR** el paquete debian, tendrás que instalar los siguientes paquetes:
 
