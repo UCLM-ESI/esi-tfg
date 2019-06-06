@@ -18,6 +18,13 @@ Puedes utilizar la clase **esi-tfg** descargando el fichero esi-tfg.cls_, pero e
 derivados de debian). Para descargar el paquete, añade el repo ejecutando (como root)::
 
   # echo "deb http://pike.esi.uclm.es/arco sid main" > /etc/apt/sources.list.d/pike.list
+  
+Si este paso falla usad en su defecto::
+
+  # echo "deb [trusted=yes] http://pike.esi.uclm.es/arco sid main" > /etc/apt/sources.list
+
+Ejecuta la preinstalación::
+
   # apt-get update
   # apt-get install arco-archive-keyring
 
