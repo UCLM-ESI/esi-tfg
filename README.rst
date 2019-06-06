@@ -27,7 +27,7 @@ E instala con::
 
 Utilizar el paquete debian tiene varias ventajas muy interesantes:
 
-* Instala todas las dependencias necesarias, con las versiones correctas, incluyendo el fichero `atbeginend.sty <https://bitbucket.org/arco_group/arco-authors/raw/tip/tex/atbeginend.sty>`_.
+* Instala todas las dependencias necesarias, con las versiones correctas, incluyendo el fichero `atbeginend.sty <https://bitbucket.org/esi_atc/arco-authors/raw/tip/tex/atbeginend.sty>`_.
 * Convierte automáticamente las figuras al formato que pongas en tus ``\includegraphics``
 * Recompila el documento si cambia alguna de las partes (ficheros incluidos con ``\input``).
 * Incluye las figuras necesarias (el `auténtico escudo de informática`__ y de la ESI) en
@@ -75,12 +75,12 @@ Hay ejemplos disponibles que pueden servir como punto de partida:
 * Fuente de la memoria de TFM_ y resultado en `PDF`__.
 
 .. _texlive:        http://www.tug.org/texlive/
-.. _esi-tfg.cls:    /arco_group/esi-tfg/src/tip/tex/esi-tfg.cls
-.. _pre-tfg.cls:    /arco_group/esi-tfg/src/tip/tex/pre-tfg.cls
-.. _esi-tfm.cls:    /arco_group/esi-tfg/src/tip/tex/esi-tfm.cls
-.. _TFG:            https://bitbucket.org/arco_group/esi-tfg/src/tip/examples/tfg
-.. _anteproyecto:   https://bitbucket.org/arco_group/esi-tfg/src/tip/examples/anteproyecto
-.. _TFM:            https://bitbucket.org/arco_group/esi-tfg/src/tip/examples/tfm
+.. _esi-tfg.cls:    /esi_atc/esi-tfg/src/tip/tex/esi-tfg.cls
+.. _pre-tfg.cls:    /esi_atc/esi-tfg/src/tip/tex/pre-tfg.cls
+.. _esi-tfm.cls:    /esi_atc/esi-tfg/src/tip/tex/esi-tfm.cls
+.. _TFG:            https://bitbucket.org/esi_atc/esi-tfg/src/tip/examples/tfg
+.. _anteproyecto:   https://bitbucket.org/esi_atc/esi-tfg/src/tip/examples/anteproyecto
+.. _TFM:            https://bitbucket.org/esi_atc/esi-tfg/src/tip/examples/tfm
 .. __: 		    http://fowler.esi.uclm.es/buildbot/esi-tfg/anteproyecto.pdf
 .. __: 		    http://fowler.esi.uclm.es/buildbot/esi-tfg/tfg.pdf
 .. __: 		    http://fowler.esi.uclm.es/buildbot/esi-tfg/tfm.pdf

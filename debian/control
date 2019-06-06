@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: David Villa Alises <David.Villa@gmail.com>
 Build-Depends: debhelper (>= 7.0.50~)
 Standards-Version: 4.0.0
-Homepage: https://bitbucket.org/arco_group/esi-tfg
+Homepage: https://bitbucket.org/esi_atc/esi-tfg
 
 Package: esi-tfg
 Architecture: all

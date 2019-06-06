@@ -10,15 +10,15 @@ DOCDIR=$(DESTDIR)/usr/share/doc
 
 all:
 
-
-wiki:
-	hg clone ssh://hg@bitbucket.org/arco_group/esi-tfg/wiki
-
 test:
 	atheist -f -i2  test
 
 examples:
 	$(MAKE) -C examples
+
+push:
+	git push
+	git push git@github.com:arco-group/esi-tfg.git
 
 clean:
 	$(RM) $(shell find -name *~)

@@ -657,7 +657,7 @@
   \begin{center}
     Este documento fue editado y tipografiado con \LaTeX{} empleando\\
     la clase \textbf{esi-tfm} {\small (versión \versiondate)} que se puede encontrar en:\\
-    \url{https://bitbucket.org/arco_group/esi-tfg}
+    \url{https://bitbucket.org/esi_atc/esi-tfg}
 
     \bigskip
     {\scriptsize [respeta esta atribución al autor]}
