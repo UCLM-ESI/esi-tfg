@@ -372,14 +372,14 @@
 \newcommand{\@advisorFirst}{}
 \newcommand{\advisorFirst}[1]{%
   \renewcommand{\@advisorFirst}{#1}}
-\newcommand{\@putAdvisorFirst}{Director: \@advisorFirst\par}
+\newcommand{\@putAdvisorFirst}{Tutor académico: \@advisorFirst\par}
 
 \newcommand{\@advisorSecond}{}
 \newcommand{\advisorSecond}[1]{%
   \renewcommand{\@advisorSecond}{#1}}
 \newcommand{\@putAdvisorSecond}{
   \ifdefempty{\@advisorSecond}{}{
-  Director: \@advisorSecond\par}}
+  Coautor académico: \@advisorSecond\par}}
 
 \newcommand{\@advisorDepartment}{}
 \newcommand{\advisorDepartment}[1]{\renewcommand{\@advisorDepartment}{#1}}
@@ -433,8 +433,8 @@
     \Large \bfseries
     \setstretch{1.3}
 
-    \vspace*{\stretch{8}}
-    \includegraphics[width=2.7cm]{informatica_gray.pdf}
+    \vspace*{\stretch{6}}
+    \includegraphics[width=4.1cm]{esi_logo.pdf}
 
     \vspace*{\stretch{6}}
 
@@ -443,15 +443,15 @@
     ESCUELA SUPERIOR DE INFORMÁTICA
 
     \vspace*{\stretch{2}}
-    GRADO EN INGENIERÍA INFORMÁTICA
+    GRADO EN INGENIERÍA EN INFORMÁTICA
 
-    \vspace*{\stretch{2}}
-    \begin{spacing}{0.9}
-      {\normalsize TECNOLOGÍA ESPECÍFICA DE\\\MakeUppercase{\@intensification}}
-    \end{spacing}
+    % \vspace*{\stretch{2}}
+    % \begin{spacing}{0.9}
+    %  {\normalsize TECNOLOGÍA ESPECÍFICA DE\\\MakeUppercase{\@intensification}}
+    % \end{spacing}
 
-    \vspace*{\stretch{3}}
-    TRABAJO FIN DE GRADO
+    % \vspace*{\stretch{3}}
+    % TRABAJO FIN DE GRADO
 
     \vspace*{\stretch{4}}
     {\LARGE \@title}
@@ -464,7 +464,7 @@
 
   \vfill
   \hfill
-  {\large \@docmonth, \@docyear}
+  {\large \textbf{\@docmonth, \@docyear}}
   \vspace{\stretch{1}}
   \cleardoublepage
 }
@@ -485,29 +485,32 @@
 }
 
 \newcommand{\frontpage}{%
-  \thispagestyle{firstpage}
+  \thispagestyle{empty}
   \begin{center}
     \Large \bfseries
     \setstretch{1.3}
 
     \vspace*{2cm}
-    \includegraphics[width=3cm]{informatica_gray.pdf}
+    \includegraphics[width=4.1cm]{esi_logo.pdf}
 
-    \vspace{2cm}
+    \vspace{1.2cm}
 
+    \begin{spacing}{1.09}
     UNIVERSIDAD DE CASTILLA-LA MANCHA
-
     ESCUELA SUPERIOR DE INFORMÁTICA
+    \end{spacing}
+
+    \vspace{0.4cm}
 
     \@advisorDepartment
 
-    \vspace*{\stretch{4}}
-    \begin{spacing}{0.9}
-      {\normalsize TECNOLOGÍA ESPECÍFICA DE\\\MakeUppercase{\@intensification}}
-    \end{spacing}
+    \vspace*{\stretch{6}}
 
-    \vspace*{\stretch{4}}
-    TRABAJO FIN DE GRADO
+    GRADO EN INGENIERÍA EN INFORMÁTICA
+
+    \begin{spacing}{0.9}
+      {\normalsize \MakeUppercase{\@intensification}}
+    \end{spacing}
 
     \vspace*{\stretch{6}}
     {\LARGE \@title}
@@ -515,7 +518,7 @@
 
   \vspace*{\stretch{7}}
 
-  {\large
+  {\large \bfseries
     \@putAuthor
     \@putAdvisorFirst
     \@putAdvisorSecond

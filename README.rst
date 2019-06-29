@@ -7,14 +7,14 @@ de Ciudad Real, pero es sencillo adaptarla si estudias en otro sitio.
 
 La normativa actual de la ESI de CR se puede encontrar en:
 
-* http://webpub.esi.uclm.es/archivos/216/NormativaTFG
-* http://webpub.esi.uclm.es/archivos/336/Normativa-TFGs
+* https://pruebasaluuclm.sharepoint.com/sites/esicr/tfg/SitePages/Inicio.aspx
 
 Esta clase LaTeX asume que dispones del paquete texlive_, que es el que se distribuye por
 defecto en la mayoría de las distribuciones GNU/Linux, y que también está disponible para
 Windows y Mac OSX.
 
-Puedes utilizar la clase **esi-tfg** descargando el fichero esi-tfg.cls_, pero es altamente recomendado **instalar el paquete debian** (también válido para ubuntu y otros
+Puedes utilizar la clase **esi-tfg** descargando el fichero esi-tfg.cls_, pero es
+altamente recomendado **instalar el paquete debian** (también válido para ubuntu y otros
 derivados de debian). Para descargar el paquete, añade el repo ejecutando (como root)::
 
   $ sudo echo "deb http://pike.esi.uclm.es/arco sid main" > /etc/apt/sources.list.d/pike.list
@@ -30,9 +30,21 @@ Utilizar el paquete debian tiene varias ventajas muy interesantes:
 * Instala todas las dependencias necesarias, con las versiones correctas, incluyendo el fichero `atbeginend.sty <https://bitbucket.org/esi_atc/arco-authors/raw/tip/tex/atbeginend.sty>`_.
 * Convierte automáticamente las figuras al formato que pongas en tus ``\includegraphics``
 * Recompila el documento si cambia alguna de las partes (ficheros incluidos con ``\input``).
-* Incluye las figuras necesarias (el `auténtico escudo de informática`__ y de la ESI) en
-  formato escalable (no se pixela).
+* Incluye el logo de la ESI en formato escalable (no se pixela).
 * Incluye un ejemplo completo del documento, listo para adaptar y usar.
+
+
+Overleaf
+--------
+
+También puedes editar tu proyecto utilizando el editor online overleaf_. Simplemente:
+
+* Crea una cuenta gratuita.
+* Pulsa "New Project".
+* Elige "Upload Project" y selecciona el fichero tfg-overleaf-template.zip de este repositorio.
+* Modifica el contenido directamente.
+
+.. _overleaf:       http://www.overleaf.com
 
 __ escudo_
 .. _escudo:         http://crysol.github.io/2009-03-10/el-autntico-emblema-de-informtica.html

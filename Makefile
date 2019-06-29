@@ -8,7 +8,10 @@ DOCDIR=$(DESTDIR)/usr/share/doc
 
 .PHONY: examples test
 
-all:
+all: tfg-overleaf-template.zip
+
+tfg-overleaf-template.zip: $(shell ls -1d overleaf/tfg)
+	(cd overleaf/tfg && zip -r - .) > $@
 
 test:
 	atheist -f -i2  test
@@ -22,6 +25,7 @@ push:
 
 clean:
 	$(RM) $(shell find -name *~)
+	$(RM) *-overleaf-template.zip
 	$(MAKE) -C examples clean
 
 
