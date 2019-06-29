@@ -41,10 +41,11 @@ También puedes editar tu proyecto utilizando el editor online overleaf_. Simple
 
 * Crea una cuenta gratuita.
 * Pulsa "New Project".
-* Elige "Upload Project" y selecciona el fichero tfg-overleaf-template.zip de este repositorio.
+* Elige "Upload Project" y selecciona el fichero tfg-overleaf-template.zip_ de este repositorio.
 * Modifica el contenido directamente.
 
 .. _overleaf:       http://www.overleaf.com
+-- _ tfg-overleaf-template.zip https://bitbucket.org/esi_atc/esi-tfg/raw/697a9bdc8111d8caab312660de5b86bb2fb5f916/tfg-overleaf-template.zip
 
 __ escudo_
 .. _escudo:         http://crysol.github.io/2009-03-10/el-autntico-emblema-de-informtica.html
