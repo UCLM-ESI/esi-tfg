@@ -184,6 +184,10 @@
     hyperfootnotes = false,
     pdfview        = {fitv},
     hidelinks      = true,
+    colorlinks,
+    linkcolor      = black,
+    citecolor      = black,
+    urlcolor=      = black,
     % backref, % debug: refs desde la bibliografía
     ]{hyperref}
 
