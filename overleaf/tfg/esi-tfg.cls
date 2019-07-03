@@ -2,7 +2,7 @@
 
 % esi-tfg.cls
 %
-% Copyright © 2013-2017 David Villa Alises
+% Copyright © 2013-2019 David Villa Alises
 %
 % This program is free software; you can redistribute it and/or modify
 % it under the terms of the GNU General Public License as published by
@@ -183,7 +183,6 @@
     bookmarks,
     hyperfootnotes = false,
     pdfview        = {fitv},
-    hidelinks      = true,
     colorlinks,
     linkcolor      = black,
     citecolor      = black,
@@ -341,7 +340,7 @@
 
 
 %% -- VARIABLES DEL PAQUETE ----------------------------------------------------
-\usepackage{etoolbox}
+\usepackage{ifmtarg}
 
 \newcommand{\@authortitle}{}
 \renewcommand{\author}[2]{%
@@ -382,8 +381,8 @@
 \newcommand{\advisorSecond}[1]{%
   \renewcommand{\@advisorSecond}{#1}}
 \newcommand{\@putAdvisorSecond}{
-  \ifdefempty{\@advisorSecond}{}{
-  Coautor académico: \@advisorSecond\par}}
+  \@ifmtarg{\@advisorSecond}{Coautor académico: \@advisorSecond\par}{}}
+
 
 \newcommand{\@advisorDepartment}{}
 \newcommand{\advisorDepartment}[1]{\renewcommand{\@advisorDepartment}{#1}}
@@ -396,7 +395,7 @@
 
 
 \newcommand{\@license}{%
-  \begin{minipage}{1.1\textwidth}
+  \begin{minipage}{\textwidth}
     \begin{singlespace}
       Permission is granted to copy, distribute and/or modify this
       document under the terms of the GNU Free Documentation License,
@@ -404,7 +403,7 @@
       Foundation; with no Invariant Sections, no Front-Cover Texts,
       and no Back-Cover Texts.  A copy of the license is included in
       the section entitled \hyperlink{chap:GFDL}{"GNU Free
-        Documentation License"}.
+      Documentation License"}.
 
       \smallskip
       Se permite la copia, distribución y/o modificación de este
@@ -413,15 +412,15 @@
       por la \emph{Free Software Foundation}; sin secciones
       invariantes. Una copia de esta licencia esta incluida en el
       apéndice titulado \hyperlink{chap:GFDL}{«GNU Free Documentation
-        License»}.
+      License»}.
 
-    \smallskip
-    Muchos de los nombres usados por las compañías para diferenciar
-    sus productos y servicios son reclamados como marcas
-    registradas. Allí donde estos nombres aparezcan en este documento,
-    y cuando el autor haya sido informado de esas marcas registradas,
-    los nombres estarán escritos en mayúsculas o como nombres propios.
-  \end{singlespace}
+      \smallskip
+      Muchos de los nombres usados por las compañías para diferenciar
+      sus productos y servicios son reclamados como marcas
+      registradas. Allí donde estos nombres aparezcan en este documento,
+      y cuando el autor haya sido informado de esas marcas registradas,
+      los nombres estarán escritos en mayúsculas o como nombres propios.
+    \end{singlespace}
   \end{minipage}
 }
 \newcommand{\license}[1]{\renewcommand{\@license}{#1}}
@@ -558,9 +557,9 @@
     \vspace{-1cm}
     \begin{tabbing}
       \hspace*{1.7cm} \= \\
-      \ifdefempty{\@email}   {}{\emph{E-mail:}   \> \@email \\}
-      \ifdefempty{\@phone}   {}{\emph{Teléfono:} \> \@phone \\}
-      \ifdefempty{\@homepage}{}{\emph{Web site:} \> \url{\@homepage} \\}
+      \@ifmtarg{\@email}    {\emph{E-mail:}   \> \@email \\}{}
+      \@ifmtarg{\@phone}    {\emph{Teléfono:} \> \@phone \\}{}
+      \@ifmtarg{\@homepage} {\emph{Web site:} \> \url{\@homepage} \\}{}
     \end{tabbing}
     \vspace{-1cm}
     \noindent
@@ -579,10 +578,11 @@
   \noindent\underline{\textbf{{\Large TRIBUNAL:}}}
   \vspace{1.3cm}
   \par
-  \textbf{{\large Presidente:}} \\ \par
-  \textbf{{\large Vocal:}} \\ \par
-  \textbf{{\large Secretario:}} \\ \par
-%  \textbf{{\large Vocal 2:}} \\ \par
+  \textbf{{\large Presidente:}} \par
+  \vspace{.5cm}
+  \textbf{{\large Vocal:}}      \par
+  \vspace{.5cm}
+  \textbf{{\large Secretario:}} \par
   \vspace{2.5cm}
   \noindent\underline{\textbf{{\Large FECHA DE DEFENSA:}}} \par
   \vspace{2.2cm}
