@@ -34,21 +34,6 @@ Utilizar el paquete debian tiene varias ventajas muy interesantes:
 * Incluye un ejemplo completo del documento, listo para adaptar y usar.
 
 
-Overleaf
---------
-
-También puedes editar tu proyecto utilizando el editor online overleaf_. Simplemente:
-
-* Crea una cuenta gratuita.
-* Pulsa "New Project".
-* Elige "Upload Project" y selecciona el fichero `tfg-overleaf-template.zip <https://bitbucket.org/esi_atc/esi-tfg/raw/697a9bdc8111d8caab312660de5b86bb2fb5f916/tfg-overleaf-template.zip>`_ de este repositorio.
-* Modifica el contenido directamente.
-
-.. _overleaf:       http://www.overleaf.com
-
-__ escudo_
-.. _escudo:         http://crysol.github.io/2009-03-10/el-autntico-emblema-de-informtica.html
-
 Si optas por **NO USAR** el paquete debian, tendrás que instalar los siguientes paquetes:
 
 * latex-xcolor
@@ -66,10 +51,30 @@ Si optas por **NO USAR** el paquete debian, tendrás que instalar los siguientes
 
 y descargar el fichero atbeginend.sty antes mencionado.
 
+
+Overleaf
+--------
+
+También puedes editar tu proyecto utilizando el editor online overleaf_. Simplemente:
+
+* Crea una cuenta gratuita.
+* Pulsa "New Project".
+* Elige "Upload Project" y selecciona el fichero `tfg-overleaf-template.zip <https://bitbucket.org/esi_atc/esi-tfg/raw/697a9bdc8111d8caab312660de5b86bb2fb5f916/tfg-overleaf-template.zip>`_ de este repositorio.
+* Modifica el contenido directamente.
+
+O puedes aplicar directamente la plantilla _`ESI TFG <https://www.overleaf.com/latex/templates/esi-tfg/zqxnfvqxgtdw>`_ pulsando en "Open as template".
+
+.. _overleaf:       http://www.overleaf.com
+
+__ escudo_
+.. _escudo:         http://crysol.github.io/2009-03-10/el-autntico-emblema-de-informtica.html
+
+
 pre-tfg
 -------
 
 Es la clase pre-tfg.cls_ para preparar el anteproyecto, conforme a la normativa.
+
 
 tfm
 ---
@@ -82,9 +87,9 @@ Ejemplos
 
 Hay ejemplos disponibles que pueden servir como punto de partida:
 
-* Fuente del anteproyecto_ y el resultado en `PDF`__ ,
-* Fuente de la memoria de TFG_ y resultado en `PDF`__ , y
-* Fuente de la memoria de TFM_ y resultado en `PDF`__.
+* Fuente del anteproyecto_,
+* Fuente de la memoria de TFG_, y
+* Fuente de la memoria de TFM_.
 
 .. _texlive:        http://www.tug.org/texlive/
 .. _esi-tfg.cls:    /esi_atc/esi-tfg/src/tip/tex/esi-tfg.cls
@@ -93,9 +98,6 @@ Hay ejemplos disponibles que pueden servir como punto de partida:
 .. _TFG:            https://bitbucket.org/esi_atc/esi-tfg/src/tip/examples/tfg
 .. _anteproyecto:   https://bitbucket.org/esi_atc/esi-tfg/src/tip/examples/anteproyecto
 .. _TFM:            https://bitbucket.org/esi_atc/esi-tfg/src/tip/examples/tfm
-.. __: 		    http://fowler.esi.uclm.es/buildbot/esi-tfg/anteproyecto.pdf
-.. __: 		    http://fowler.esi.uclm.es/buildbot/esi-tfg/tfg.pdf
-.. __: 		    http://fowler.esi.uclm.es/buildbot/esi-tfg/tfm.pdf
 
 .. Local Variables:
 .. fill-column: 90
