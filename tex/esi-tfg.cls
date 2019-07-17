@@ -357,10 +357,16 @@
 \newcommand{\city}[1]{\renewcommand{\@city}{#1}}
 \newcommand{\@country}{Spain}
 \newcommand{\country}[1]{\renewcommand{\@country}{#1}}
+
 \newcommand{\phone}[1]{\newcommand{\@phone}{#1}}
+\newcommand{\printphone}{\@phone}
+
 \newcommand{\email}[1]{\newcommand{\@email}{#1}}
+\newcommand{\printemail}{\@email}
+
 \newcommand{\@homepage}{}
 \newcommand{\homepage}[1]{\renewcommand{\@homepage}{#1}}
+
 
 \newcommand{\@intensification}{}
 \newcommand{\intensification}[1]{%

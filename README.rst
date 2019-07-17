@@ -62,7 +62,7 @@ También puedes editar tu proyecto utilizando el editor online overleaf_. Simple
 * Elige "Upload Project" y selecciona el fichero `tfg-overleaf-template.zip <https://bitbucket.org/esi_atc/esi-tfg/raw/697a9bdc8111d8caab312660de5b86bb2fb5f916/tfg-overleaf-template.zip>`_ de este repositorio.
 * Modifica el contenido directamente.
 
-O puedes aplicar directamente la plantilla _`ESI TFG <https://www.overleaf.com/latex/templates/esi-tfg/zqxnfvqxgtdw>`_ pulsando en "Open as template".
+O puedes aplicar directamente la plantilla `ESI TFG <https://www.overleaf.com/latex/templates/esi-tfg/zqxnfvqxgtdw>`_ pulsando en "Open as template".
 
 .. _overleaf:       http://www.overleaf.com
 
