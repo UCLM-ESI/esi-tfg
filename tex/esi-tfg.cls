@@ -233,7 +233,11 @@
 \titleformat{\subsection}
   {\normalfont\fontsize{13.5pt}{1em}\selectfont\bfseries}{\thesubsection}{1em}{}
 
-%-- standard definitions
+% -- standard definitions
+% \titleformat{\chapter}[display]
+% {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+% \titleformat{\section}
+% {\normalfont\Large\bfseries}{\thesection}{1em}{}
 % \titleformat{\subsubsection}
 %   {\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
 % \titleformat{\paragraph}[runin]
