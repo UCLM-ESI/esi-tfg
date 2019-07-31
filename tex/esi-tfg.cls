@@ -41,7 +41,7 @@
 \usepackage{atbeginend}
 \usepackage{xifthen}
 
-\usepackage{enumitem}
+\usepackage[inline]{enumitem}
 \setlist{topsep=0pt, itemsep=0pt}
 \newlist{definitionlist}{description}{1}
 \setlist[definitionlist]{
@@ -157,15 +157,15 @@
 }
 
 \lstnewenvironment{console}[1][]
-   {\pagebreak[0]\lstset{style=consoleStyle,#1}}
-   {\pagebreak[0]}
+   {\pagebreak[3]\lstset{style=consoleStyle,#1}}
+   {\pagebreak[3]}
 
 
 
 %% -- ACRÓNIMOS Y GLOSARIO -----------------------------------------------------
-\usepackage[printonlyused]{acronym}
+\usepackage[printonlyused, smaller]{acronym}
 
-\renewcommand*{\acsfont}[1]{\textsc{\textscale{.85}{#1}}} % enunciado del acrónimo: OO
+\renewcommand*{\acsfont}[1]{{\textsc{#1}}} % enunciado del acrónimo: OO
 \renewcommand*{\acfsfont}[1]{#1}
 \renewcommand*{\acffont}[1]{#1}
 
