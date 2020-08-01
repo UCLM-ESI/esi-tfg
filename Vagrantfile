@@ -2,9 +2,8 @@
 # vi: set ft=ruby :
 
 $bootstrap = <<SCRIPT
-wget -O- http://pike.esi.uclm.es/arco/key.asc | sudo apt-key add -
-sudo sh -c 'echo "deb http://pike.esi.uclm.es/arco sid main" > /etc/apt/sources.list.d/pike.list'
-
+wget -O- https://uclm-arco.github.io/debian/key.asc | sudo apt-key add -
+sudo echo "deb https://uclm-arco.github.io/debian/ sid main" > /etc/apt/sources.list.d/arco.list
 sudo apt-get update
 sudo apt-get install -y esi-tfg
 SCRIPT

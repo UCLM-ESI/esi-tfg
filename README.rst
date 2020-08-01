@@ -64,7 +64,7 @@ O puedes aplicar directamente la plantilla `ESI TFG <https://www.overleaf.com/la
 .. _overleaf:       http://www.overleaf.com
 
 __ escudo_
-.. _escudo:         http://crysol.github.io/2009-03-10/el-autntico-emblema-de-informtica.html
+.. _escudo:         https://crysol.org/2009-03-10/el-autntico-emblema-de-informtica.html
 
 
 pre-tfg
