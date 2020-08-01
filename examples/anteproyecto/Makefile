@@ -1,7 +1,7 @@
 #!/usr/bin/make -f
 # -*- mode:makefile -*-
 
-# Si instalas el paquete "arco-authors" (desde babel.esi.uclm.es) usa la siguiente linea:
+# Si instalas el paquete "arco-authors" (desde https://uclm-arco.github.io/debian/) usa la siguiente linea:
 include arco/latex.mk
 
 # En otro caso usa las siguientes reglas:

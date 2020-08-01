@@ -1,5 +1,5 @@
 # Requiere:
-# - arco-authors (deb http://babel.esi.uclm.es/arco/ unstable main)
+# - arco-authors (https://uclm-arco.github.io/debian/)
 
 # raster image resolution
 DPI = 300

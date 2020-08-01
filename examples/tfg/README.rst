@@ -13,7 +13,7 @@ Debian) y el editor GNU Emacs (versión 23 o mayor) y el modo "auctex".
 
 DEPENDENCIAS
 ============
-- arco-authors (deb http://babel.esi.uclm.es/arco/ unstable main)
+- arco-authors (https://uclm-arco.github.io/debian/)
 
 Paquetes Debian oficiales
 -------------------------
