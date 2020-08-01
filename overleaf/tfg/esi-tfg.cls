@@ -41,7 +41,7 @@
 \usepackage{atbeginend}
 \usepackage{xifthen}
 
-\usepackage{enumitem}
+\usepackage[inline]{enumitem}
 \setlist{topsep=0pt, itemsep=0pt}
 \newlist{definitionlist}{description}{1}
 \setlist[definitionlist]{
@@ -157,15 +157,15 @@
 }
 
 \lstnewenvironment{console}[1][]
-   {\pagebreak[0]\lstset{style=consoleStyle,#1}}
-   {\pagebreak[0]}
+   {\pagebreak[3]\lstset{style=consoleStyle,#1}}
+   {\pagebreak[3]}
 
 
 
 %% -- ACRÓNIMOS Y GLOSARIO -----------------------------------------------------
-\usepackage[printonlyused]{acronym}
+\usepackage[printonlyused, smaller]{acronym}
 
-\renewcommand*{\acsfont}[1]{\textsc{\textscale{.85}{#1}}} % enunciado del acrónimo: OO
+\renewcommand*{\acsfont}[1]{{\textsc{#1}}} % enunciado del acrónimo: OO
 \renewcommand*{\acfsfont}[1]{#1}
 \renewcommand*{\acffont}[1]{#1}
 
@@ -233,7 +233,11 @@
 \titleformat{\subsection}
   {\normalfont\fontsize{13.5pt}{1em}\selectfont\bfseries}{\thesubsection}{1em}{}
 
-%-- standard definitions
+% -- standard definitions
+% \titleformat{\chapter}[display]
+% {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+% \titleformat{\section}
+% {\normalfont\Large\bfseries}{\thesection}{1em}{}
 % \titleformat{\subsubsection}
 %   {\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
 % \titleformat{\paragraph}[runin]
@@ -357,8 +361,13 @@
 \newcommand{\city}[1]{\renewcommand{\@city}{#1}}
 \newcommand{\@country}{Spain}
 \newcommand{\country}[1]{\renewcommand{\@country}{#1}}
+
 \newcommand{\phone}[1]{\newcommand{\@phone}{#1}}
+\newcommand{\printphone}{\@phone}
+
 \newcommand{\email}[1]{\newcommand{\@email}{#1}}
+\newcommand{\printemail}{\@email}
+
 \newcommand{\@homepage}{}
 \newcommand{\homepage}[1]{\renewcommand{\@homepage}{#1}}
 
@@ -381,7 +390,7 @@
 \newcommand{\advisorSecond}[1]{%
   \renewcommand{\@advisorSecond}{#1}}
 \newcommand{\@putAdvisorSecond}{
-  \@ifmtarg{\@advisorSecond}{Coautor académico: \@advisorSecond\par}{}}
+  \@ifmtarg{\@advisorSecond}{Cotutor académico: \@advisorSecond\par}{}}
 
 
 \newcommand{\@advisorDepartment}{}

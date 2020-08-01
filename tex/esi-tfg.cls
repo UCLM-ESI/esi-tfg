@@ -371,7 +371,6 @@
 \newcommand{\@homepage}{}
 \newcommand{\homepage}[1]{\renewcommand{\@homepage}{#1}}
 
-
 \newcommand{\@intensification}{}
 \newcommand{\intensification}[1]{%
   \renewcommand{\@intensification}{#1}}
@@ -391,7 +390,7 @@
 \newcommand{\advisorSecond}[1]{%
   \renewcommand{\@advisorSecond}{#1}}
 \newcommand{\@putAdvisorSecond}{
-  \@ifmtarg{\@advisorSecond}{Coautor académico: \@advisorSecond\par}{}}
+  \@ifmtarg{\@advisorSecond}{Cotutor académico: \@advisorSecond\par}{}}
 
 
 \newcommand{\@advisorDepartment}{}
