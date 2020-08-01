@@ -15,11 +15,8 @@ Windows y Mac OSX.
 
 Puedes utilizar la clase **esi-tfg** descargando el fichero esi-tfg.cls_, pero es
 altamente recomendado **instalar el paquete debian** (también válido para ubuntu y otros
-derivados de debian). Para descargar el paquete, añade el repo ejecutando (como root)::
-
-  $ sudo echo "deb http://pike.esi.uclm.es/arco sid main" > /etc/apt/sources.list.d/pike.list
-  $ sudo apt-key adv --fetch-keys http://pike.esi.uclm.es/arco/key.asc
-  $ sudo pt-get update
+derivados de debian). Para descargar el paquete, sigue las instrucciones de 
+https://uclm-arco.github.io/debian/
 
 E instala con::
 
