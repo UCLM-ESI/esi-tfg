@@ -15,7 +15,7 @@ Windows y Mac OSX.
 
 Puedes utilizar la clase **esi-tfg** descargando el fichero esi-tfg.cls_, pero es
 altamente recomendado **instalar el paquete debian** (también válido para ubuntu y otros
-derivados de debian). Para descargar el paquete, sigue las instrucciones de 
+derivados de debian). Para descargar el paquete, sigue las instrucciones de
 https://uclm-arco.github.io/debian/
 
 E instala con::
@@ -92,9 +92,9 @@ Hay ejemplos disponibles que pueden servir como punto de partida:
 .. _esi-tfg.cls:    /esi_atc/esi-tfg/src/tip/tex/esi-tfg.cls
 .. _pre-tfg.cls:    /esi_atc/esi-tfg/src/tip/tex/pre-tfg.cls
 .. _esi-tfm.cls:    /esi_atc/esi-tfg/src/tip/tex/esi-tfm.cls
-.. _TFG:            https://bitbucket.org/esi_atc/esi-tfg/src/tip/examples/tfg
-.. _anteproyecto:   https://bitbucket.org/esi_atc/esi-tfg/src/tip/examples/anteproyecto
-.. _TFM:            https://bitbucket.org/esi_atc/esi-tfg/src/tip/examples/tfm
+.. _TFG:            https://github.com/UCLM-ESI/esi-tfg/tree/master/examples/tfg
+.. _anteproyecto:   https://github.com/UCLM-ESI/esi-tfg/tree/master/examples/anteproyecto
+.. _TFM:            https://github.com/UCLM-ESI/esi-tfg/tree/master/examples/tfm
 
 .. Local Variables:
 .. fill-column: 90
