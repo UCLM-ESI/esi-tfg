@@ -24,7 +24,7 @@ E instala con::
 
 Utilizar el paquete debian tiene varias ventajas muy interesantes:
 
-* Instala todas las dependencias necesarias, con las versiones correctas, incluyendo el fichero `atbeginend.sty <https://bitbucket.org/esi_atc/arco-authors/raw/tip/tex/atbeginend.sty>`_.
+* Instala todas las dependencias necesarias, con las versiones correctas, incluyendo el fichero `atbeginend.sty <https://github.com/UCLM-ARCO/arco-authors/blob/master/tex/atbeginend.sty>`_.
 * Convierte automáticamente las figuras al formato que pongas en tus ``\includegraphics``
 * Recompila el documento si cambia alguna de las partes (ficheros incluidos con ``\input``).
 * Incluye el logo de la ESI en formato escalable (no se pixela).
@@ -56,7 +56,7 @@ También puedes editar tu proyecto utilizando el editor online overleaf_. Simple
 
 * Crea una cuenta gratuita.
 * Pulsa "New Project".
-* Elige "Upload Project" y selecciona el fichero `tfg-overleaf-template.zip <https://bitbucket.org/esi_atc/esi-tfg/raw/697a9bdc8111d8caab312660de5b86bb2fb5f916/tfg-overleaf-template.zip>`_ de este repositorio.
+* Elige "Upload Project" y selecciona el fichero `tfg-overleaf-template.zip <https://github.com/UCLM-ESI/esi-tfg/releases/download/latest/tfg-overleaf-template.zip>`_ de este repositorio.
 * Modifica el contenido directamente.
 
 O puedes aplicar directamente la plantilla `ESI TFG <https://www.overleaf.com/latex/templates/esi-tfg/zqxnfvqxgtdw>`_ pulsando en "Open as template".
