@@ -89,11 +89,11 @@ Hay ejemplos disponibles que pueden servir como punto de partida:
 * Fuente de la memoria de TFM_.
 
 .. _texlive:        http://www.tug.org/texlive/
-.. _esi-tfg.cls:    /esi_atc/esi-tfg/src/tip/tex/esi-tfg.cls
-.. _pre-tfg.cls:    /esi_atc/esi-tfg/src/tip/tex/pre-tfg.cls
-.. _esi-tfm.cls:    /esi_atc/esi-tfg/src/tip/tex/esi-tfm.cls
-.. _TFG:            https://github.com/UCLM-ESI/esi-tfg/tree/master/examples/tfg
+.. _pre-tfg.cls:    https://github.com/UCLM-ESI/esi-tfg/blob/master/tex/pre-tfg.cls
+.. _esi-tfg.cls:    https://github.com/UCLM-ESI/esi-tfg/blob/master/tex/esi-tfg.cls
+.. _esi-tfm.cls:    https://github.com/UCLM-ESI/esi-tfg/blob/master/tex/esi-tfm.cls
 .. _anteproyecto:   https://github.com/UCLM-ESI/esi-tfg/tree/master/examples/anteproyecto
+.. _TFG:            https://github.com/UCLM-ESI/esi-tfg/tree/master/examples/tfg
 .. _TFM:            https://github.com/UCLM-ESI/esi-tfg/tree/master/examples/tfm
 
 .. Local Variables:
