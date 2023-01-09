@@ -8,3 +8,9 @@ syntax: glob
 *.lol
 *.out
 *.toc
+.vscode/settings.json
+debian/esi-tfg.substvars
+debian/files
+debian/.debhelper/
+debian/esi-tfg/
+examples/*/*.pdf
