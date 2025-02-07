@@ -2,7 +2,7 @@
 
 % esi-tfg.cls
 %
-% Copyright © 2013-2019 David Villa Alises
+% Copyright © 2013-2023 David Villa Alises
 %
 % This program is free software; you can redistribute it and/or modify
 % it under the terms of the GNU General Public License as published by
@@ -615,7 +615,7 @@
 
 % http://tex.stackexchange.com/a/237251/27822
 % \def\versiondate{\leavevmode\hbox{0.\the\year\twodigits\month\twodigits\day}}
-\def\versiondate{0.20191022}
+\def\versiondate{0.20230109}
 \def\twodigits#1{\ifnum#1<10 0\fi\the#1}
 
 \newcommand{\attributionArco} {

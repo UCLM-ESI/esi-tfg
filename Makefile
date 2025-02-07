@@ -13,9 +13,6 @@ all: tfg-overleaf-template.zip
 tfg-overleaf-template.zip: $(shell ls -1d overleaf/tfg)
 	(cd overleaf/tfg && zip -r - .) > $@
 
-# test:
-# 	atheist -f -i2  test
-
 examples:
 	$(MAKE) -C examples
 
